@@ -67,95 +67,266 @@
     <div class="breadcrumb">
       <a href="index.html">Inicio</a>
       <span class="sep">›</span>
-      <span class="current">Git: guardá tu trabajo</span>
+      <span class="current">Orquestación</span>
     </div>
 
     <div class="page-section-label">Sección 06</div>
-    <h1 class="page-title">Git: el historial de tu proyecto</h1>
+    <h1 class="page-title">Orquestación:<br>un pedido, todo el equipo trabaja</h1>
 
-    <p>Cada vez que trabajás con la IA en VS Code, producís cosas: archivos, documentos, cambios. Git es el sistema que guarda la historia de todo eso — para que puedas volver atrás, compartir tu trabajo y no perder nada.</p>
+    <!-- ══════════════════════════════════════
+         📖 CONCEPTO
+    ══════════════════════════════════════ -->
+    <div class="module-block">
+      <div class="module-label">📖 Concepto</div>
+      <h2 class="section-heading" style="margin-top:8px;">¿Qué es la orquestación?</h2>
 
-    <blockquote class="key-quote">
-      "Git no guarda en otro lado. Guarda la historia dentro de tu carpeta."
-    </blockquote>
+      <p>La orquestación es cuando un solo pedido tuyo dispara una cadena de acciones coordinadas. El agente principal recibe tu pedido, lo descompone en partes y llama al subagente correcto para cada una — en el orden correcto.</p>
 
-    <h2 class="section-heading">¿Qué es Git?</h2>
+      <blockquote class="key-quote">
+        "El agente principal es el director de orquesta: vos le decís qué querés lograr, y él decide qué especialista llamar y en qué orden."
+      </blockquote>
 
-    <p>Git es un sistema de control de versiones. Eso significa que registra cada cambio que hacés — quién lo hizo, cuándo y qué cambió.</p>
-
-    <p>No es una nube. No es un servicio externo. Git es un sistema que vive <strong>dentro de tu propia carpeta</strong> de proyecto. Cuando hacés git init, creás una carpeta oculta llamada <code>.git</code> que empieza a guardar todo el historial.</p>
-
-    <h2 class="section-heading">Los 3 comandos que necesitás</h2>
-
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Comando</th><th>Qué hace</th><th>Analogía</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>git init</code></td>
-            <td>Inicializa Git en la carpeta actual</td>
-            <td>Abrís un cuaderno nuevo para el proyecto</td>
-          </tr>
-          <tr>
-            <td><code>git add .</code></td>
-            <td>Marca todos los archivos para guardar</td>
-            <td>Seleccionás las fotos que querés revelar</td>
-          </tr>
-          <tr>
-            <td><code>git commit -m "mensaje"</code></td>
-            <td>Guarda los cambios con una descripción</td>
-            <td>Revelás las fotos y las ponés en el álbum</td>
-          </tr>
-          <tr>
-            <td><code>git log</code></td>
-            <td>Muestra el historial de commits</td>
-            <td>Abrís el álbum y ves todas las fotos</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="flow">
+        <div class="flow-step">
+          <div class="flow-label">Tu pedido</div>
+          <div class="flow-sub">Un solo mensaje</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step">
+          <div class="flow-label">Agente principal</div>
+          <div class="flow-sub">Interpreta y coordina</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step flow-step--violet">
+          <div class="flow-label">Subagente 1 — Redactar</div>
+          <div class="flow-sub">Genera el contenido</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step flow-step--violet">
+          <div class="flow-label">Subagente 2 — Revisar</div>
+          <div class="flow-sub">Evalúa la claridad</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-step flow-step--green">
+          <div class="flow-label">Resultado final</div>
+          <div class="flow-sub">Archivo listo en tu proyecto</div>
+        </div>
+      </div>
     </div>
 
-    <h2 class="section-heading">El flujo básico</h2>
+    <!-- ══════════════════════════════════════
+         💡 EJEMPLO
+    ══════════════════════════════════════ -->
+    <div class="module-block">
+      <div class="module-label">💡 Ejemplo cotidiano</div>
+      <h2 class="section-heading" style="margin-top:8px;">El pedido de informe</h2>
 
-    <div class="code-block">
-      <button class="copy-btn">Copiar</button>
-      <pre>git init
-git add .
-git commit -m "Primera versión de mi proyecto"</pre>
+      <p>Imaginá que le decís a tu equipo: <em>"Necesito un informe para el cliente para el viernes."</em></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Quién actúa</th><th>Qué hace</th><th>Cuándo</th></tr></thead>
+          <tbody>
+            <tr><td>El redactor</td><td>Escribe el borrador</td><td>Primero</td></tr>
+            <tr><td>El revisor</td><td>Corrige y simplifica</td><td>Cuando el borrador está listo</td></tr>
+            <tr><td>El diseñador</td><td>Formatea para el cliente</td><td>Solo cuando el revisor aprobó</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Vos dijiste una sola cosa. El resto pasó automáticamente, en el orden correcto. Eso es orquestación.</p>
+
+      <div class="comparison">
+        <div class="comp-card bad">
+          <div class="comp-label">❌ Sin orquestación</div>
+          <div class="comp-text">Hacés tres pedidos por separado, en orden, esperando que cada uno termine antes del siguiente. Si olvidás alguno, el resultado es inconsistente.</div>
+        </div>
+        <div class="comp-card good">
+          <div class="comp-label">✅ Con orquestación</div>
+          <div class="comp-text">Hacés un solo pedido. El agente principal coordina todo. Cada subagente actúa en el momento correcto, con lo que el anterior produjo.</div>
+        </div>
+      </div>
     </div>
 
-    <p>Eso es todo. Tres comandos. Tu proyecto ya tiene historial.</p>
+    <!-- ══════════════════════════════════════
+         🛠️ EJERCICIO
+    ══════════════════════════════════════ -->
+    <div class="module-block">
+      <div class="module-label">🛠️ Ejercicio — Tu primera orquestación</div>
+      <h2 class="section-heading" style="margin-top:8px;">Dos subagentes, un solo pedido</h2>
+      <p>Vas a crear dos subagentes simples y actualizar tu agente principal para que los coordine.</p>
 
-    <div class="code-block">
-      <button class="copy-btn">Copiar</button>
-      <pre>git log --oneline</pre>
+      <div class="stepper-nav" style="margin:32px 0 40px;">
+        <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Subagente 1</div></div>
+        <div class="step-connector"></div>
+        <div class="step-dot" data-step="1"><div class="step-dot-circle">2</div><div class="step-dot-label">Subagente 2</div></div>
+        <div class="step-connector"></div>
+        <div class="step-dot" data-step="2"><div class="step-dot-circle">3</div><div class="step-dot-label">Actualizar</div></div>
+        <div class="step-connector"></div>
+        <div class="step-dot" data-step="3"><div class="step-dot-circle">4</div><div class="step-dot-label">Probar</div></div>
+      </div>
+
+      <!-- PASO 1 -->
+      <div class="exercise-step" data-step="0">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">1</div>
+          <div class="ex-meta">
+            <div class="ex-mode">Explorer de VS Code</div>
+            <div class="ex-title">Creá el subagente de redacción</div>
+            <div class="ex-goal">Un especialista que solo redacta</div>
+          </div>
+        </div>
+
+        <p>Primero creá la carpeta de prompts. Abrí la terminal:</p>
+        <div class="table-wrap" style="margin-bottom:12px;">
+          <table>
+            <thead><tr><th>Forma</th><th>Cómo</th></tr></thead>
+            <tbody>
+              <tr><td>Tradicional</td><td>Menú <strong>Terminal → New Terminal</strong></td></tr>
+              <tr><td>Windows</td><td><code>Ctrl + Ñ</code> &nbsp;o&nbsp; <code>Ctrl + `</code></td></tr>
+              <tr><td>Mac</td><td><code>Cmd + `</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>mkdir -p .github/prompts</pre></div>
+
+        <p>Luego creá el archivo <code>.github/prompts/redactar.prompt.md</code> con este contenido:</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>---
+description: "Redacta contenido simple y claro"
+mode: agent
+---
+Redactá el contenido que te piden en tono simple, sin tecnicismos.
+Usá español argentino.
+Guardá el resultado en el archivo que te indiquen.</pre></div>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" disabled>← Anterior</button>
+          <button class="btn btn-primary" data-step-next>Siguiente: Subagente 2 →</button>
+        </div>
+      </div>
+
+      <!-- PASO 2 -->
+      <div class="exercise-step" data-step="1">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">2</div>
+          <div class="ex-meta">
+            <div class="ex-mode">Explorer de VS Code</div>
+            <div class="ex-title">Creá el subagente de revisión</div>
+            <div class="ex-goal">Un especialista que solo revisa claridad</div>
+          </div>
+        </div>
+
+        <p>Creá el archivo <code>.github/prompts/revisar.prompt.md</code>:</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>---
+description: "Revisa que el contenido sea simple y claro"
+mode: agent
+---
+Leé el archivo que te indiquen.
+Evaluá si se entiende para alguien que no sabe de tecnología.
+Dale un puntaje del 1 al 10.
+Si el puntaje es menor a 7, sugerí mejoras concretas.</pre></div>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+          <button class="btn btn-primary" data-step-next>Siguiente: Actualizar agente →</button>
+        </div>
+      </div>
+
+      <!-- PASO 3 -->
+      <div class="exercise-step" data-step="2">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">3</div>
+          <div class="ex-meta">
+            <div class="ex-mode">Editor</div>
+            <div class="ex-title">Actualizá tu agente principal</div>
+            <div class="ex-goal">Enseñarle al director cuándo llamar a cada especialista</div>
+          </div>
+        </div>
+
+        <p>Abrí <code>.github/copilot-instructions.md</code> y agregá al final:</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>## Subagentes disponibles
+
+Cuando necesites redactar algo → invocá /redactar
+Cuando necesites revisar algo → invocá /revisar
+
+El orden correcto es siempre: redactar primero, revisar después.
+Nunca revises un texto que no fue generado en esta sesión.</pre></div>
+
+        <p>Guardá el archivo:</p>
+        <div class="table-wrap" style="margin-bottom:0;">
+          <table>
+            <thead><tr><th>Forma</th><th>Cómo</th></tr></thead>
+            <tbody>
+              <tr><td>Tradicional</td><td>Menú <strong>File → Save</strong></td></tr>
+              <tr><td>Windows</td><td><code>Ctrl + S</code></td></tr>
+              <tr><td>Mac</td><td><code>Cmd + S</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+          <button class="btn btn-primary" data-step-next>Siguiente: Probar →</button>
+        </div>
+      </div>
+
+      <!-- PASO 4 -->
+      <div class="exercise-step" data-step="3">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">4</div>
+          <div class="ex-meta">
+            <div class="ex-mode">Chat de Copilot — modo Agent</div>
+            <div class="ex-title">Probá la orquestación</div>
+            <div class="ex-goal">Un pedido que activa los dos subagentes en orden</div>
+          </div>
+        </div>
+
+        <p>En el chat modo <strong>Agent</strong>, escribí:</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Redactá y revisá un texto corto que explique qué es VS Code para alguien que nunca lo usó. Guardalo en mi-primer-texto.md</pre></div>
+
+        <p><strong>Observá:</strong></p>
+        <ul>
+          <li>¿Invocó <code>/redactar</code> primero?</li>
+          <li>¿Esperó que terminara antes de invocar <code>/revisar</code>?</li>
+          <li>¿Apareció <code>mi-primer-texto.md</code> en tu carpeta?</li>
+          <li>¿El texto tiene un puntaje asignado por el revisor?</li>
+        </ul>
+
+        <div class="tip">💡 Si el agente no invocó los subagentes automáticamente, podés hacerlo manualmente: escribí <code>/redactar</code> primero, y luego <code>/revisar</code>.</div>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+          <span class="btn btn-ghost" style="opacity:.4;cursor:default;">Fin del ejercicio ✓</span>
+        </div>
+      </div>
     </div>
 
-    <p>Esto muestra los commits en una línea cada uno — el más reciente arriba.</p>
-
-    <h2 class="section-heading">¿Por qué usarlo en IT4W?</h2>
-
-    <ul style="padding-left:20px;">
-      <li style="margin-bottom:12px;"><strong>No perdés nada.</strong> Si algo sale mal, podés volver a cualquier punto anterior de tu proyecto.</li>
-      <li style="margin-bottom:12px;"><strong>Podés compartir.</strong> Git es la base de GitHub y SharePoint — los sistemas que usamos para colaborar en IT4W.</li>
-    </ul>
-
-    <h2 class="section-heading">Git ≠ GitHub</h2>
-
-    <p><strong>Git</strong> es el sistema que corre en tu máquina. <strong>GitHub</strong> es una plataforma online donde podés subir tu repositorio para compartirlo con el equipo o tener una copia de respaldo en la nube.</p>
-
-    <p>En el ejercicio usaste Git localmente. Subir a GitHub es el paso siguiente — cuando estés lista para compartir.</p>
-
-    <div class="tip">💡 Los proyectos IT4W están en el repositorio de SharePoint. Git es el paso local; SharePoint es el paso compartido.</div>
+    <!-- ══════════════════════════════════════
+         ✅ CHECKPOINT
+    ══════════════════════════════════════ -->
+    <div class="module-block checkpoint-block">
+      <div class="module-label">✅ Checkpoint</div>
+      <h2 class="section-heading" style="margin-top:8px;">Lo que aprendiste en esta sección</h2>
+      <ul class="checkpoint-list">
+        <li>🎼 <strong>Orquestación</strong> = un pedido que activa múltiples agentes en orden.</li>
+        <li>🎬 El agente principal coordina — los subagentes se especializan.</li>
+        <li>📁 Los subagentes viven en <code>.github/prompts/</code> con extensión <code>.prompt.md</code>.</li>
+        <li>⚡ Menos errores, más consistencia — cada agente hace una sola cosa.</li>
+        <li>✅ Tenés tu primera orquestación funcionando con dos subagentes reales.</li>
+      </ul>
+    </div>
 
     <div class="section-footer">
-      <span class="read-time">⏱️ Lectura estimada: 5 min</span>
+      <span class="read-time">⏱️ Duración estimada: 20 min</span>
       <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
+      <div style="text-align:center;padding:24px 0 8px;">
+        <div style="font-size:28px;margin-bottom:8px;">🎉</div>
+        <p style="font-weight:700;font-size:18px;margin:0 0 4px;">¡Completaste todas las secciones!</p>
+        <p style="color:var(--text-muted);font-size:14px;margin:0 0 24px;">Ya conocés todos los conceptos clave. ¿Listo para ponerlo en práctica?</p>
+      </div>
       <div class="page-nav">
-        <a href="mcp.html" class="btn btn-ghost">← Sección 05</a>
-        <a href="ejercicio.html" class="btn btn-primary">Ejercicio práctico →</a>
+        <a href="mcp.html" class="btn btn-ghost">← Anterior: MCP</a>
+        <a href="ejercicio.html" class="btn btn-primary">Ir al Ejercicio de inicio →</a>
       </div>
     </div>
 

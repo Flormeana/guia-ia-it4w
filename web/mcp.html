@@ -73,78 +73,204 @@
     <div class="page-section-label">Sección 05</div>
     <h1 class="page-title">MCP: el puente hacia el mundo exterior</h1>
 
-    <p>La IA en VS Code trabaja bien con lo que está dentro de tu proyecto. Pero ¿qué pasa cuando necesitás que también use información de Figma, GitHub, o de otras herramientas que usás todos los días? Ahí entra MCP.</p>
+    <!-- ══════════════════════════════════════
+         📖 CONCEPTO
+    ══════════════════════════════════════ -->
+    <div class="module-block">
+      <div class="module-label">📖 Concepto</div>
+      <h2 class="section-heading" style="margin-top:8px;">¿Qué es MCP?</h2>
 
-    <blockquote class="key-quote">
-      "MCP es el teléfono que le permite a la IA hablar con herramientas fuera de VS Code."
-    </blockquote>
+      <p>La IA en VS Code, por defecto, solo puede trabajar con los archivos que están en tu proyecto. MCP es el sistema que le permite salir de ahí y hablar con herramientas externas — como Figma, GitHub, o una base de datos.</p>
 
-    <p>MCP son las siglas de <strong>Model Context Protocol</strong>. Es un estándar que le permite a la IA conectarse con herramientas externas y leer o interactuar con ellas directamente — sin que vos tengas que copiar y pegar nada.</p>
+      <blockquote class="key-quote">
+        "MCP es el teléfono que le permite a la IA hablar con herramientas fuera de VS Code."
+      </blockquote>
 
-    <h2 class="section-heading">¿Cómo funciona?</h2>
+      <p>MCP son las siglas de <strong>Model Context Protocol</strong>. Es un estándar que le da a la IA la capacidad de conectarse con herramientas externas sin que vos tengas que copiar y pegar información entre ventanas.</p>
 
-    <div class="bridge">
-      <div class="bridge-node ia">
-        <div class="bridge-icon">🤖</div>
-        <div class="bridge-label">IA en VS Code</div>
-        <div class="bridge-sub">GitHub Copilot + Claude</div>
-      </div>
-      <div class="bridge-arrow">↔ MCP ↔</div>
-      <div class="bridge-node tools">
-        <div class="bridge-icon">🔧</div>
-        <div class="bridge-label">Tus herramientas</div>
-        <div class="bridge-sub">Figma · GitHub · Analytics</div>
-      </div>
-    </div>
-
-    <h2 class="section-heading">Ejemplos en IT4W</h2>
-
-    <div class="cards-grid cols-2">
-
-      <div class="card">
-        <span class="card-icon">🎨</span>
-        <div class="card-subtitle">MCP de Figma</div>
-        <div class="card-title">Figma + IA</div>
-        <div class="card-desc">
-          La IA puede leer directamente tu archivo de Figma: componentes, estilos, frames. Podés pedirle que genere documentación de diseño, checklists de accesibilidad, o specs para developers — sin salir de VS Code.
+      <div class="bridge">
+        <div class="bridge-node ia">
+          <div class="bridge-icon">🤖</div>
+          <div class="bridge-label">IA en VS Code</div>
+          <div class="bridge-sub">Copilot + Claude</div>
         </div>
-        <div class="card-example">
-          <strong>Ejemplo</strong>
-          "Revisá el Design System en Figma y listá los componentes sin estado :disabled documentado."
+        <div class="bridge-arrow">↔ MCP ↔</div>
+        <div class="bridge-node tools">
+          <div class="bridge-icon">🔧</div>
+          <div class="bridge-label">Tus herramientas</div>
+          <div class="bridge-sub">Figma · GitHub · BD</div>
         </div>
       </div>
 
-      <div class="card">
-        <span class="card-icon">🐙</span>
-        <div class="card-subtitle">MCP de GitHub</div>
-        <div class="card-title">GitHub + IA</div>
-        <div class="card-desc">
-          La IA puede consultar issues, pull requests y el historial del repositorio directamente. Útil para generar reportes de avance, checklists de review o comentarios automáticos.
+      <div class="alert">
+        ⚠️ <strong>MCP solo funciona en modo Agent.</strong> En Ask o Plan, la IA no puede conectarse con herramientas externas.
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         💡 EJEMPLO
+    ══════════════════════════════════════ -->
+    <div class="module-block">
+      <div class="module-label">💡 Ejemplo cotidiano</div>
+      <h2 class="section-heading" style="margin-top:8px;">El asistente con teléfono</h2>
+
+      <p>Imaginá que tenés un asistente que solo puede trabajar dentro de la oficina. Para saber qué pasó en una reunión externa tiene que esperar a que alguien le cuente.</p>
+
+      <p>Con MCP, ese asistente tiene un teléfono. Puede llamar directamente a Figma, a GitHub, o a tu sistema interno y traer la información sin que nadie se la tenga que pasar manualmente.</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Sin MCP</th><th>Con MCP</th></tr></thead>
+          <tbody>
+            <tr>
+              <td>Exportás los datos de Figma, los pegás en el chat, pedís el análisis</td>
+              <td>La IA abre el archivo de Figma directamente y hace el análisis</td>
+            </tr>
+            <tr>
+              <td>Copiás los issues de GitHub, los pegás, pedís el resumen</td>
+              <td>La IA consulta GitHub y genera el resumen</td>
+            </tr>
+            <tr>
+              <td>Pasás los datos de la base a mano</td>
+              <td>La IA los lee directamente</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         🛠️ EJERCICIO
+    ══════════════════════════════════════ -->
+    <div class="module-block">
+      <div class="module-label">🛠️ Ejercicio — Explorá los MCPs disponibles</div>
+      <h2 class="section-heading" style="margin-top:8px;">Conocé qué existe antes de instalar</h2>
+      <p>Vas a explorar los MCPs oficiales disponibles y anotar cuál te sería más útil en tu trabajo. No vas a instalar nada todavía.</p>
+
+      <div class="stepper-nav" style="margin:32px 0 40px;">
+        <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Buscar</div></div>
+        <div class="step-connector"></div>
+        <div class="step-dot" data-step="1"><div class="step-dot-circle">2</div><div class="step-dot-label">Settings</div></div>
+        <div class="step-connector"></div>
+        <div class="step-dot" data-step="2"><div class="step-dot-circle">3</div><div class="step-dot-label">Anotar</div></div>
+      </div>
+
+      <!-- PASO 1 -->
+      <div class="exercise-step" data-step="0">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">1</div>
+          <div class="ex-meta">
+            <div class="ex-mode">Navegador web</div>
+            <div class="ex-title">Buscá los MCPs oficiales</div>
+            <div class="ex-goal">Ver qué herramientas tienen MCP disponible</div>
+          </div>
         </div>
-        <div class="card-example">
-          <strong>Ejemplo</strong>
-          "Listá todos los issues abiertos del sprint y generá un resumen para la reunión de cierre."
+
+        <p>Abrí el navegador y visitá:</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>marketplace.visualstudio.com</pre></div>
+
+        <p>Buscá <strong>"MCP"</strong> en el buscador del marketplace. Fijate en:</p>
+        <ul>
+          <li>¿Cuántos MCPs aparecen?</li>
+          <li>¿Cuáles tienen el sello de publisher verificado (Microsoft, GitHub, Anthropic)?</li>
+          <li>¿Hay alguno que conecte con herramientas que usás en tu trabajo?</li>
+        </ul>
+
+        <div class="alert">⚠️ Solo instalá MCPs que tengan publisher verificado. Los de terceros desconocidos pueden tener acceso a tu información.</div>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" disabled>← Anterior</button>
+          <button class="btn btn-primary" data-step-next>Siguiente: Settings →</button>
         </div>
       </div>
 
+      <!-- PASO 2 -->
+      <div class="exercise-step" data-step="1">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">2</div>
+          <div class="ex-meta">
+            <div class="ex-mode">VS Code — Settings</div>
+            <div class="ex-title">Explorá la configuración de MCP en VS Code</div>
+            <div class="ex-goal">Ver dónde se configuran los MCPs</div>
+          </div>
+        </div>
+
+        <p>Abrí la configuración de VS Code:</p>
+        <div class="table-wrap" style="margin-bottom:16px;">
+          <table>
+            <thead><tr><th>Forma</th><th>Cómo</th></tr></thead>
+            <tbody>
+              <tr><td>Tradicional</td><td>Menú <strong>File → Preferences → Settings</strong></td></tr>
+              <tr><td>Windows</td><td><code>Ctrl + ,</code></td></tr>
+              <tr><td>Mac</td><td><code>Cmd + ,</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>En el buscador de Settings, escribí <strong>"MCP"</strong> y explorá qué opciones aparecen. No cambies nada — solo mirá.</p>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+          <button class="btn btn-primary" data-step-next>Siguiente: Anotar →</button>
+        </div>
+      </div>
+
+      <!-- PASO 3 -->
+      <div class="exercise-step" data-step="2">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">3</div>
+          <div class="ex-meta">
+            <div class="ex-mode">Tu proyecto</div>
+            <div class="ex-title">Dejá registro de lo que encontraste</div>
+            <div class="ex-goal">Crear una nota útil para cuando lo necesites</div>
+          </div>
+        </div>
+
+        <p>Creá un archivo <code>notas-mcp.md</code> en tu carpeta y completá:</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre># Notas sobre MCPs
+
+## Herramienta que más me interesa conectar
+[nombre de la herramienta — ej: Figma, Notion, Jira]
+
+## Por qué me sería útil
+[describí en 1-2 oraciones qué haría con ese MCP]
+
+## MCP oficial que encontré en el marketplace
+[nombre del MCP y publisher]
+
+## Próximo paso
+Consultar con [tu líder de área] para habilitar el MCP en el proyecto.</pre></div>
+
+        <div class="tip">💡 Para UX: el MCP de Figma es el más útil — permite que la IA lea componentes y genere documentación de diseño directamente.</div>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+          <span class="btn btn-ghost" style="opacity:.4;cursor:default;">Fin del ejercicio ✓</span>
+        </div>
+      </div>
     </div>
 
-    <div class="alert">
-      ⚠️ <strong>MCP solo funciona en modo Agent.</strong> Si estás en modo Ask o Plan, la IA no puede conectarse con herramientas externas.
+    <!-- ══════════════════════════════════════
+         ✅ CHECKPOINT
+    ══════════════════════════════════════ -->
+    <div class="module-block checkpoint-block">
+      <div class="module-label">✅ Checkpoint</div>
+      <h2 class="section-heading" style="margin-top:8px;">Lo que aprendiste en esta sección</h2>
+      <ul class="checkpoint-list">
+        <li>🌉 <strong>MCP</strong> conecta la IA con herramientas externas (Figma, GitHub, etc.).</li>
+        <li>⚠️ Solo funciona en modo <strong>Agent</strong>.</li>
+        <li>🔒 Solo instalar MCPs de publishers verificados (Microsoft, GitHub, Anthropic).</li>
+        <li>📍 Sabés dónde buscarlos: marketplace.visualstudio.com.</li>
+        <li>✅ Tenés una nota con el MCP que más te interesa para cuando lo necesites.</li>
+      </ul>
     </div>
-
-    <div class="alert">
-      ⚠️ <strong>Solo instalá MCPs oficiales.</strong> Hay MCPs de terceros que pueden tener acceso a tus datos. Usá únicamente los que están verificados por Anthropic, GitHub u otras fuentes confiables.
-    </div>
-
-    <div class="tip">💡 MCP se configura una sola vez por proyecto, en el archivo <code>settings.json</code> de VS Code o en la configuración de Copilot. Consultá con tu líder de área para acceder a los MCPs habilitados en IT4W.</div>
 
     <div class="section-footer">
-      <span class="read-time">⏱️ Lectura estimada: 4 min</span>
+      <span class="read-time">⏱️ Duración estimada: 15 min</span>
       <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
       <div class="page-nav">
         <a href="agentes.html" class="btn btn-ghost">← Sección 04</a>
-        <a href="orquestacion.html" class="btn btn-primary">Sección 06: Git →</a>
+        <a href="orquestacion.html" class="btn btn-primary">Sección 06: Orquestación →</a>
       </div>
     </div>
 

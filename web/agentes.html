@@ -73,11 +73,252 @@
     <div class="page-section-label">Sección 04</div>
     <h1 class="page-title">Agentes y subagentes:<br>el director y los especialistas</h1>
 
-    <p>Hasta acá viste cómo hablar con la IA. Ahora veamos cómo organizarla cuando hay múltiples tareas que necesitan múltiples "manos".</p>
+    <!-- ══════════════════════════════════════
+         📖 CONCEPTO
+    ══════════════════════════════════════ -->
+    <div class="module-block">
+      <div class="module-label">📖 Concepto</div>
+      <h2 class="section-heading" style="margin-top:8px;">¿Qué es un agente?</h2>
 
-    <blockquote class="key-quote">
-      "Un agente = un archivo .md con instrucciones. No importa cómo lo creaste, siempre termina siendo ese archivo."
-    </blockquote>
+      <p>Un agente es la IA configurada con contexto permanente sobre quién sos, cómo trabajás y qué puede hacer. No es una app especial — es un archivo de texto con instrucciones que la IA lee antes de cada conversación.</p>
+
+      <blockquote class="key-quote">
+        "Un agente = un archivo .md con instrucciones. No importa cómo lo creaste, siempre termina siendo ese archivo."
+      </blockquote>
+
+      <div class="cards-grid cols-2">
+        <div class="card accent-blue">
+          <span class="card-icon">🎬</span>
+          <div class="card-subtitle">Siempre activo</div>
+          <div class="card-title">Agente principal</div>
+          <div class="card-desc">Lee el contexto del proyecto antes de cada respuesta. Sabe tu área, tu tono, tus reglas. Recibe el pedido y decide cómo responder o a qué subagente llamar.</div>
+        </div>
+        <div class="card">
+          <span class="card-icon">⚡</span>
+          <div class="card-subtitle">Se invoca cuando se necesita</div>
+          <div class="card-title">Subagente</div>
+          <div class="card-desc">Un agente especializado en una tarea específica: redactar, revisar, diseñar. El agente principal lo llama cuando necesita esa especialidad.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         💡 EJEMPLO
+    ══════════════════════════════════════ -->
+    <div class="module-block">
+      <div class="module-label">💡 Ejemplo cotidiano</div>
+      <h2 class="section-heading" style="margin-top:8px;">El equipo de trabajo</h2>
+
+      <p>Imaginá un equipo con roles claros:</p>
+
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Rol</th><th>En el equipo real</th><th>En la IA</th></tr></thead>
+          <tbody>
+            <tr>
+              <td><strong>Director</strong></td>
+              <td>Sabe todo del proyecto. Recibe pedidos y delega.</td>
+              <td>Agente principal — lee el contexto siempre</td>
+            </tr>
+            <tr>
+              <td><strong>Redactor</strong></td>
+              <td>Solo escribe. No diseña, no revisa.</td>
+              <td>Subagente <code>/redactar</code></td>
+            </tr>
+            <tr>
+              <td><strong>Revisor</strong></td>
+              <td>Solo corrige. No escribe desde cero.</td>
+              <td>Subagente <code>/revisar</code></td>
+            </tr>
+            <tr>
+              <td><strong>Diseñador</strong></td>
+              <td>Solo formatea. Trabaja sobre lo que el revisor aprobó.</td>
+              <td>Subagente <code>/diseñar</code></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>Cada uno hace una cosa y la hace bien. Vos solo hablás con el director.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         🛠️ EJERCICIO
+    ══════════════════════════════════════ -->
+    <div class="module-block">
+      <div class="module-label">🛠️ Ejercicio — Creá tu agente principal</div>
+      <h2 class="section-heading" style="margin-top:8px;">Un agente que sabe de quién sos</h2>
+      <p>Vas a crear el agente principal de tu proyecto — el que la IA va a leer antes de cada conversación.</p>
+
+      <div class="stepper-nav" style="margin:32px 0 40px;">
+        <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Carpeta</div></div>
+        <div class="step-connector"></div>
+        <div class="step-dot" data-step="1"><div class="step-dot-circle">2</div><div class="step-dot-label">Agente</div></div>
+        <div class="step-connector"></div>
+        <div class="step-dot" data-step="2"><div class="step-dot-circle">3</div><div class="step-dot-label">Probarlo</div></div>
+        <div class="step-connector"></div>
+        <div class="step-dot" data-step="3"><div class="step-dot-circle">4</div><div class="step-dot-label">Alternativas</div></div>
+      </div>
+
+      <!-- PASO 1 -->
+      <div class="exercise-step" data-step="0">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">1</div>
+          <div class="ex-meta">
+            <div class="ex-mode">Terminal</div>
+            <div class="ex-title">Creá la carpeta .github</div>
+            <div class="ex-goal">Preparar el lugar donde vive el agente principal</div>
+          </div>
+        </div>
+
+        <p>Abrí la terminal:</p>
+        <div class="table-wrap" style="margin-bottom:16px;">
+          <table>
+            <thead><tr><th>Forma</th><th>Cómo</th></tr></thead>
+            <tbody>
+              <tr><td>Tradicional</td><td>Menú <strong>Terminal → New Terminal</strong></td></tr>
+              <tr><td>Windows</td><td><code>Ctrl + Ñ</code> &nbsp;o&nbsp; <code>Ctrl + `</code></td></tr>
+              <tr><td>Mac</td><td><code>Cmd + `</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>mkdir -p .github</pre></div>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" disabled>← Anterior</button>
+          <button class="btn btn-primary" data-step-next>Siguiente: Crear agente →</button>
+        </div>
+      </div>
+
+      <!-- PASO 2 -->
+      <div class="exercise-step" data-step="1">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">2</div>
+          <div class="ex-meta">
+            <div class="ex-mode">Explorer de VS Code</div>
+            <div class="ex-title">Creá el archivo del agente</div>
+            <div class="ex-goal">Escribir las instrucciones permanentes</div>
+          </div>
+        </div>
+
+        <p>Creá el archivo <code>.github/copilot-instructions.md</code> con este contenido — reemplazá los corchetes con tu información:</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Soy [tu nombre] y trabajo en [tu área, ej: Diseño UX / Comercial / QA].
+Mi trabajo consiste en [describí en una oración qué hacés].
+
+Cuando me ayudes, tené en cuenta:
+- Usá siempre español argentino
+- Mis archivos son principalmente .md (texto simple)
+- El tono tiene que ser [amigable / formal / técnico — elegí uno]
+- Nunca asumas que sé de programación
+- Si necesitás hacer algo, pedime confirmación antes</pre></div>
+
+        <p>Guardá el archivo:</p>
+        <div class="table-wrap" style="margin-bottom:0;">
+          <table>
+            <thead><tr><th>Forma</th><th>Cómo</th></tr></thead>
+            <tbody>
+              <tr><td>Tradicional</td><td>Menú <strong>File → Save</strong></td></tr>
+              <tr><td>Windows</td><td><code>Ctrl + S</code></td></tr>
+              <tr><td>Mac</td><td><code>Cmd + S</code></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+          <button class="btn btn-primary" data-step-next>Siguiente: Probarlo →</button>
+        </div>
+      </div>
+
+      <!-- PASO 3 -->
+      <div class="exercise-step" data-step="2">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">3</div>
+          <div class="ex-meta">
+            <div class="ex-mode">Chat de Copilot — cualquier modo</div>
+            <div class="ex-title">¿La IA sabe quién sos?</div>
+            <div class="ex-goal">Verificar que el agente principal está activo</div>
+          </div>
+        </div>
+
+        <p>Cerrá y volvé a abrir el chat de Copilot. Escribí cualquier pregunta sobre tu trabajo:</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>¿Qué sabés sobre mí y sobre mi trabajo?</pre></div>
+
+        <p><strong>Observá:</strong></p>
+        <ul>
+          <li>¿Mencionó tu área?</li>
+          <li>¿Usó el tono que definiste?</li>
+          <li>¿El contexto que escribiste está activo?</li>
+        </ul>
+
+        <div class="tip">💡 Si no notás diferencia, verificá que el archivo esté exactamente en <code>.github/copilot-instructions.md</code> (con el punto al inicio).</div>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+          <button class="btn btn-primary" data-step-next>Siguiente: Alternativas →</button>
+        </div>
+      </div>
+
+      <!-- PASO 4 -->
+      <div class="exercise-step" data-step="3">
+        <div class="exercise-step-header">
+          <div class="ex-num-circle">4</div>
+          <div class="ex-meta">
+            <div class="ex-mode">Referencia</div>
+            <div class="ex-title">Las 3 formas de crear un agente</div>
+            <div class="ex-goal">Conocer todas las opciones disponibles</div>
+          </div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Forma</th><th>Cómo</th><th>Cuándo usarla</th></tr></thead>
+            <tbody>
+              <tr><td><strong>A mano</strong></td><td>Creás el archivo <code>.instructions.md</code> o <code>copilot-instructions.md</code> directamente</td><td>Cuando sabés exactamente qué querés</td></tr>
+              <tr><td><strong>Desde la UI</strong></td><td>Click en el selector de agentes → "Crear nuevo agente"</td><td>Para empezar rápido con asistencia visual</td></tr>
+              <tr><td><strong>Pidiéndoselo a Agent</strong></td><td>"Creá un agente que sepa sobre diseño UX y lo guarde en .github/"</td><td>Cuando no sabés bien qué instrucciones poner</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="step-nav-btns">
+          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+          <span class="btn btn-ghost" style="opacity:.4;cursor:default;">Fin del ejercicio ✓</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         ✅ CHECKPOINT
+    ══════════════════════════════════════ -->
+    <div class="module-block checkpoint-block">
+      <div class="module-label">✅ Checkpoint</div>
+      <h2 class="section-heading" style="margin-top:8px;">Lo que aprendiste en esta sección</h2>
+      <ul class="checkpoint-list">
+        <li>🎬 <strong>El agente principal</strong> siempre está activo y lee el contexto antes de cada respuesta.</li>
+        <li>📁 Vive en <code>.github/copilot-instructions.md</code>.</li>
+        <li>⚡ Los subagentes se especializan en tareas concretas.</li>
+        <li>📝 Un agente es siempre un archivo de texto — no hay magia.</li>
+        <li>✅ Tenés tu propio agente principal configurado con tu contexto real.</li>
+      </ul>
+    </div>
+
+    <div class="section-footer">
+      <span class="read-time">⏱️ Duración estimada: 15 min</span>
+      <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
+      <div class="page-nav">
+        <a href="skills.html" class="btn btn-ghost">← Sección 03</a>
+        <a href="mcp.html" class="btn btn-primary">Sección 05: MCP →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
 
     <h2 class="section-heading">La analogía del equipo de producción</h2>
 
