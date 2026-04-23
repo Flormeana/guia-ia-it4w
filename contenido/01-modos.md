@@ -2,6 +2,10 @@
 
 ---
 
+> "VS Code es la oficina. La IA es el equipo que trabaja adentro."
+
+---
+
 ## ¿Qué es?
 
 Cuando abrís el chat de GitHub Copilot en VS Code, podés elegir **cómo querés que la IA trabaje** con vos.

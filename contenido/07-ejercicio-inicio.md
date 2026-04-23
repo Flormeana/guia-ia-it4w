@@ -2,6 +2,10 @@
 
 ---
 
+> "Git no guarda en otro lado — guarda la historia dentro de tu carpeta."
+
+---
+
 > Este ejercicio pone en práctica todo lo que aprendiste en la guía.
 > No necesitás saber programar. Solo seguí los pasos en orden.
 > Al terminar, vas a haber usado los tres modos, dos subagentes y Git.
@@ -180,3 +184,11 @@ Si querés ir más allá, probá este flujo completo:
 
 Elegí un concepto de tu trabajo diario en IT4W y dejá que la IA lo explique.
 Después revisalo y ajustalo. La guía puede crecer con lo que cada área agrega.
+
+---
+
+## 📁 Repositorio oficial IT4W
+
+Todo el material de la iniciativa Adopción IA está acá:
+
+[Ir al Repositorio IT4W — Adopción IA 2026](https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1)

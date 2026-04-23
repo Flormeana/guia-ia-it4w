@@ -2,6 +2,10 @@
 
 ---
 
+> "El agente principal es el director de orquesta: vos le decís qué querés lograr, y él decide qué especialista llamar y en qué orden."
+
+---
+
 ## ¿Qué es?
 
 **Orquestación** es cuando la IA coordina automáticamente múltiples pasos y agentes para completar una tarea compleja.

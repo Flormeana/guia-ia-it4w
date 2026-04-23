@@ -2,6 +2,10 @@
 
 ---
 
+> "Un agente = un archivo .md con instrucciones. No importa cómo lo creaste, siempre termina siendo ese archivo."
+
+---
+
 ## ¿Qué es?
 
 Un **agente** es una IA que puede tomar decisiones, usar herramientas y completar tareas por sí sola.

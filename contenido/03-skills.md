@@ -2,6 +2,10 @@
 
 ---
 
+> "Un skill es el manual de procedimientos que el especialista tiene sobre su escritorio."
+
+---
+
 ## ¿Qué es?
 
 Un **skill** es un archivo que le dice a la IA cómo comportarse en una tarea específica.

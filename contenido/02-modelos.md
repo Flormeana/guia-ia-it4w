@@ -2,6 +2,10 @@
 
 ---
 
+> "El mismo lugar, distinto motor."
+
+---
+
 ## ¿Qué es?
 
 En VS Code podés usar **distintos modelos de IA** dentro del mismo chat de Copilot.

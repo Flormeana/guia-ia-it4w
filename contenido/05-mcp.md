@@ -2,6 +2,10 @@
 
 ---
 
+> "MCP es el teléfono que le permite a la IA hablar con herramientas fuera de VS Code."
+
+---
+
 ## ¿Qué es?
 
 **MCP** (Model Context Protocol) es la forma en que la IA se conecta con otras herramientas y servicios externos.
