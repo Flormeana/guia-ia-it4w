@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ejercicio de inicio — Guía IA IT4W</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <a href="index.html">
+      <span class="brand-label">IT4W · Adopción IA 2026</span>
+      <span class="brand-title">IA en VS Code —<br><span>Guía práctica</span></span>
+    </a>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <a href="ejercicio.html" class="nav-item active"><span class="nav-num">07</span> Ejercicio de inicio</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio oficial IT4W</a>
+  </div>
+</aside>
+
+<!-- MOBILE -->
+<div class="mobile-topbar">
+  <span class="mobile-brand">IA en VS Code — <span>IT4W</span></span>
+  <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-nav-overlay"></div>
+<div class="mobile-nav-drawer">
+  <div class="sidebar-brand" style="display:block;padding:24px 20px 16px;">
+    <span class="brand-label">IT4W · Adopción IA 2026</span>
+    <span class="brand-title" style="display:block;margin-top:4px">IA en VS Code — <span style="color:#8C52FF">Guía práctica</span></span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <a href="ejercicio.html" class="nav-item active"><span class="nav-num">07</span> Ejercicio de inicio</a>
+  </nav>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrapper">
+  <div class="page-content">
+
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span class="sep">›</span>
+      <span class="current">Ejercicio de inicio</span>
+    </div>
+
+    <div class="page-section-label">Sección 07 · Ejercicio práctico</div>
+    <h1 class="page-title">Tu primer flujo completo<br>con IA en VS Code</h1>
+
+    <p>Este ejercicio te lleva paso a paso por el flujo completo que usaremos en IT4W. No hace falta saber programar — solo seguir los pasos. Tiempo estimado: <strong>20–30 minutos</strong>.</p>
+
+    <blockquote class="key-quote">
+      "Git no guarda en otro lado — guarda la historia dentro de tu carpeta."
+    </blockquote>
+
+    <!-- STEPPER NAV -->
+    <div class="stepper-nav" style="margin:40px 0 48px;">
+      <div class="step-dot" data-step="0">
+        <div class="step-dot-circle">1</div>
+        <div class="step-dot-label">Explorar</div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="1">
+        <div class="step-dot-circle">2</div>
+        <div class="step-dot-label">Planificar</div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="2">
+        <div class="step-dot-circle">3</div>
+        <div class="step-dot-label">Generar</div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="3">
+        <div class="step-dot-circle">4</div>
+        <div class="step-dot-label">Revisar</div>
+      </div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="4">
+        <div class="step-dot-circle">5</div>
+        <div class="step-dot-label">Guardar</div>
+      </div>
+    </div>
+
+    <!-- ── PASO 1 ── -->
+    <div class="exercise-step" data-step="0">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">1</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Modo: Ask · Duración: 5 min</div>
+          <div class="ex-title">Explorar el proyecto</div>
+          <div class="ex-goal">Entender qué tiene la carpeta antes de hacer cualquier cosa</div>
+        </div>
+      </div>
+
+      <p>Abrí VS Code en la carpeta del proyecto. Activá el modo <strong>Ask</strong> en el chat de Copilot y escribí:</p>
+
+      <div class="code-block">
+        <button class="copy-btn">Copiar</button>
+        <pre>¿Qué archivos tiene este proyecto y cuál es el propósito de cada carpeta?</pre>
+      </div>
+
+      <p>La IA va a leer la estructura del proyecto y te va a explicar qué hay. <strong>No modifica nada</strong>, solo te informa.</p>
+
+      <div class="tip">💡 Si no ves el chat de Copilot, buscá el ícono de chat en la barra lateral izquierda de VS Code o usá el menú Ver → GitHub Copilot Chat.</div>
+
+      <p>Cuando tengas el panorama general, anotá mentalmente o en papel:</p>
+      <ul>
+        <li>¿Cuántas carpetas hay?</li>
+        <li>¿Hay archivos .md? ¿Para qué sirven?</li>
+        <li>¿Qué es la carpeta <code>skills-main</code>?</li>
+      </ul>
+
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" disabled>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Planificar →</button>
+      </div>
+    </div>
+
+    <!-- ── PASO 2 ── -->
+    <div class="exercise-step" data-step="1">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">2</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Modo: Plan · Duración: 5 min</div>
+          <div class="ex-title">Planificar la sección</div>
+          <div class="ex-goal">Que la IA te proponga cómo abordar la tarea antes de ejecutarla</div>
+        </div>
+      </div>
+
+      <p>Cambiá el modo a <strong>Plan</strong> en el selector del chat y escribí:</p>
+
+      <div class="code-block">
+        <button class="copy-btn">Copiar</button>
+        <pre>Quiero documentar qué son los modos de trabajo (Ask, Plan, Agent) para personas no técnicas del área de UX y Comercial. ¿Cómo lo encarás?</pre>
+      </div>
+
+      <p>La IA va a proponer una estructura: qué incluir, qué orden usar, qué ejemplos dar. <strong>Todavía no escribe nada</strong>, solo te muestra el camino.</p>
+
+      <p>Leé la propuesta y verificá:</p>
+      <ul>
+        <li>¿Tiene introducción, cuerpo y cierre?</li>
+        <li>¿Menciona ejemplos prácticos?</li>
+        <li>¿El tono parece accesible para no-técnicos?</li>
+      </ul>
+
+      <div class="analogy">Si la propuesta no te convence, podés decirle: "Agregá más ejemplos del área Comercial" o "Hacelo más corto". El Plan es tuyo para modificar.</div>
+
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Generar →</button>
+      </div>
+    </div>
+
+    <!-- ── PASO 3 ── -->
+    <div class="exercise-step" data-step="2">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">3</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Modo: Agent · Subagente: /generar-seccion · Duración: 5–8 min</div>
+          <div class="ex-title">Generar la sección</div>
+          <div class="ex-goal">La IA escribe el contenido completo y lo guarda en un archivo</div>
+        </div>
+      </div>
+
+      <p>Cambiá el modo a <strong>Agent</strong>. Ahora vas a invocar el subagente que genera secciones:</p>
+
+      <div class="code-block">
+        <button class="copy-btn">Copiar</button>
+        <pre>/generar-seccion concepto: "Los modos de trabajo: Ask, Plan y Agent" archivo: contenido/mi-seccion.md</pre>
+      </div>
+
+      <p>El subagente va a generar el texto y guardarlo en el archivo <code>contenido/mi-seccion.md</code>. Cuando termine, verás el archivo nuevo en la carpeta.</p>
+
+      <div class="tip">💡 Si el subagente pide confirmación para escribir el archivo, confirmá con "sí" o "ok".</div>
+
+      <p>Abrí el archivo generado y revisá:</p>
+      <ul>
+        <li>¿Tiene los tres modos explicados?</li>
+        <li>¿El lenguaje es accesible?</li>
+        <li>¿Hay al menos un ejemplo por modo?</li>
+      </ul>
+
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Revisar →</button>
+      </div>
+    </div>
+
+    <!-- ── PASO 4 ── -->
+    <div class="exercise-step" data-step="3">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">4</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Modo: Agent · Subagente: /revisar-simplicidad · Duración: 5 min</div>
+          <div class="ex-title">Revisar la sección</div>
+          <div class="ex-goal">Evaluar la claridad antes de dar el texto por bueno</div>
+        </div>
+      </div>
+
+      <p>Con el modo <strong>Agent</strong> activo, invocá el subagente de revisión:</p>
+
+      <div class="code-block">
+        <button class="copy-btn">Copiar</button>
+        <pre>/revisar-simplicidad archivo: contenido/mi-seccion.md</pre>
+      </div>
+
+      <p>El subagente va a evaluar el texto y darte un <strong>puntaje del 1 al 10</strong> junto con sugerencias. Interpretá el resultado:</p>
+
+      <div style="margin: 20px 0;">
+        <div class="score-row">
+          <span class="score-badge red">1–4</span>
+          <span class="score-text">El texto es confuso o demasiado técnico. Hay que reescribir.</span>
+        </div>
+        <div class="score-row">
+          <span class="score-badge yellow">5–6</span>
+          <span class="score-text">Mejorable. Incorporá las sugerencias y volvé a generar.</span>
+        </div>
+        <div class="score-row">
+          <span class="score-badge green">7–8</span>
+          <span class="score-text">Bueno. Podés continuar al siguiente paso.</span>
+        </div>
+        <div class="score-row">
+          <span class="score-badge best">9–10</span>
+          <span class="score-text">Excelente. Listo para diseñar.</span>
+        </div>
+      </div>
+
+      <div class="alert">⚠️ Si el puntaje es menor a 7, volvé al Paso 3 con las sugerencias. No avances al diseño con un texto que no está claro.</div>
+
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Guardar →</button>
+      </div>
+    </div>
+
+    <!-- ── PASO 5 ── -->
+    <div class="exercise-step" data-step="4">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">5</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Git · Duración: 3–5 min</div>
+          <div class="ex-title">Guardar en Git</div>
+          <div class="ex-goal">Dejar registro de tu trabajo en el historial del proyecto</div>
+        </div>
+      </div>
+
+      <p>Git guarda la historia de todos los cambios del proyecto. Para registrar lo que hiciste, abrí la terminal de VS Code (<strong>Ctrl + `</strong> en Windows) y ejecutá estos comandos en orden:</p>
+
+      <div class="code-block">
+        <button class="copy-btn">Copiar</button>
+        <pre>git add contenido/mi-seccion.md</pre>
+      </div>
+
+      <div class="code-block">
+        <button class="copy-btn">Copiar</button>
+        <pre>git commit -m "feat: seccion modos de trabajo — ejercicio de inicio"</pre>
+      </div>
+
+      <p>¿Qué hace cada comando?</p>
+      <ul>
+        <li><code>git add</code> — dice "este archivo va en el próximo guardado"</li>
+        <li><code>git commit</code> — hace el guardado con una descripción de lo que hiciste</li>
+      </ul>
+
+      <div class="tip">💡 Si VS Code te pregunta quién sos la primera vez que hacés un commit, escribí tu nombre y email cuando te lo pida. Es solo para identificar los cambios.</div>
+
+      <p>Cuando el comando se ejecute sin errores, tu trabajo quedó registrado. Podés verificarlo con:</p>
+
+      <div class="code-block">
+        <button class="copy-btn">Copiar</button>
+        <pre>git log --oneline -5</pre>
+      </div>
+
+      <p>Vas a ver el listado de los últimos commits, incluyendo el que acabás de hacer.</p>
+
+      <div style="background: var(--bg-highlight); border-radius: 12px; padding: 28px; margin-top: 32px; border: 1px solid rgba(140,82,255,0.2);">
+        <p style="font-size:18px;font-weight:700;color:var(--dark-blue);margin-bottom:12px;">🎉 ¡Completaste el ejercicio!</p>
+        <p style="margin-bottom:0;color:var(--text-muted);">Usaste los tres modos (Ask, Plan y Agent), dos subagentes, evaluaste la calidad del texto y guardaste tu trabajo en Git. Eso es exactamente cómo trabaja el equipo IT4W.</p>
+      </div>
+
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener" class="btn btn-primary">Ver repositorio IT4W →</a>
+      </div>
+    </div>
+
+    <!-- Tabla resumen (siempre visible) -->
+    <h2 class="section-heading" style="margin-top: 64px;">Resumen del flujo</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Paso</th><th>Modo</th><th>¿Qué hacés?</th><th>¿Qué hace la IA?</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>1 · Explorar</td><td>Ask</td><td>Preguntás</td><td>Te informa sin tocar nada</td></tr>
+          <tr><td>2 · Planificar</td><td>Plan</td><td>Pedís una hoja de ruta</td><td>Propone cómo abordar la tarea</td></tr>
+          <tr><td>3 · Generar</td><td>Agent</td><td>Invocás /generar-seccion</td><td>Escribe y guarda el archivo</td></tr>
+          <tr><td>4 · Revisar</td><td>Agent</td><td>Invocás /revisar-simplicidad</td><td>Puntúa y sugiere mejoras</td></tr>
+          <tr><td>5 · Guardar</td><td>Terminal</td><td>Usás git add + commit</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-footer">
+      <span class="read-time">⏱️ Duración estimada: 20–30 min</span>
+      <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
+      <div class="page-nav">
+        <a href="orquestacion.html" class="btn btn-ghost">← Sección 06</a>
+        <a href="index.html" class="btn btn-outline">Volver al inicio</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

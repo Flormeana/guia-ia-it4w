@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Copilot vs Claude — Guía IA IT4W</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <a href="index.html">
+      <span class="brand-label">IT4W · Adopción IA 2026</span>
+      <span class="brand-title">IA en VS Code —<br><span>Guía práctica</span></span>
+    </a>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item active"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio oficial IT4W</a>
+  </div>
+</aside>
+
+<!-- MOBILE -->
+<div class="mobile-topbar">
+  <span class="mobile-brand">IA en VS Code — <span>IT4W</span></span>
+  <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-nav-overlay"></div>
+<div class="mobile-nav-drawer">
+  <div class="sidebar-brand" style="display:block;padding:24px 20px 16px;">
+    <span class="brand-label">IT4W · Adopción IA 2026</span>
+    <span class="brand-title" style="display:block;margin-top:4px">IA en VS Code — <span style="color:#8C52FF">Guía práctica</span></span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item active"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+  </nav>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrapper">
+  <div class="page-content">
+
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span class="sep">›</span>
+      <span class="current">Copilot vs Claude</span>
+    </div>
+
+    <div class="page-section-label">Sección 02</div>
+    <h1 class="page-title">GitHub Copilot y Claude:<br>dos motores, un mismo lugar</h1>
+
+    <p>Cuando abrís VS Code, vas a poder elegir qué modelo de IA quiere usar. Los modelos son distintos — cada uno tiene características y fortalezas. Lo importante: <strong>los operás desde el mismo lugar</strong>.</p>
+
+    <blockquote class="key-quote">
+      "El mismo lugar, distinto motor."
+    </blockquote>
+
+    <div class="analogy">
+      Es como un auto que te deja elegir entre nafta super o premium — el volante y los pedales no cambian, pero el rendimiento sí.
+    </div>
+
+    <!-- 2 cards modelo -->
+    <h2 class="section-heading">¿Qué es cada uno?</h2>
+
+    <div class="cards-grid cols-2">
+
+      <div class="card accent-blue">
+        <span class="card-icon">🤖</span>
+        <div class="card-subtitle">Desarrollado por GitHub + OpenAI</div>
+        <div class="card-title">GitHub Copilot</div>
+        <div class="card-desc">
+          Es el modelo "de base" de VS Code. Muy bueno para tareas técnicas, autocompletar código y razonamiento estructurado. Es el que viene por defecto.
+        </div>
+        <p style="font-size:14px;margin-bottom:6px;"><strong>Mejor para:</strong></p>
+        <ul style="margin:0;padding-left:16px;">
+          <li style="font-size:13px;margin-bottom:4px;">Revisar archivos y resumir estructuras</li>
+          <li style="font-size:13px;margin-bottom:4px;">Razonamiento paso a paso</li>
+          <li style="font-size:13px;">Buscar respuestas rápidas</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <span class="card-icon">✨</span>
+        <div class="card-subtitle">Desarrollado por Anthropic</div>
+        <div class="card-title">Claude</div>
+        <div class="card-desc">
+          Es el modelo alternativo disponible desde VS Code. Excelente para redacción, documentación, ideas creativas y comunicaciones más complejas.
+        </div>
+        <p style="font-size:14px;margin-bottom:6px;"><strong>Mejor para:</strong></p>
+        <ul style="margin:0;padding-left:16px;">
+          <li style="font-size:13px;margin-bottom:4px;">Redactar textos para personas reales</li>
+          <li style="font-size:13px;margin-bottom:4px;">Documentación interna y guías</li>
+          <li style="font-size:13px;">Pensar comunicaciones complejas</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Ejemplo Sofía -->
+    <h2 class="section-heading">Ejemplo práctico: Sofía de UX</h2>
+
+    <p>Sofía necesita documentar el flujo de onboarding de un nuevo usuario para la App de IT4W.</p>
+
+    <div class="comparison">
+      <div class="comp-card bad">
+        <div class="comp-label">❌ Sin elegir el modelo correcto</div>
+        <div class="comp-text">
+          Sofía usa el modelo por defecto y le pide que explique el flujo técnico de la API. La IA le da una respuesta muy técnica que no sirve para el documento de diseño que necesita.
+        </div>
+      </div>
+      <div class="comp-card good">
+        <div class="comp-label">✅ Con Claude seleccionado</div>
+        <div class="comp-text">
+          Sofía cambia a Claude y pide el mismo documento en tono accesible para stakeholders. La respuesta tiene tono claro, estructura de secciones y lenguaje para no-técnicos.
+        </div>
+      </div>
+    </div>
+
+    <div class="tip">💡 En la guía IT4W usamos <strong>Claude</strong> como modelo principal porque está optimizado para redacción, documentación y comunicación — las tareas más comunes del equipo.</div>
+
+    <!-- Cómo cambiar -->
+    <h2 class="section-heading">¿Cómo se cambia el modelo?</h2>
+
+    <ol class="steps-list">
+      <li>Abrí el chat de Copilot en VS Code</li>
+      <li>En la parte superior del chat hay un selector de modelo</li>
+      <li>Hacé clic y elegí <strong>Claude Sonnet</strong> (o el modelo disponible en tu cuenta)</li>
+      <li>Tu próxima pregunta ya usa el modelo nuevo</li>
+    </ol>
+
+    <!-- Tabla de cuándo usar cada uno -->
+    <h2 class="section-heading">¿Cuándo usar cada uno?</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Tarea</th><th>GitHub Copilot</th><th>Claude</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Resumir un archivo técnico</td><td>✅ Muy bueno</td><td>✅ Muy bueno</td></tr>
+          <tr><td>Redactar un comunicado interno</td><td>Puede servir</td><td>✅ Ideal</td></tr>
+          <tr><td>Generar una guía para usuarios</td><td>Puede servir</td><td>✅ Ideal</td></tr>
+          <tr><td>Documentar un proceso técnico</td><td>✅ Muy bueno</td><td>✅ Muy bueno</td></tr>
+          <tr><td>Escribir presentaciones y pitches</td><td>Regular</td><td>✅ Ideal</td></tr>
+          <tr><td>Analizar estructura de archivos</td><td>✅ Muy bueno</td><td>✅ Muy bueno</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="section-footer">
+      <span class="read-time">⏱️ Lectura estimada: 4 min</span>
+      <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
+      <div class="page-nav">
+        <a href="modos.html" class="btn btn-ghost">← Sección 01</a>
+        <a href="skills.html" class="btn btn-primary">Sección 03: Skills →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

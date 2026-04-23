@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MCP — Guía IA IT4W</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <a href="index.html">
+      <span class="brand-label">IT4W · Adopción IA 2026</span>
+      <span class="brand-title">IA en VS Code —<br><span>Guía práctica</span></span>
+    </a>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item active"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio oficial IT4W</a>
+  </div>
+</aside>
+
+<!-- MOBILE -->
+<div class="mobile-topbar">
+  <span class="mobile-brand">IA en VS Code — <span>IT4W</span></span>
+  <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-nav-overlay"></div>
+<div class="mobile-nav-drawer">
+  <div class="sidebar-brand" style="display:block;padding:24px 20px 16px;">
+    <span class="brand-label">IT4W · Adopción IA 2026</span>
+    <span class="brand-title" style="display:block;margin-top:4px">IA en VS Code — <span style="color:#8C52FF">Guía práctica</span></span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item active"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+  </nav>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrapper">
+  <div class="page-content">
+
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span class="sep">›</span>
+      <span class="current">MCP</span>
+    </div>
+
+    <div class="page-section-label">Sección 05</div>
+    <h1 class="page-title">MCP: el puente hacia el mundo exterior</h1>
+
+    <p>MCP (<strong>Model Context Protocol</strong>) es el sistema que le permite a la IA <strong>conectarse con herramientas externas</strong> como Figma, Notion, Google Analytics, bases de datos y más — sin que vos tengas que copiar y pegar datos manualmente.</p>
+
+    <blockquote class="key-quote">
+      "MCP es el teléfono que le permite a la IA hablar con herramientas fuera de VS Code."
+    </blockquote>
+
+    <div class="analogy">
+      Sin MCP, la IA solo puede trabajar con lo que vos le pasás. Con MCP, puede buscar, leer y usar información que vive en tus otras herramientas, en tiempo real.
+    </div>
+
+    <!-- BRIDGE VISUAL -->
+    <h2 class="section-heading">¿Cómo funciona?</h2>
+
+    <div class="bridge">
+      <div class="bridge-node ia">
+        <div class="bridge-icon">🤖</div>
+        <div class="bridge-label">IA en VS Code</div>
+        <div class="bridge-sub">GitHub Copilot + Claude</div>
+      </div>
+      <div class="bridge-arrow">⟵ MCP ⟶</div>
+      <div class="bridge-node mcp">
+        <div class="bridge-icon">🌉</div>
+        <div class="bridge-label">MCP</div>
+        <div class="bridge-sub">Model Context Protocol</div>
+      </div>
+      <div class="bridge-arrow">⟶</div>
+      <div class="bridge-node tools">
+        <div class="bridge-icon">🔧</div>
+        <div class="bridge-label">Tus herramientas</div>
+        <div class="bridge-sub">Figma · Notion · Analytics</div>
+      </div>
+    </div>
+
+    <!-- Ejemplos por área -->
+    <h2 class="section-heading">Ejemplos por área</h2>
+
+    <div class="cards-grid">
+
+      <div class="card">
+        <span class="card-icon">🎨</span>
+        <div class="card-subtitle">Área UX</div>
+        <div class="card-title">Figma + IA</div>
+        <div class="card-desc">
+          La IA puede leer los componentes y estilos de tu archivo Figma para generar documentación de diseño, checklists de accessibility o specs para developers.
+        </div>
+        <div class="card-example">
+          <strong>Ejemplo</strong>
+          "Revisá los componentes del Design System en Figma y listá los que no tienen estado disabled documentado."
+        </div>
+      </div>
+
+      <div class="card accent-orange">
+        <span class="card-icon">📊</span>
+        <div class="card-subtitle">Área Analytics</div>
+        <div class="card-title">Analytics + IA</div>
+        <div class="card-desc">
+          La IA accede a métricas de uso, tasas de conversión o datos de comportamiento y los incluye automáticamente en tus reportes sin que tengas que exportar nada.
+        </div>
+        <div class="card-example">
+          <strong>Ejemplo</strong>
+          "Traé el reporte de la semana pasada y generá un resumen ejecutivo de 3 párrafos."
+        </div>
+      </div>
+
+      <div class="card accent-green">
+        <span class="card-icon">🤝</span>
+        <div class="card-subtitle">Área Comercial</div>
+        <div class="card-title">CRM + IA</div>
+        <div class="card-desc">
+          La IA puede consultar el estado de oportunidades en el CRM y redactar automáticamente los próximos pasos o un email de seguimiento personalizado.
+        </div>
+        <div class="card-example">
+          <strong>Ejemplo</strong>
+          "Buscá las oportunidades sin actividad en los últimos 14 días y generá un email de seguimiento para cada una."
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tabla sin/con MCP -->
+    <h2 class="section-heading">Sin MCP vs con MCP</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Tarea</th><th>Sin MCP</th><th>Con MCP</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Crear un reporte de analytics</td>
+            <td>Exportás los datos, los pegás en el chat, pedís el resumen</td>
+            <td>La IA busca los datos sola y genera el reporte</td>
+          </tr>
+          <tr>
+            <td>Documentar componentes de Figma</td>
+            <td>Copiás los datos a mano y los explicás</td>
+            <td>La IA lee el archivo Figma directamente</td>
+          </tr>
+          <tr>
+            <td>Seguimiento de clientes en CRM</td>
+            <td>Revisás el CRM, copiás los datos, pedís el email</td>
+            <td>La IA consulta el CRM y redacta los emails sola</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tip">💡 En la guía IT4W, MCP ya está configurado en algunos proyectos de referencia del repositorio. Consultá con tu líder de área si ya tenés acceso.</div>
+
+    <div class="section-footer">
+      <span class="read-time">⏱️ Lectura estimada: 4 min</span>
+      <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
+      <div class="page-nav">
+        <a href="agentes.html" class="btn btn-ghost">← Sección 04</a>
+        <a href="orquestacion.html" class="btn btn-primary">Sección 06: Orquestación →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

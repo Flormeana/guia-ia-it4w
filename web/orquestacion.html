@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Orquestación — Guía IA IT4W</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <a href="index.html">
+      <span class="brand-label">IT4W · Adopción IA 2026</span>
+      <span class="brand-title">IA en VS Code —<br><span>Guía práctica</span></span>
+    </a>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item active"><span class="nav-num">06</span> Orquestación</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio oficial IT4W</a>
+  </div>
+</aside>
+
+<!-- MOBILE -->
+<div class="mobile-topbar">
+  <span class="mobile-brand">IA en VS Code — <span>IT4W</span></span>
+  <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-nav-overlay"></div>
+<div class="mobile-nav-drawer">
+  <div class="sidebar-brand" style="display:block;padding:24px 20px 16px;">
+    <span class="brand-label">IT4W · Adopción IA 2026</span>
+    <span class="brand-title" style="display:block;margin-top:4px">IA en VS Code — <span style="color:#8C52FF">Guía práctica</span></span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item active"><span class="nav-num">06</span> Orquestación</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+  </nav>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrapper">
+  <div class="page-content">
+
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span class="sep">›</span>
+      <span class="current">Orquestación</span>
+    </div>
+
+    <div class="page-section-label">Sección 06</div>
+    <h1 class="page-title">Orquestación: un pedido,<br>todo el equipo trabajando</h1>
+
+    <p>La <strong>orquestación</strong> es cuando el agente principal coordina a múltiples subagentes para completar una tarea compleja, encadenando sus resultados de forma automática.</p>
+
+    <blockquote class="key-quote">
+      "El agente principal es el director de orquesta: vos le decís qué querés lograr, y él decide qué especialista llamar y en qué orden."
+    </blockquote>
+
+    <div class="analogy">
+      Es como encargar una propuesta comercial: vos le decís al gerente de cuenta "necesito la propuesta para el lunes", y él coordina al redactor, al diseñador y al financial — sin que vos tengas que hablar con cada uno.
+    </div>
+
+    <!-- Antes / Después -->
+    <h2 class="section-heading">El mismo trabajo, antes y después</h2>
+
+    <div class="comparison">
+      <div class="comp-card bad">
+        <div class="comp-label">❌ Antes de la orquestación</div>
+        <div class="comp-text">
+          Para generar una sección de la guía, necesitabas hacer tres pedidos por separado: uno para generar, otro para revisar, otro para diseñar. Si olvidabas el orden, el resultado era inconsistente.
+        </div>
+      </div>
+      <div class="comp-card good">
+        <div class="comp-label">✅ Con orquestación</div>
+        <div class="comp-text">
+          Hacés un solo pedido: "generá la sección de KPIs para el área de Analytics". El agente principal llama a /generar-seccion, luego a /revisar-simplicidad, evalúa el score y recién ahí llama a /diseñar-seccion.
+        </div>
+      </div>
+    </div>
+
+    <!-- Flujo completo -->
+    <h2 class="section-heading">El flujo completo</h2>
+
+    <div class="flow">
+      <div class="flow-trigger">🎯 Pedido: "Generá la sección sobre KPIs de Analytics"</div>
+      <div class="flow-arrow">↓ el agente principal lee las instrucciones del proyecto</div>
+      <div class="flow-step s1">
+        <div>
+          <span class="fs-name">Paso 1 · /generar-seccion</span>
+          <span class="fs-desc">Genera el contenido de la sección con el concepto pedido</span>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step s2">
+        <div>
+          <span class="fs-name">Paso 2 · /revisar-simplicidad</span>
+          <span class="fs-desc">Evalúa claridad, puntaje del 1 al 10</span>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-gate">¿Score ≥ 7? → Continuar &nbsp; | &nbsp; Score &lt; 7 → Volver a Paso 1</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step s3">
+        <div>
+          <span class="fs-name">Paso 3 · /diseñar-seccion</span>
+          <span class="fs-desc">Genera el HTML visual con el contenido aprobado</span>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-result">✅ Sección lista · Contenido + diseño + consistencia garantizada</div>
+    </div>
+
+    <!-- Walkthrough UX -->
+    <h2 class="section-heading">Ejemplo completo: equipo UX</h2>
+
+    <p>Sofía de UX necesita documentar tres pantallas del nuevo flujo de onboarding.</p>
+
+    <ol class="steps-list">
+      <li>Sofía abre el chat de Copilot en <strong>modo Agent</strong></li>
+      <li>Escribe: <em>"Documentá las tres pantallas del flujo de onboarding: bienvenida, perfil y confirmación"</em></li>
+      <li>El agente lee las instrucciones del proyecto y detecta que hay que usar el subagente <strong>/generar-seccion</strong> tres veces</li>
+      <li>Para cada pantalla: genera → revisa → aprueba → diseña</li>
+      <li>Al final, las tres secciones están generadas, revisadas y diseñadas en el mismo formato</li>
+    </ol>
+
+    <div class="tip">💡 La orquestación funciona mejor cuando las instrucciones del proyecto están bien escritas en el archivo <code>.github/copilot-instructions.md</code>. Ahí es donde el agente principal sabe qué subagentes usar y cuándo.</div>
+
+    <div class="section-footer">
+      <span class="read-time">⏱️ Lectura estimada: 5 min</span>
+      <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
+      <div class="page-nav">
+        <a href="mcp.html" class="btn btn-ghost">← Sección 05</a>
+        <a href="ejercicio.html" class="btn btn-primary">Ejercicio de inicio →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

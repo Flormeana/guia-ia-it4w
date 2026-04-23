@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Agentes y subagentes — Guía IA IT4W</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <a href="index.html">
+      <span class="brand-label">IT4W · Adopción IA 2026</span>
+      <span class="brand-title">IA en VS Code —<br><span>Guía práctica</span></span>
+    </a>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item active"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio oficial IT4W</a>
+  </div>
+</aside>
+
+<!-- MOBILE -->
+<div class="mobile-topbar">
+  <span class="mobile-brand">IA en VS Code — <span>IT4W</span></span>
+  <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-nav-overlay"></div>
+<div class="mobile-nav-drawer">
+  <div class="sidebar-brand" style="display:block;padding:24px 20px 16px;">
+    <span class="brand-label">IT4W · Adopción IA 2026</span>
+    <span class="brand-title" style="display:block;margin-top:4px">IA en VS Code — <span style="color:#8C52FF">Guía práctica</span></span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item active"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+  </nav>
+</div>
+
+<!-- MAIN -->
+<div class="main-wrapper">
+  <div class="page-content">
+
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span class="sep">›</span>
+      <span class="current">Agentes y subagentes</span>
+    </div>
+
+    <div class="page-section-label">Sección 04</div>
+    <h1 class="page-title">Agentes y subagentes:<br>el director y los especialistas</h1>
+
+    <p>Un <strong>agente</strong> es una IA configurada para hacer una tarea específica de forma autónoma. Los <strong>subagentes</strong> son agentes especializados que el agente principal puede llamar cuando los necesita.</p>
+
+    <blockquote class="key-quote">
+      "Un agente = un archivo .md con instrucciones. No importa cómo lo creaste, siempre termina siendo ese archivo."
+    </blockquote>
+
+    <div class="analogy">
+      Imaginá un equipo de cine: hay un director (el agente principal), un guionista (subagente), un editor (otro subagente) y un diseñador de escenografía (otro más). Vos le decís al director qué película querés, y él coordina a todos los demás.
+    </div>
+
+    <!-- Subagentes del proyecto -->
+    <h2 class="section-heading">Los tres subagentes de esta guía</h2>
+
+    <div class="subagents">
+      <div class="subagent">
+        <div class="subagent-name">/generar-seccion</div>
+        <div class="subagent-desc">Redacta una sección completa a partir de un concepto. Genera texto listo para revisar.</div>
+      </div>
+      <div class="subagent rev">
+        <div class="subagent-name">/revisar-simplicidad</div>
+        <div class="subagent-desc">Evalúa el texto generado. Da un puntaje del 1 al 10 y sugerencias para hacerlo más claro.</div>
+      </div>
+      <div class="subagent dis">
+        <div class="subagent-name">/diseñar-seccion</div>
+        <div class="subagent-desc">Solo actúa si la revisión fue ≥ 7. Toma el texto aprobado y genera el diseño HTML/visual.</div>
+      </div>
+    </div>
+
+    <div class="tip">💡 El orden importa: nunca se diseña antes de que el contenido esté revisado y aprobado.</div>
+
+    <!-- Cómo se invocan -->
+    <h2 class="section-heading">¿Cómo se invoca un subagente?</h2>
+
+    <p>Con el modo <strong>Agent</strong> activo en el chat, escribís el nombre del subagente seguido de los parámetros:</p>
+
+    <div class="code-block">
+      <button class="copy-btn">Copiar</button>
+      <pre>/generar-seccion concepto: "Qué es un skill" archivo: contenido/03-skills.md</pre>
+    </div>
+
+    <div class="code-block">
+      <button class="copy-btn">Copiar</button>
+      <pre>/revisar-simplicidad archivo: contenido/03-skills.md</pre>
+    </div>
+
+    <div class="code-block">
+      <button class="copy-btn">Copiar</button>
+      <pre>/diseñar-seccion archivo: contenido/03-skills.md destino: diseño/03-skills.html</pre>
+    </div>
+
+    <!-- Flujo visual -->
+    <h2 class="section-heading">Flujo del proyecto IT4W</h2>
+
+    <div class="flow">
+      <div class="flow-trigger">📝 Concepto a documentar</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step s1">
+        <div>
+          <span class="fs-name">🤖 /generar-seccion</span>
+          <span class="fs-desc">Genera el texto de la sección</span>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step s2">
+        <div>
+          <span class="fs-name">🔍 /revisar-simplicidad</span>
+          <span class="fs-desc">Evalúa el texto (puntaje del 1 al 10)</span>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-gate">⚖️ ¿Puntaje ≥ 7? → Continuar &nbsp;|&nbsp; &lt; 7 → Reescribir</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step s3">
+        <div>
+          <span class="fs-name">🎨 /diseñar-seccion</span>
+          <span class="fs-desc">Genera el diseño HTML con el texto aprobado</span>
+        </div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-result">✅ Sección lista para el repositorio</div>
+    </div>
+
+    <div class="section-footer">
+      <span class="read-time">⏱️ Lectura estimada: 5 min</span>
+      <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
+      <div class="page-nav">
+        <a href="skills.html" class="btn btn-ghost">← Sección 03</a>
+        <a href="mcp.html" class="btn btn-primary">Sección 05: MCP →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
