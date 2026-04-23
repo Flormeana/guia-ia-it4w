@@ -73,86 +73,94 @@
     <div class="page-section-label">Sección 04</div>
     <h1 class="page-title">Agentes y subagentes:<br>el director y los especialistas</h1>
 
-    <p>Un <strong>agente</strong> es una IA configurada para hacer una tarea específica de forma autónoma. Los <strong>subagentes</strong> son agentes especializados que el agente principal puede llamar cuando los necesita.</p>
+    <p>Hasta acá viste cómo hablar con la IA. Ahora veamos cómo organizarla cuando hay múltiples tareas que necesitan múltiples "manos".</p>
 
     <blockquote class="key-quote">
       "Un agente = un archivo .md con instrucciones. No importa cómo lo creaste, siempre termina siendo ese archivo."
     </blockquote>
 
-    <div class="analogy">
-      Imaginá un equipo de cine: hay un director (el agente principal), un guionista (subagente), un editor (otro subagente) y un diseñador de escenografía (otro más). Vos le decís al director qué película querés, y él coordina a todos los demás.
-    </div>
+    <h2 class="section-heading">La analogía del equipo de producción</h2>
 
-    <!-- Subagentes del proyecto -->
-    <h2 class="section-heading">Los tres subagentes de esta guía</h2>
+    <p>Imaginá que estás produciendo una guía interna para IT4W. Necesitás tres cosas: alguien que escriba el contenido, alguien que revise que sea simple de entender, y alguien que lo deje con el diseño correcto.</p>
+
+    <p>Podés hacer todo vos — o podés tener tres especialistas que cada uno hace su parte. Los subagentes son esos especialistas.</p>
+
+    <p><strong>El agente principal</strong> es el director: recibe el pedido, lo interpreta, decide qué subagente usar y en qué orden. <strong>Los subagentes</strong> son los especialistas: cada uno hace una cosa y la hace bien.</p>
+
+    <h2 class="section-heading">Los subagentes de IT4W</h2>
 
     <div class="subagents">
-      <div class="subagent">
-        <div class="subagent-name">/generar-seccion</div>
-        <div class="subagent-desc">Redacta una sección completa a partir de un concepto. Genera texto listo para revisar.</div>
+
+      <div class="subagent-card">
+        <div class="sa-icon">✍️</div>
+        <div class="sa-name">/generar-seccion</div>
+        <div class="sa-desc">Redacta el contenido de una sección de la guía. Recibe el concepto a explicar y el archivo destino.</div>
       </div>
-      <div class="subagent rev">
-        <div class="subagent-name">/revisar-simplicidad</div>
-        <div class="subagent-desc">Evalúa el texto generado. Da un puntaje del 1 al 10 y sugerencias para hacerlo más claro.</div>
+
+      <div class="subagent-card">
+        <div class="sa-icon">🔍</div>
+        <div class="sa-name">/revisar-simplicidad</div>
+        <div class="sa-desc">Evalúa si el texto es claro para personas no técnicas. Da un score del 1 al 10 con sugerencias.</div>
       </div>
-      <div class="subagent dis">
-        <div class="subagent-name">/diseñar-seccion</div>
-        <div class="subagent-desc">Solo actúa si la revisión fue ≥ 7. Toma el texto aprobado y genera el diseño HTML/visual.</div>
+
+      <div class="subagent-card">
+        <div class="sa-icon">🎨</div>
+        <div class="sa-name">/diseñar-seccion</div>
+        <div class="sa-desc">Convierte el contenido aprobado en HTML con el diseño IT4W. Solo actúa cuando el score ≥ 7.</div>
       </div>
+
     </div>
 
-    <div class="tip">💡 El orden importa: nunca se diseña antes de que el contenido esté revisado y aprobado.</div>
+    <h2 class="section-heading">¿Cómo se crea un agente?</h2>
 
-    <!-- Cómo se invocan -->
-    <h2 class="section-heading">¿Cómo se invoca un subagente?</h2>
+    <ol class="steps-list">
+      <li>
+        <strong>Desde el chat</strong> — En modo Agent, escribís las instrucciones directamente. VS Code genera el archivo .md por vos si le pedís que lo guarde.
+      </li>
+      <li>
+        <strong>Desde un archivo existente</strong> — Tomás un archivo de texto con instrucciones y lo guardás como <code>.instructions.md</code> o <code>.agent.md</code> en la carpeta del proyecto.
+      </li>
+      <li>
+        <strong>Copiando un template</strong> — Tomás un agente existente del repositorio IT4W y lo adaptás cambiando las instrucciones específicas.
+      </li>
+    </ol>
 
-    <p>Con el modo <strong>Agent</strong> activo en el chat, escribís el nombre del subagente seguido de los parámetros:</p>
+    <blockquote class="key-quote">
+      "La regla de oro: nunca hagas diseño antes de que el contenido esté revisado y aprobado."
+    </blockquote>
 
-    <div class="code-block">
-      <button class="copy-btn">Copiar</button>
-      <pre>/generar-seccion concepto: "Qué es un skill" archivo: contenido/03-skills.md</pre>
-    </div>
-
-    <div class="code-block">
-      <button class="copy-btn">Copiar</button>
-      <pre>/revisar-simplicidad archivo: contenido/03-skills.md</pre>
-    </div>
-
-    <div class="code-block">
-      <button class="copy-btn">Copiar</button>
-      <pre>/diseñar-seccion archivo: contenido/03-skills.md destino: diseño/03-skills.html</pre>
-    </div>
-
-    <!-- Flujo visual -->
-    <h2 class="section-heading">Flujo del proyecto IT4W</h2>
+    <h2 class="section-heading">El flujo completo</h2>
 
     <div class="flow">
-      <div class="flow-trigger">📝 Concepto a documentar</div>
-      <div class="flow-arrow">↓</div>
-      <div class="flow-step s1">
-        <div>
-          <span class="fs-name">🤖 /generar-seccion</span>
-          <span class="fs-desc">Genera el texto de la sección</span>
-        </div>
+      <div class="flow-step">
+        <div class="flow-label">Pedido del usuario</div>
+        <div class="flow-sub">"Generá la sección sobre Skills"</div>
       </div>
       <div class="flow-arrow">↓</div>
-      <div class="flow-step s2">
-        <div>
-          <span class="fs-name">🔍 /revisar-simplicidad</span>
-          <span class="fs-desc">Evalúa el texto (puntaje del 1 al 10)</span>
-        </div>
+      <div class="flow-step">
+        <div class="flow-label">Agente principal</div>
+        <div class="flow-sub">Interpreta, divide, asigna</div>
       </div>
       <div class="flow-arrow">↓</div>
-      <div class="flow-gate">⚖️ ¿Puntaje ≥ 7? → Continuar &nbsp;|&nbsp; &lt; 7 → Reescribir</div>
-      <div class="flow-arrow">↓</div>
-      <div class="flow-step s3">
-        <div>
-          <span class="fs-name">🎨 /diseñar-seccion</span>
-          <span class="fs-desc">Genera el diseño HTML con el texto aprobado</span>
-        </div>
+      <div class="flow-step flow-step--violet">
+        <div class="flow-label">/generar-seccion</div>
+        <div class="flow-sub">Redacta el contenido</div>
       </div>
       <div class="flow-arrow">↓</div>
-      <div class="flow-result">✅ Sección lista para el repositorio</div>
+      <div class="flow-step flow-step--violet">
+        <div class="flow-label">/revisar-simplicidad</div>
+        <div class="flow-sub">Score ≥ 7 → sigue | &lt; 7 → vuelve a generar</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step flow-step--violet">
+        <div class="flow-label">/diseñar-seccion</div>
+        <div class="flow-sub">Genera el HTML final</div>
+      </div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step flow-step--green">
+        <div class="flow-label">Resultado final</div>
+        <div class="flow-sub">Sección lista en web/</div>
+      </div>
     </div>
 
     <div class="section-footer">

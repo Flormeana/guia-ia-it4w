@@ -73,112 +73,82 @@
     <div class="page-section-label">Sección 03</div>
     <h1 class="page-title">Skills: el manual de procedimientos de la IA</h1>
 
-    <p>Un <strong>skill</strong> es un archivo con instrucciones especializadas que le explicás a la IA cómo hacer una tarea particular. No es código, es texto con reglas claras.</p>
+    <p>Cuando le pedís algo a la IA sin darle contexto, te da una respuesta genérica. Cuando le dás un skill, le das el contexto que necesita para hacer el trabajo como IT4W lo hace.</p>
 
     <blockquote class="key-quote">
       "Un skill es el manual de procedimientos que el especialista tiene sobre su escritorio."
     </blockquote>
 
-    <div class="analogy">
-      Pensalo como una ficha técnica de trabajo: antes de que alguien empiece una tarea, le das una hoja con las reglas, el formato y los ejemplos. El skill es esa hoja.
+    <h2 class="section-heading">¿Qué es un skill?</h2>
+
+    <p>Un skill es un archivo de texto con instrucciones especializadas. Le explicás a la IA cómo hacer una tarea específica: qué tono usar, qué formato seguir, qué reglas respetar, qué ejemplos tener en cuenta.</p>
+
+    <p>No es código. Es texto. Instrucciones escritas como para explicarle a una persona nueva cómo se hacen las cosas en IT4W.</p>
+
+    <h2 class="section-heading">¿Dónde viven los skills?</h2>
+
+    <p>En este proyecto, los skills están en la carpeta:</p>
+
+    <div class="code-block">
+      <button class="copy-btn">Copiar</button>
+      <pre>skills-main/skills/</pre>
     </div>
 
-    <!-- Skills disponibles -->
-    <h2 class="section-heading">Skills disponibles en IT4W</h2>
+    <p>Cada skill tiene su propia subcarpeta con un archivo <code>SKILL.md</code> adentro. Ese archivo es el skill.</p>
 
-    <div class="table-wrap">
-      <table>
-        <thead>
-          <tr><th>Skill</th><th>¿Para qué sirve?</th><th>Área que lo usa</th></tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><code>brand-guidelines</code></td>
-            <td>Asegura que todo lo que se crea respeta la identidad visual IT4W</td>
-            <td>Diseño, Comunicación</td>
-          </tr>
-          <tr>
-            <td><code>canvas-design</code></td>
-            <td>Diseña layouts y canvas con tipografía y colores correctos</td>
-            <td>Diseño, UX</td>
-          </tr>
-          <tr>
-            <td><code>doc-coauthoring</code></td>
-            <td>Redacción colaborativa de documentos internos</td>
-            <td>Todas las áreas</td>
-          </tr>
-          <tr>
-            <td><code>internal-comms</code></td>
-            <td>Comunicaciones internas con tono IT4W</td>
-            <td>Comercial, RRHH</td>
-          </tr>
-          <tr>
-            <td><code>pptx</code></td>
-            <td>Genera presentaciones .pptx listas para descargar</td>
-            <td>Comercial, Liderazgo</td>
-          </tr>
-          <tr>
-            <td><code>pdf</code></td>
-            <td>Exporta documentos como PDF</td>
-            <td>Todas las áreas</td>
-          </tr>
-          <tr>
-            <td><code>docx</code></td>
-            <td>Exporta documentos como Word .docx</td>
-            <td>Todas las áreas</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <h2 class="section-heading">¿Cómo se activan?</h2>
 
-    <!-- Cómo se usa -->
-    <h2 class="section-heading">¿Cómo se activa un skill?</h2>
-
-    <p>Hay dos formas de usar un skill:</p>
-
-    <h3 class="sub-heading">Opción 1: Citarlo directamente en el chat</h3>
-
-    <p>En el chat de Copilot, usás <code>#file:</code> para adjuntar el archivo del skill:</p>
+    <h3 class="sub-heading">Opción 1 — Citarlos en el chat con #file:</h3>
 
     <div class="code-block">
       <button class="copy-btn">Copiar</button>
       <pre>#file:skills-main/skills/doc-coauthoring/SKILL.md
 
-Redactá una guía de bienvenida para nuevos integrantes del área de QA.</pre>
+Redactá una guía de bienvenida para personas nuevas en el área de QA.</pre>
     </div>
 
-    <h3 class="sub-heading">Opción 2: Dejarlo en las instrucciones de Copilot</h3>
+    <h3 class="sub-heading">Opción 2 — Instrucciones permanentes del proyecto</h3>
 
-    <p>Si usás el mismo skill todo el tiempo, podés configurarlo en el archivo <code>.github/copilot-instructions.md</code> del proyecto y ya queda activo permanentemente.</p>
+    <p>Si el archivo <code>.github/copilot-instructions.md</code> menciona el skill, queda activo automáticamente para todo el proyecto. No tenés que citarlo cada vez.</p>
 
-    <div class="code-block">
-      <button class="copy-btn">Copiar</button>
-      <pre># Mis instrucciones permanentes
-Antes de cualquier tarea de diseño, cargá el skill:
-#file:skills-main/skills/brand-guidelines/SKILL.md</pre>
-    </div>
-
-    <!-- Bueno / malo -->
     <h2 class="section-heading">Con skill vs sin skill</h2>
 
     <div class="comparison">
       <div class="comp-card bad">
         <div class="comp-label">❌ Sin skill</div>
         <div class="comp-text">
-          "Redactá un comunicado para el equipo." → La IA escribe algo genérico, con tono desconocido, sin respetar la identidad IT4W.
+          Sofía de UX pide a la IA que redacte la documentación del flujo de onboarding. La IA escribe algo genérico, con tono técnico, sin respetar el formato IT4W.
         </div>
       </div>
       <div class="comp-card good">
-        <div class="comp-label">✅ Con skill <code>internal-comms</code></div>
+        <div class="comp-label">✅ Con skill <code>doc-coauthoring</code></div>
         <div class="comp-text">
-          La IA ya sabe el tono, el formato y los valores IT4W. El comunicado sale listo para enviar, en el estilo correcto.
+          Con el skill activo, la IA ya sabe el tono, el formato y qué incluir. El resultado sale listo para compartir con el equipo de diseño y los stakeholders.
         </div>
       </div>
     </div>
 
-    <!-- Regla importante -->
+    <h2 class="section-heading">Skills disponibles en IT4W</h2>
+
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr><th>Skill</th><th>Para qué sirve</th><th>Área que lo usa</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>brand-guidelines</code></td><td>Respetar la identidad visual IT4W</td><td>Diseño, Comunicación</td></tr>
+          <tr><td><code>canvas-design</code></td><td>Diseñar layouts y canvas</td><td>Diseño, UX</td></tr>
+          <tr><td><code>doc-coauthoring</code></td><td>Redactar documentos internos</td><td>Todas las áreas</td></tr>
+          <tr><td><code>internal-comms</code></td><td>Comunicaciones internas con tono IT4W</td><td>Comercial, RRHH</td></tr>
+          <tr><td><code>pptx</code></td><td>Generar presentaciones .pptx</td><td>Comercial, Liderazgo</td></tr>
+          <tr><td><code>pdf</code></td><td>Exportar como PDF</td><td>Todas las áreas</td></tr>
+          <tr><td><code>docx</code></td><td>Exportar como Word</td><td>Todas las áreas</td></tr>
+        </tbody>
+      </table>
+    </div>
+
     <div class="alert">
-      <strong>⚠️ Regla importante:</strong> Siempre que uses un skill, cargalo primero con <code>#file:</code> antes de pedir la tarea. No lo asumas — leelo primero y después actuá.
+      ⚠️ <strong>Regla de uso:</strong> Antes de ejecutar cualquier tarea de diseño o documentación, cargá el skill correspondiente con <code>#file:</code>. No asumas el contenido — leelo antes de actuar.
     </div>
 
     <div class="section-footer">

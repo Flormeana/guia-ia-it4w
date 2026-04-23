@@ -71,19 +71,18 @@
     </div>
 
     <div class="page-section-label">Sección 02</div>
-    <h1 class="page-title">GitHub Copilot y Claude:<br>dos motores, un mismo lugar</h1>
+    <h1 class="page-title">Los modelos de IA:<br>Copilot y Claude</h1>
 
-    <p>Cuando abrís VS Code, vas a poder elegir qué modelo de IA quiere usar. Los modelos son distintos — cada uno tiene características y fortalezas. Lo importante: <strong>los operás desde el mismo lugar</strong>.</p>
+    <p>Cuando hablás con la IA en VS Code, hay algo funcionando "adentro" que procesa lo que escribís y genera la respuesta. Ese algo se llama <strong>modelo</strong>. Podés elegir cuál usar.</p>
 
     <blockquote class="key-quote">
-      "El mismo lugar, distinto motor."
+      "No es Copilot VS Claude. Usan el mismo lugar, cambia el motor."
     </blockquote>
 
     <div class="analogy">
-      Es como un auto que te deja elegir entre nafta super o premium — el volante y los pedales no cambian, pero el rendimiento sí.
+      Imaginá un auto que te deja elegir entre distintos motores antes de salir. El volante, los pedales y el tablero son siempre los mismos. Lo que cambia es el rendimiento. VS Code es el auto. Copilot y Claude son los motores.
     </div>
 
-    <!-- 2 cards modelo -->
     <h2 class="section-heading">¿Qué es cada uno?</h2>
 
     <div class="cards-grid cols-2">
@@ -93,13 +92,13 @@
         <div class="card-subtitle">Desarrollado por GitHub + OpenAI</div>
         <div class="card-title">GitHub Copilot</div>
         <div class="card-desc">
-          Es el modelo "de base" de VS Code. Muy bueno para tareas técnicas, autocompletar código y razonamiento estructurado. Es el que viene por defecto.
+          Es el modelo "de base" — el que viene activo por defecto cuando instalás la extensión. Muy bueno para tareas estructuradas: revisar archivos, analizar código, razonamiento paso a paso.
         </div>
-        <p style="font-size:14px;margin-bottom:6px;"><strong>Mejor para:</strong></p>
+        <p style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text-muted);">MEJOR PARA:</p>
         <ul style="margin:0;padding-left:16px;">
-          <li style="font-size:13px;margin-bottom:4px;">Revisar archivos y resumir estructuras</li>
-          <li style="font-size:13px;margin-bottom:4px;">Razonamiento paso a paso</li>
-          <li style="font-size:13px;">Buscar respuestas rápidas</li>
+          <li style="font-size:13px;margin-bottom:4px;">Explorar y entender la estructura de un proyecto</li>
+          <li style="font-size:13px;margin-bottom:4px;">Razonamiento lógico y análisis</li>
+          <li style="font-size:13px;">Respuestas rápidas y directas</li>
         </ul>
       </div>
 
@@ -108,68 +107,45 @@
         <div class="card-subtitle">Desarrollado por Anthropic</div>
         <div class="card-title">Claude</div>
         <div class="card-desc">
-          Es el modelo alternativo disponible desde VS Code. Excelente para redacción, documentación, ideas creativas y comunicaciones más complejas.
+          Claude es el modelo alternativo que podés elegir desde el selector de VS Code. Especialmente bueno para escribir en lenguaje humano: documentación, comunicaciones, guías, textos para personas reales.
         </div>
-        <p style="font-size:14px;margin-bottom:6px;"><strong>Mejor para:</strong></p>
+        <p style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text-muted);">MEJOR PARA:</p>
         <ul style="margin:0;padding-left:16px;">
-          <li style="font-size:13px;margin-bottom:4px;">Redactar textos para personas reales</li>
-          <li style="font-size:13px;margin-bottom:4px;">Documentación interna y guías</li>
-          <li style="font-size:13px;">Pensar comunicaciones complejas</li>
+          <li style="font-size:13px;margin-bottom:4px;">Redactar comunicados internos y documentación</li>
+          <li style="font-size:13px;margin-bottom:4px;">Generar contenido con tono específico</li>
+          <li style="font-size:13px;">Tareas creativas y de escritura larga</li>
         </ul>
       </div>
 
     </div>
 
-    <!-- Ejemplo Sofía -->
-    <h2 class="section-heading">Ejemplo práctico: Sofía de UX</h2>
-
-    <p>Sofía necesita documentar el flujo de onboarding de un nuevo usuario para la App de IT4W.</p>
-
-    <div class="comparison">
-      <div class="comp-card bad">
-        <div class="comp-label">❌ Sin elegir el modelo correcto</div>
-        <div class="comp-text">
-          Sofía usa el modelo por defecto y le pide que explique el flujo técnico de la API. La IA le da una respuesta muy técnica que no sirve para el documento de diseño que necesita.
-        </div>
-      </div>
-      <div class="comp-card good">
-        <div class="comp-label">✅ Con Claude seleccionado</div>
-        <div class="comp-text">
-          Sofía cambia a Claude y pide el mismo documento en tono accesible para stakeholders. La respuesta tiene tono claro, estructura de secciones y lenguaje para no-técnicos.
-        </div>
-      </div>
-    </div>
-
-    <div class="tip">💡 En la guía IT4W usamos <strong>Claude</strong> como modelo principal porque está optimizado para redacción, documentación y comunicación — las tareas más comunes del equipo.</div>
-
-    <!-- Cómo cambiar -->
-    <h2 class="section-heading">¿Cómo se cambia el modelo?</h2>
-
-    <ol class="steps-list">
-      <li>Abrí el chat de Copilot en VS Code</li>
-      <li>En la parte superior del chat hay un selector de modelo</li>
-      <li>Hacé clic y elegí <strong>Claude Sonnet</strong> (o el modelo disponible en tu cuenta)</li>
-      <li>Tu próxima pregunta ya usa el modelo nuevo</li>
-    </ol>
-
-    <!-- Tabla de cuándo usar cada uno -->
-    <h2 class="section-heading">¿Cuándo usar cada uno?</h2>
+    <h2 class="section-heading">¿Cuándo uso cuál en IT4W?</h2>
 
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>Tarea</th><th>GitHub Copilot</th><th>Claude</th></tr>
+          <tr><th>Tarea</th><th>Copilot</th><th>Claude</th></tr>
         </thead>
         <tbody>
-          <tr><td>Resumir un archivo técnico</td><td>✅ Muy bueno</td><td>✅ Muy bueno</td></tr>
+          <tr><td>Entender la estructura del proyecto</td><td>✅ Muy bueno</td><td>✅ Muy bueno</td></tr>
           <tr><td>Redactar un comunicado interno</td><td>Puede servir</td><td>✅ Ideal</td></tr>
-          <tr><td>Generar una guía para usuarios</td><td>Puede servir</td><td>✅ Ideal</td></tr>
-          <tr><td>Documentar un proceso técnico</td><td>✅ Muy bueno</td><td>✅ Muy bueno</td></tr>
+          <tr><td>Generar documentación para usuarios</td><td>Puede servir</td><td>✅ Ideal</td></tr>
+          <tr><td>Revisar archivos y resumir</td><td>✅ Muy bueno</td><td>✅ Muy bueno</td></tr>
           <tr><td>Escribir presentaciones y pitches</td><td>Regular</td><td>✅ Ideal</td></tr>
-          <tr><td>Analizar estructura de archivos</td><td>✅ Muy bueno</td><td>✅ Muy bueno</td></tr>
         </tbody>
       </table>
     </div>
+
+    <div class="tip">💡 En esta guía y en los proyectos IT4W usamos <strong>Claude</strong> como modelo principal para las tareas de redacción y documentación.</div>
+
+    <h2 class="section-heading">¿Cómo cambio el modelo?</h2>
+
+    <ol class="steps-list">
+      <li>Abrí el chat de Copilot en VS Code</li>
+      <li>Fijate en el selector que está arriba del cuadro de texto — muestra el nombre del modelo activo</li>
+      <li>Hacé clic en él y elegí el modelo que querés usar</li>
+      <li>El cambio se aplica al próximo mensaje que enviés</li>
+    </ol>
 
     <div class="section-footer">
       <span class="read-time">⏱️ Lectura estimada: 4 min</span>

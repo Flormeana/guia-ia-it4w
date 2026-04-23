@@ -75,19 +75,14 @@
     <div class="page-section-label">Sección 01</div>
     <h1 class="page-title">Los modos de trabajo:<br>Ask, Plan y Agent</h1>
 
-    <p>Cuando abrís el chat de GitHub Copilot en VS Code, podés elegir <strong>cómo querés que la IA trabaje</strong> con vos. Hay tres modos, cada uno con un nivel distinto de autonomía.</p>
+    <p>En el ejercicio viste la diferencia entre Ask y Agent. Ahora entendemos los tres modos con más detalle — y cuándo usar cada uno en el trabajo real de IT4W.</p>
 
-    <!-- Frase síntesis -->
     <blockquote class="key-quote">
       "VS Code es la oficina. La IA es el equipo que trabaja adentro."
     </blockquote>
 
-    <div class="analogy">
-      Pensalo como pedirle algo a un asistente: <strong>Ask</strong> = "¿me explicás esto?" &nbsp;·&nbsp; <strong>Plan</strong> = "¿cómo lo harías vos?" &nbsp;·&nbsp; <strong>Agent</strong> = "hacelo vos, yo te sigo."
-    </div>
-
     <!-- 3 Cards de modos -->
-    <h2 class="section-heading">¿Para qué sirve cada uno?</h2>
+    <h2 class="section-heading">Los tres modos</h2>
 
     <div class="cards-grid">
 
@@ -96,91 +91,90 @@
         <div class="card-subtitle">Para explorar y entender</div>
         <div class="card-title">Ask</div>
         <div class="card-desc">
-          Hacés una pregunta, la IA responde. No toca nada, no modifica nada. Solo te explica o te orienta.
+          Ask es para preguntar. La IA responde, explica, orienta. No toca ningún archivo. No ejecuta nada. Solo te da información.
         </div>
-        <p style="font-size:14px;margin-bottom:8px;"><strong>Cuándo usarlo:</strong></p>
+        <p style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text-muted);">CUÁNDO USARLO EN IT4W:</p>
         <ul style="margin:0 0 12px;padding-left:16px;">
-          <li style="font-size:13px;margin-bottom:4px;">Cuando querés entender antes de actuar</li>
-          <li style="font-size:13px;margin-bottom:4px;">Para que te resuma un documento o proyecto</li>
-          <li style="font-size:13px;">Cuando no sabés ni por dónde empezar</li>
+          <li style="font-size:13px;margin-bottom:4px;">Cuando querés entender qué hace un archivo o carpeta</li>
+          <li style="font-size:13px;margin-bottom:4px;">Cuando no sabés por dónde empezar con una tarea</li>
+          <li style="font-size:13px;">Cuando querés que te resuma algo antes de decidir si lo hacés</li>
         </ul>
         <div class="card-example">
-          <strong>Ejemplo UX</strong>
-          "¿Qué archivos tiene este proyecto y para qué sirve cada uno?"
+          <strong>Ejemplo</strong>
+          "¿Qué archivos tiene este proyecto y para qué sirve cada carpeta?"
         </div>
       </div>
 
       <div class="card">
         <span class="card-icon">🗺️</span>
-        <div class="card-subtitle">Para pensar antes de hacer</div>
+        <div class="card-subtitle">Para pensar antes de actuar</div>
         <div class="card-title">Plan</div>
         <div class="card-desc">
-          Le pedís a la IA que te proponga cómo abordar una tarea. Te da una hoja de ruta, no una acción.
+          Plan es para que la IA te proponga una hoja de ruta. Te dice cómo haría la tarea — pero vos decidís si seguir ese plan o no. No ejecuta nada todavía.
         </div>
-        <p style="font-size:14px;margin-bottom:8px;"><strong>Cuándo usarlo:</strong></p>
+        <p style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text-muted);">CUÁNDO USARLO EN IT4W:</p>
         <ul style="margin:0 0 12px;padding-left:16px;">
-          <li style="font-size:13px;margin-bottom:4px;">Antes de encarar algo nuevo o complejo</li>
-          <li style="font-size:13px;margin-bottom:4px;">Para entender qué pasos hay antes de ejecutar</li>
-          <li style="font-size:13px;">Para validar un enfoque antes de actuar</li>
+          <li style="font-size:13px;margin-bottom:4px;">Antes de una tarea nueva o compleja</li>
+          <li style="font-size:13px;margin-bottom:4px;">Cuando querés ver el camino completo antes de dar el primer paso</li>
+          <li style="font-size:13px;">Cuando querés validar un enfoque antes de invertir tiempo en él</li>
         </ul>
         <div class="card-example">
-          <strong>Ejemplo QA</strong>
-          "Planificá cómo escribirías la documentación de este flujo de pruebas."
+          <strong>Ejemplo</strong>
+          "Quiero documentar el flujo de onboarding de nuevos usuarios. ¿Cómo lo encarás?"
         </div>
       </div>
 
       <div class="card accent-green">
         <span class="card-icon">🤖</span>
-        <div class="card-subtitle">Para ejecutar y delegar</div>
+        <div class="card-subtitle">Para que las cosas pasen</div>
         <div class="card-title">Agent</div>
         <div class="card-desc">
-          La IA toma decisiones, usa herramientas y ejecuta tareas por vos. Lee archivos, crea documentos y encadena acciones.
+          Agent es el modo de ejecución. La IA toma decisiones, usa herramientas, crea archivos y encadena acciones. Es el modo donde realmente se hace el trabajo.
         </div>
-        <p style="font-size:14px;margin-bottom:8px;"><strong>Cuándo usarlo:</strong></p>
+        <p style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text-muted);">CUÁNDO USARLO EN IT4W:</p>
         <ul style="margin:0 0 12px;padding-left:16px;">
           <li style="font-size:13px;margin-bottom:4px;">Cuando ya sabés qué querés y querés que la IA lo haga</li>
-          <li style="font-size:13px;margin-bottom:4px;">Para tareas de varios pasos coordinados</li>
-          <li style="font-size:13px;">Para flujos completos: generar → revisar → diseñar</li>
+          <li style="font-size:13px;margin-bottom:4px;">Para tareas de múltiples pasos que se pueden delegar</li>
+          <li style="font-size:13px;">Para invocar subagentes especializados</li>
         </ul>
         <div class="card-example">
-          <strong>Ejemplo Dashboards</strong>
-          "/generar-seccion concepto: KPIs de ventas archivo: contenido/kpis.md"
+          <strong>Ejemplo</strong>
+          "/generar-seccion concepto: 'Qué es un skill' archivo: contenido/skills.md"
         </div>
       </div>
 
     </div>
 
-    <!-- Cómo se usa -->
-    <h2 class="section-heading">¿Cómo se usa?</h2>
-
-    <ol class="steps-list">
-      <li>Abrí el panel de chat de Copilot en VS Code (ícono de chat a la izquierda)</li>
-      <li>En la parte superior del chat, seleccioná el modo: <strong>Ask</strong>, <strong>Plan</strong> o <strong>Agent</strong></li>
-      <li>Escribí tu pedido en lenguaje natural — sin necesitar saber programar</li>
-      <li>Leé la respuesta y seguí desde ahí</li>
-    </ol>
-
-    <div class="tip">💡 Si no estás segura de cuál usar, empezá con <strong>Ask</strong>. Siempre podés cambiar de modo.</div>
-
-    <!-- Tabla resumen -->
+    <!-- Tabla de decisión -->
     <h2 class="section-heading">Tabla de decisión rápida</h2>
 
     <div class="table-wrap">
       <table>
         <thead>
-          <tr><th>Modo</th><th>Lo que hace la IA</th><th>Lo que vos hacés</th></tr>
+          <tr><th>Si querés…</th><th>Usá</th></tr>
         </thead>
         <tbody>
-          <tr><td><strong>Ask</strong></td><td>Responde y explica</td><td>Preguntás y aprendés</td></tr>
-          <tr><td><strong>Plan</strong></td><td>Propone un camino</td><td>Decidís si seguirlo</td></tr>
-          <tr><td><strong>Agent</strong></td><td>Ejecuta y produce</td><td>Supervisás el resultado</td></tr>
+          <tr><td>Entender algo antes de actuar</td><td><strong>Ask</strong></td></tr>
+          <tr><td>Ver el camino completo antes de empezar</td><td><strong>Plan</strong></td></tr>
+          <tr><td>Que la IA lo haga</td><td><strong>Agent</strong></td></tr>
+          <tr><td>Preguntar sin riesgo de que cambie algo</td><td><strong>Ask</strong></td></tr>
+          <tr><td>Delegar una tarea con múltiples pasos</td><td><strong>Agent</strong></td></tr>
+          <tr><td>Validar un enfoque antes de ejecutar</td><td><strong>Plan</strong></td></tr>
         </tbody>
       </table>
     </div>
 
+    <div class="alert">
+      ⚠️ <strong>Nota sobre versiones nuevas:</strong> En versiones recientes de VS Code y GitHub Copilot, puede que no veas los mismos nombres exactos. El modo "Edit" ya no está disponible — fue reemplazado por Agent. Si en tu versión ves solo Ask y Agent, no te preocupés: el flujo es el mismo.
+    </div>
+
+    <div class="tip">
+      💡 <strong>La regla práctica:</strong> Cuando no sabés cuál usar, empezá con <strong>Ask</strong>. Te orienta sin hacer nada. Si querés que algo pase de verdad, pasá a <strong>Agent</strong>.
+    </div>
+
     <!-- Footer de sección -->
     <div class="section-footer">
-      <span class="read-time">⏱️ Lectura estimada: 3 min</span>
+      <span class="read-time">⏱️ Lectura estimada: 4 min</span>
       <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
       <div class="page-nav">
         <a href="index.html" class="btn btn-ghost">← Inicio</a>
