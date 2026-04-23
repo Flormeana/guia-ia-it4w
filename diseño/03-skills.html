@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S03 — Skills | Guía IA IT4W</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono&display=swap');
+  :root { --dark: #141413; --light: #faf9f5; --mid-gray: #b0aea5; --light-gray: #e8e6dc; --orange: #d97757; --blue: #6a9bcc; --green: #788c5d; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Lora', Georgia, serif; background: var(--light); color: var(--dark); max-width: 860px; margin: 0 auto; padding: 48px 40px; line-height: 1.7; }
+  .section-tag { font-family: 'Poppins', Arial, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 12px; }
+  h1 { font-family: 'Poppins', Arial, sans-serif; font-size: 36px; font-weight: 700; line-height: 1.2; padding-bottom: 16px; border-bottom: 3px solid var(--orange); margin-bottom: 32px; }
+  h2 { font-family: 'Poppins', Arial, sans-serif; font-size: 22px; font-weight: 600; margin: 40px 0 16px; }
+  h3 { font-family: 'Poppins', Arial, sans-serif; font-size: 18px; font-weight: 600; margin: 24px 0 10px; color: var(--orange); }
+  .analogy { background: var(--light-gray); border-left: 4px solid var(--blue); padding: 16px 20px; margin: 24px 0; font-style: italic; font-size: 16px; border-radius: 0 8px 8px 0; }
+  .skill-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 24px 0; }
+  .skill-chip {
+    display: flex; align-items: center; gap: 12px;
+    background: white; border: 1px solid var(--light-gray);
+    border-radius: 10px; padding: 14px 16px;
+    font-size: 14px;
+  }
+  .skill-chip .skill-icon {
+    width: 36px; height: 36px; border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; flex-shrink: 0;
+  }
+  .skill-chip .skill-icon.design { background: #fff0eb; }
+  .skill-chip .skill-icon.content { background: #f0f5eb; }
+  .skill-chip .skill-icon.export { background: #eef3f8; }
+  .skill-chip .skill-info {}
+  .skill-chip .skill-name { font-family: 'Poppins', Arial, sans-serif; font-weight: 600; font-size: 14px; }
+  .skill-chip .skill-desc { font-size: 12px; color: var(--mid-gray); }
+  .code-block {
+    background: var(--light-gray); border-left: 4px solid var(--orange);
+    border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 16px 0;
+    font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.6;
+    white-space: pre;
+  }
+  .option-block { margin-bottom: 24px; }
+  .option-label { font-family: 'Poppins', Arial, sans-serif; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--mid-gray); margin-bottom: 8px; }
+  .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 24px 0; }
+  .comp-card { border-radius: 10px; padding: 20px; }
+  .comp-card.bad { background: #fdf0ec; border: 1px solid #e8c4b8; }
+  .comp-card.good { background: #f0f5eb; border: 1px solid #c4d4b0; }
+  .comp-label { font-family: 'Poppins', Arial, sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+  .comp-card.bad .comp-label { color: #c05030; }
+  .comp-card.good .comp-label { color: var(--green); }
+  .comp-text { font-size: 14px; line-height: 1.6; }
+  .rule-box { background: var(--dark); color: white; border-radius: 12px; padding: 24px 28px; margin: 32px 0; text-align: center; }
+  .rule-box p { font-size: 18px; line-height: 1.6; }
+  .rule-box strong { color: var(--orange); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--light-gray); font-family: 'Poppins', Arial, sans-serif; font-size: 12px; color: var(--mid-gray); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="section-tag">Sección 03 — Guía IA IT4W</div>
+<h1>Skills: el manual de<br>comportamiento de la IA</h1>
+
+<p>Un <strong>skill</strong> es un archivo que le dice a la IA cómo comportarse en una tarea específica — el tono, el formato, los pasos y las reglas que tiene que seguir.</p>
+
+<div class="analogy">
+  Pensalo como el <strong>manual de onboarding</strong> que le das a alguien nuevo en el equipo: "En IT4W hacemos las cosas así, con este tono, siguiendo estos pasos."
+</div>
+
+<h2>Skills disponibles en el proyecto</h2>
+
+<div class="skill-grid">
+  <div class="skill-chip">
+    <div class="skill-icon design">🎨</div>
+    <div class="skill-info">
+      <div class="skill-name">brand-guidelines</div>
+      <div class="skill-desc">Identidad visual IT4W</div>
+    </div>
+  </div>
+  <div class="skill-chip">
+    <div class="skill-icon design">🖼️</div>
+    <div class="skill-info">
+      <div class="skill-name">canvas-design</div>
+      <div class="skill-desc">Diseño de layouts y canvas</div>
+    </div>
+  </div>
+  <div class="skill-chip">
+    <div class="skill-icon content">✍️</div>
+    <div class="skill-info">
+      <div class="skill-name">doc-coauthoring</div>
+      <div class="skill-desc">Redacción colaborativa</div>
+    </div>
+  </div>
+  <div class="skill-chip">
+    <div class="skill-icon content">📢</div>
+    <div class="skill-info">
+      <div class="skill-name">internal-comms</div>
+      <div class="skill-desc">Comunicación interna</div>
+    </div>
+  </div>
+  <div class="skill-chip">
+    <div class="skill-icon export">📊</div>
+    <div class="skill-info">
+      <div class="skill-name">pptx</div>
+      <div class="skill-desc">Crear presentación PowerPoint</div>
+    </div>
+  </div>
+  <div class="skill-chip">
+    <div class="skill-icon export">📄</div>
+    <div class="skill-info">
+      <div class="skill-name">pdf / docx</div>
+      <div class="skill-desc">Exportar como PDF o Word</div>
+    </div>
+  </div>
+</div>
+
+<h2>¿Cómo se usa un skill?</h2>
+
+<div class="option-block">
+  <div class="option-label">Opción 1 — Copilot lo activa automáticamente</div>
+  <p>Copilot lee las instrucciones del proyecto y sabe qué skill cargar según la tarea que pedís.</p>
+</div>
+
+<div class="option-block">
+  <div class="option-label">Opción 2 — Lo cargás vos con #file:</div>
+  <div class="code-block">#file:skills-main/skills/doc-coauthoring/SKILL.md
+Redactá la introducción del informe mensual de UX.</div>
+  <p>Esto le "adjunta" el skill a tu pedido como un briefing.</p>
+</div>
+
+<h2>Ejemplo: newsletter de Comercial</h2>
+<div class="comparison">
+  <div class="comp-card bad">
+    <div class="comp-label">❌ Sin skill</div>
+    <div class="comp-text">La IA produce un texto genérico, formal y en inglés. No sigue el formato del equipo.</div>
+  </div>
+  <div class="comp-card good">
+    <div class="comp-label">✅ Con internal-comms</div>
+    <div class="comp-text">La IA sigue el formato de comunicación interna: progreso, planes y problemas — en el tono IT4W, en español.</div>
+  </div>
+</div>
+
+<div class="rule-box">
+  <p><strong>Regla importante:</strong> Cada sesión empieza desde cero.<br>Los skills son la forma de que la IA <strong>recuerde las reglas del equipo</strong>.</p>
+</div>
+
+<footer>
+  <span>Guía IA IT4W · Sección 03</span>
+  <span>Score de revisión: 9/10</span>
+</footer>
+</body>
+</html>

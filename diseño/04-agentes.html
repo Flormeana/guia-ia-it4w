@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S04 — Agentes y Subagentes | Guía IA IT4W</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono&display=swap');
+  :root { --dark: #141413; --light: #faf9f5; --mid-gray: #b0aea5; --light-gray: #e8e6dc; --orange: #d97757; --blue: #6a9bcc; --green: #788c5d; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Lora', Georgia, serif; background: var(--light); color: var(--dark); max-width: 860px; margin: 0 auto; padding: 48px 40px; line-height: 1.7; }
+  .section-tag { font-family: 'Poppins', Arial, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 12px; }
+  h1 { font-family: 'Poppins', Arial, sans-serif; font-size: 36px; font-weight: 700; line-height: 1.2; padding-bottom: 16px; border-bottom: 3px solid var(--orange); margin-bottom: 32px; }
+  h2 { font-family: 'Poppins', Arial, sans-serif; font-size: 22px; font-weight: 600; margin: 40px 0 16px; }
+  .analogy { background: var(--light-gray); border-left: 4px solid var(--blue); padding: 16px 20px; margin: 24px 0; font-style: italic; font-size: 16px; border-radius: 0 8px 8px 0; }
+  .agents-diagram {
+    background: white; border: 1px solid var(--light-gray); border-radius: 16px;
+    padding: 32px; margin: 32px 0; text-align: center;
+  }
+  .agent-main {
+    display: inline-block; background: var(--dark); color: white;
+    border-radius: 12px; padding: 16px 32px; margin-bottom: 20px;
+    font-family: 'Poppins', Arial, sans-serif; font-weight: 700; font-size: 18px;
+  }
+  .agent-main span { display: block; font-size: 11px; font-weight: 400; color: var(--mid-gray); margin-top: 4px; letter-spacing: 1px; text-transform: uppercase; }
+  .connector { color: var(--mid-gray); font-size: 24px; margin: 8px 0; display: block; }
+  .subagents-row { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+  .subagent-card {
+    border-radius: 10px; padding: 16px 20px; text-align: left;
+    border: 2px solid; min-width: 200px; flex: 1;
+  }
+  .subagent-card.generar { border-color: var(--orange); background: #fff8f5; }
+  .subagent-card.revisar { border-color: var(--blue); background: #f5f8fd; }
+  .subagent-card.disenar { border-color: var(--green); background: #f5f7f0; }
+  .subagent-name { font-family: 'Poppins', Arial, sans-serif; font-size: 14px; font-weight: 700; margin-bottom: 6px; }
+  .subagent-card.generar .subagent-name { color: var(--orange); }
+  .subagent-card.revisar .subagent-name { color: var(--blue); }
+  .subagent-card.disenar .subagent-name { color: var(--green); }
+  .subagent-desc { font-size: 13px; color: var(--dark); line-height: 1.5; }
+  .code-block { background: var(--light-gray); border-left: 4px solid var(--orange); border-radius: 0 8px 8px 0; padding: 16px 20px; margin: 16px 0; font-family: 'JetBrains Mono', monospace; font-size: 14px; line-height: 1.6; }
+  .flow-steps { list-style: none; counter-reset: step; }
+  .flow-steps li { counter-increment: step; display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; font-size: 15px; }
+  .flow-steps li::before { content: counter(step); font-family: 'Poppins', Arial, sans-serif; font-size: 15px; font-weight: 700; color: white; background: var(--orange); min-width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .why-box { background: var(--dark); color: white; border-radius: 12px; padding: 24px 28px; margin: 32px 0; }
+  .why-box h3 { font-family: 'Poppins', Arial, sans-serif; font-size: 16px; font-weight: 700; color: var(--orange); margin-bottom: 12px; }
+  .why-box p { font-size: 15px; line-height: 1.7; }
+  .why-box em { color: var(--blue); font-style: normal; }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--light-gray); font-family: 'Poppins', Arial, sans-serif; font-size: 12px; color: var(--mid-gray); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="section-tag">Sección 04 — Guía IA IT4W</div>
+<h1>Agentes y subagentes:<br>el director y los especialistas</h1>
+
+<p>Un <strong>agente</strong> es una IA que puede tomar decisiones, usar herramientas y completar tareas por sí sola. Un <strong>subagente</strong> es otro agente que el primero puede "llamar" para que haga una tarea específica.</p>
+
+<div class="analogy">
+  Como una <strong>producción audiovisual</strong>: el director coordina el proyecto, y llama al especialista en sonido, al de iluminación y al de edición. Cada uno hace su parte. El director ensambla todo.
+</div>
+
+<h2>El sistema de agentes en IT4W</h2>
+
+<div class="agents-diagram">
+  <div class="agent-main">
+    🤖 Agente Principal
+    <span>Copilot + Claude en modo Agent</span>
+  </div>
+  <span class="connector">↓ delega según la tarea</span>
+  <div class="subagents-row">
+    <div class="subagent-card generar">
+      <div class="subagent-name">/generar-seccion</div>
+      <div class="subagent-desc">Redacta una sección de la guía con el formato y tono IT4W</div>
+    </div>
+    <div class="subagent-card revisar">
+      <div class="subagent-name">/revisar-simplicidad</div>
+      <div class="subagent-desc">Evalúa si el texto es claro para personas no técnicas (score 1-10)</div>
+    </div>
+    <div class="subagent-card disenar">
+      <div class="subagent-name">/diseñar-seccion</div>
+      <div class="subagent-desc">Genera el diseño visual de la sección aprobada</div>
+    </div>
+  </div>
+</div>
+
+<h2>¿Cómo se invoca un subagente?</h2>
+<p>Es tan simple como escribirlo en el chat en modo <strong>Agent</strong>:</p>
+<div class="code-block">/generar-seccion concepto: agentes y subagentes archivo: contenido/04-agentes.md</div>
+<p>La IA entiende que debe invocar ese subagente, pasarle los parámetros y guardar el resultado donde se le indica.</p>
+
+<h2>Flujo real cuando Comercial pide una sección nueva</h2>
+<ol class="flow-steps">
+  <li>Escribe en modo Agent: <em>"Generá la sección sobre dashboards para analytics"</em></li>
+  <li>El agente principal recibe el pedido y lee las reglas del proyecto</li>
+  <li>Invoca <strong>/generar-seccion</strong> con el concepto y el archivo destino</li>
+  <li><strong>/generar-seccion</strong> redacta el contenido con el estilo IT4W</li>
+  <li>El agente invoca <strong>/revisar-simplicidad</strong> automáticamente</li>
+  <li>Si el score es ≥ 7, invoca <strong>/diseñar-seccion</strong></li>
+  <li>El resultado final queda en <code>contenido/</code> y <code>diseño/</code></li>
+</ol>
+
+<div class="why-box">
+  <h3>¿Por qué es potente?</h3>
+  <p>Porque podés delegar flujos completos de trabajo, no solo respuestas. La IA trabaja <em>como un equipo</em>, no como una sola persona.<br><br>
+  Es como pedirle a un PM que entregue un informe: no lo hace todo solo — coordina con UX, Comercial y QA. Vos pedís el informe. El PM orquesta.</p>
+</div>
+
+<footer>
+  <span>Guía IA IT4W · Sección 04</span>
+  <span>Score de revisión: 9/10</span>
+</footer>
+</body>
+</html>

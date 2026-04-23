@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>S02 — GitHub Copilot vs Claude | Guía IA IT4W</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+  :root {
+    --dark: #141413; --light: #faf9f5; --mid-gray: #b0aea5;
+    --light-gray: #e8e6dc; --orange: #d97757; --blue: #6a9bcc; --green: #788c5d;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: 'Lora', Georgia, serif;
+    background: var(--light); color: var(--dark);
+    max-width: 860px; margin: 0 auto; padding: 48px 40px; line-height: 1.7;
+  }
+  .section-tag {
+    font-family: 'Poppins', Arial, sans-serif; font-size: 11px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase; color: var(--mid-gray); margin-bottom: 12px;
+  }
+  h1 {
+    font-family: 'Poppins', Arial, sans-serif; font-size: 36px; font-weight: 700;
+    line-height: 1.2; padding-bottom: 16px; border-bottom: 3px solid var(--orange); margin-bottom: 32px;
+  }
+  .analogy {
+    background: var(--light-gray); border-left: 4px solid var(--blue);
+    padding: 16px 20px; margin: 24px 0; font-style: italic; font-size: 16px; border-radius: 0 8px 8px 0;
+  }
+  .vs-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;
+  }
+  .model-card {
+    border-radius: 12px; padding: 28px; border: 2px solid var(--light-gray);
+  }
+  .model-card.copilot { border-color: var(--blue); }
+  .model-card.claude { border-color: var(--orange); }
+  .model-logo {
+    font-family: 'Poppins', Arial, sans-serif; font-size: 13px; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; padding: 4px 10px;
+    display: inline-block; border-radius: 4px;
+  }
+  .model-card.copilot .model-logo { background: var(--blue); color: white; }
+  .model-card.claude .model-logo { background: var(--orange); color: white; }
+  .model-title {
+    font-family: 'Poppins', Arial, sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 4px;
+  }
+  .model-subtitle { font-size: 13px; color: var(--mid-gray); margin-bottom: 16px; }
+  .feature-list { list-style: none; }
+  .feature-list li { padding: 8px 0; border-bottom: 1px solid var(--light-gray); font-size: 15px; display: flex; gap: 8px; }
+  .feature-list li::before { content: '→'; color: var(--mid-gray); flex-shrink: 0; }
+  .feature-list li:last-child { border-bottom: none; }
+  .highlight-box {
+    background: #fff8f5; border: 1px solid var(--orange); border-radius: 10px;
+    padding: 20px 24px; margin: 32px 0;
+  }
+  .highlight-box h3 {
+    font-family: 'Poppins', Arial, sans-serif; font-size: 16px; font-weight: 600;
+    color: var(--orange); margin-bottom: 12px;
+  }
+  .scenario {
+    margin-bottom: 20px;
+  }
+  .scenario-label {
+    font-family: 'Poppins', Arial, sans-serif; font-size: 12px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 1px; color: var(--mid-gray); margin-bottom: 6px;
+  }
+  .scenario-text {
+    background: var(--light-gray); padding: 12px 16px; border-radius: 6px; font-size: 14px; font-style: italic;
+  }
+  .scenario-result {
+    padding: 10px 16px; border-radius: 6px; font-size: 14px; margin-top: 8px;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .scenario-result.bad { background: #fdf0ec; border-left: 3px solid var(--orange); }
+  .scenario-result.good { background: #f0f5eb; border-left: 3px solid var(--green); }
+  h2 { font-family: 'Poppins', Arial, sans-serif; font-size: 22px; font-weight: 600; margin: 40px 0 16px; }
+  .how-steps { list-style: none; counter-reset: step; }
+  .how-steps li { counter-increment: step; display: flex; gap: 16px; align-items: flex-start; margin-bottom: 14px; }
+  .how-steps li::before {
+    content: counter(step); font-family: 'Poppins', Arial, sans-serif; font-size: 16px; font-weight: 700;
+    color: var(--orange); min-width: 30px; height: 30px; background: var(--light-gray);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  }
+  table { width: 100%; border-collapse: collapse; margin: 24px 0; font-size: 15px; }
+  th { font-family: 'Poppins', Arial, sans-serif; font-size: 13px; font-weight: 600; background: var(--dark); color: white; padding: 12px 16px; text-align: left; }
+  td { padding: 11px 16px; border-bottom: 1px solid var(--light-gray); }
+  tr:nth-child(even) td { background: var(--light-gray); }
+  footer { margin-top: 56px; padding-top: 20px; border-top: 1px solid var(--light-gray); font-family: 'Poppins', Arial, sans-serif; font-size: 12px; color: var(--mid-gray); display: flex; justify-content: space-between; }
+</style>
+</head>
+<body>
+
+<div class="section-tag">Sección 02 — Guía IA IT4W</div>
+<h1>GitHub Copilot vs Claude:<br>el mismo lugar, distinto motor</h1>
+
+<p>En VS Code podés usar <strong>distintos modelos de IA</strong> dentro del mismo chat de Copilot. GitHub Copilot es el asistente de Microsoft. Claude es el modelo de Anthropic. Ambos viven en el mismo panel, pero piensan distinto.</p>
+
+<div class="analogy">
+  Es como elegir entre dos médicos especialistas: los dos son buenos, pero uno tiene más experiencia en lo que necesitás.
+</div>
+
+<div class="vs-grid">
+  <div class="model-card copilot">
+    <div class="model-logo">Microsoft</div>
+    <div class="model-title">GitHub Copilot</div>
+    <div class="model-subtitle">Modelo base integrado</div>
+    <ul class="feature-list">
+      <li>Especializado en código y completado de texto</li>
+      <li>Sugerencias mientras escribís</li>
+      <li>Integración nativa con VS Code</li>
+      <li>Respuesta rápida para tareas cortas</li>
+    </ul>
+  </div>
+
+  <div class="model-card claude">
+    <div class="model-logo">Anthropic</div>
+    <div class="model-title">Claude Sonnet</div>
+    <div class="model-subtitle">Modelo para lenguaje y flujos</div>
+    <ul class="feature-list">
+      <li>Especializado en razonamiento y lenguaje natural</li>
+      <li>Entiende contexto largo y documentos complejos</li>
+      <li>Ideal para redactar, revisar y coordinar</li>
+      <li>Lee y aplica skills con precisión</li>
+    </ul>
+  </div>
+</div>
+
+<div class="highlight-box">
+  <h3>Ejemplo real — Sofía, diseñadora UX</h3>
+  <div class="scenario">
+    <div class="scenario-label">La tarea</div>
+    <div class="scenario-text">"Redactá las instrucciones de flujo de pantallas para el cliente."</div>
+  </div>
+  <div class="scenario-result bad">
+    <span>❌</span>
+    <span><strong>Con Copilot base:</strong> Respuesta genérica, en inglés, pensada para código.</span>
+  </div>
+  <div class="scenario-result good">
+    <span>✅</span>
+    <span><strong>Con Claude Sonnet:</strong> Lee el archivo de instrucciones del proyecto, entiende el tono IT4W y redacta directo en español con el estilo del equipo.</span>
+  </div>
+</div>
+
+<h2>¿Cómo cambio el modelo?</h2>
+<ol class="how-steps">
+  <li>Abrí el chat de Copilot en VS Code</li>
+  <li>Hacé clic en el <strong>selector de modelo</strong> (arriba en el panel, muestra el nombre actual)</li>
+  <li>Elegí el modelo: GPT-4o, Claude Sonnet, etc.</li>
+  <li>Escribí tu pedido normalmente — el resto es igual</li>
+</ol>
+
+<h2>¿Cuándo uso cada uno en IT4W?</h2>
+<table>
+  <thead><tr><th>Modelo</th><th>Fuerte en...</th><th>Cuándo usarlo</th></tr></thead>
+  <tbody>
+    <tr><td><strong>GitHub Copilot</strong></td><td>Código, sugerencias rápidas</td><td>Archivos de configuración técnica</td></tr>
+    <tr><td><strong>Claude Sonnet</strong></td><td>Lenguaje, contexto, flujos</td><td>Redacción, revisión, orquestación</td></tr>
+  </tbody>
+</table>
+
+<footer>
+  <span>Guía IA IT4W · Sección 02</span>
+  <span>Score de revisión: 8/10</span>
+</footer>
+</body>
+</html>
