@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Orquestación — Guía IA IT4W</title>
+<title>Orquestación · Guía IT4W</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="progress-bar"></div>
 
-<!-- SIDEBAR -->
 <aside class="sidebar">
   <div class="sidebar-brand">
     <a href="index.html">
@@ -21,21 +20,20 @@
   <nav class="sidebar-nav">
     <div class="nav-section-label">Inicio</div>
     <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
     <div class="nav-section-label" style="margin-top:12px">Secciones</div>
     <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
     <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
     <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
     <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
     <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
-    <a href="orquestacion.html" class="nav-item active"><span class="nav-num">06</span> Orquestación</a>
-    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
   </nav>
   <div class="sidebar-footer">
     <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio oficial IT4W</a>
   </div>
 </aside>
 
-<!-- MOBILE -->
 <div class="mobile-topbar">
   <span class="mobile-brand">IA en VS Code — <span>IT4W</span></span>
   <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
@@ -49,175 +47,139 @@
   <nav class="sidebar-nav">
     <div class="nav-section-label">Inicio</div>
     <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
     <div class="nav-section-label" style="margin-top:12px">Secciones</div>
     <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
     <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
     <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
     <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
     <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
-    <a href="orquestacion.html" class="nav-item active"><span class="nav-num">06</span> Orquestación</a>
-    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <div style="padding:16px 24px;margin-top:8px;border-top:1px solid #E4E4E4;">
+      <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener" style="font-size:13px;color:#6B6B6B;">📁 Repositorio oficial IT4W</a>
+    </div>
   </nav>
 </div>
 
-<!-- MAIN -->
 <div class="main-wrapper">
-  <div class="page-content">
+<div class="page-content">
 
-    <div class="breadcrumb">
-      <a href="index.html">Inicio</a>
-      <span class="sep">›</span>
-      <span class="current">Orquestación</span>
+  <div class="breadcrumb">
+    <a href="index.html">Inicio</a>
+    <span class="sep">›</span>
+    <span class="current">Orquestación</span>
+  </div>
+  <div class="page-section-label">Sección 06</div>
+  <h1 class="page-title">Orquestación:<br>un pedido, todo el equipo trabaja</h1>
+
+  <div class="module-block">
+    <div class="module-label">📖 Concepto</div>
+    <h2 class="section-heading" style="margin-top:8px;">¿Qué es la orquestación?</h2>
+    <p>La orquestación es cuando un solo pedido tuyo dispara una cadena de acciones coordinadas. El agente principal recibe tu pedido, lo descompone en partes y llama al subagente correcto para cada una — en el orden correcto.</p>
+    <blockquote class="key-quote">"El agente principal es el director de orquesta: vos le decís qué querés lograr, y él decide qué especialista llamar y en qué orden."</blockquote>
+    <div class="flow">
+      <div class="flow-trigger">📩 Tu pedido — un solo mensaje</div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step s1"><div><span class="fs-name">Agente principal</span><span class="fs-desc">Interpreta y coordina</span></div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step s1"><div><span class="fs-name">Subagente 1 — Redactar</span><span class="fs-desc">Genera el contenido</span></div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-step s2"><div><span class="fs-name">Subagente 2 — Revisar</span><span class="fs-desc">Evalúa la claridad</span></div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-result">✅ Resultado final — archivo listo en tu proyecto</div>
     </div>
+  </div>
 
-    <div class="page-section-label">Sección 06</div>
-    <h1 class="page-title">Orquestación:<br>un pedido, todo el equipo trabaja</h1>
-
-    <!-- ══════════════════════════════════════
-         📖 CONCEPTO
-    ══════════════════════════════════════ -->
-    <div class="module-block">
-      <div class="module-label">📖 Concepto</div>
-      <h2 class="section-heading" style="margin-top:8px;">¿Qué es la orquestación?</h2>
-
-      <p>La orquestación es cuando un solo pedido tuyo dispara una cadena de acciones coordinadas. El agente principal recibe tu pedido, lo descompone en partes y llama al subagente correcto para cada una — en el orden correcto.</p>
-
-      <blockquote class="key-quote">
-        "El agente principal es el director de orquesta: vos le decís qué querés lograr, y él decide qué especialista llamar y en qué orden."
-      </blockquote>
-
-      <div class="flow">
-        <div class="flow-step">
-          <div class="flow-label">Tu pedido</div>
-          <div class="flow-sub">Un solo mensaje</div>
-        </div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step">
-          <div class="flow-label">Agente principal</div>
-          <div class="flow-sub">Interpreta y coordina</div>
-        </div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step flow-step--violet">
-          <div class="flow-label">Subagente 1 — Redactar</div>
-          <div class="flow-sub">Genera el contenido</div>
-        </div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step flow-step--violet">
-          <div class="flow-label">Subagente 2 — Revisar</div>
-          <div class="flow-sub">Evalúa la claridad</div>
-        </div>
-        <div class="flow-arrow">↓</div>
-        <div class="flow-step flow-step--green">
-          <div class="flow-label">Resultado final</div>
-          <div class="flow-sub">Archivo listo en tu proyecto</div>
-        </div>
-      </div>
+  <div class="module-block">
+    <div class="module-label">💡 Ejemplo cotidiano</div>
+    <h2 class="section-heading" style="margin-top:8px;">El pedido de informe</h2>
+    <p>Imaginá que le decís a tu equipo: <em>"Necesito un informe para el cliente para el viernes."</em></p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Quién actúa</th><th>Qué hace</th><th>Cuándo</th></tr></thead>
+        <tbody>
+          <tr><td>El redactor</td><td>Escribe el borrador</td><td>Primero</td></tr>
+          <tr><td>El revisor</td><td>Corrige y simplifica</td><td>Cuando el borrador está listo</td></tr>
+          <tr><td>El diseñador</td><td>Formatea para el cliente</td><td>Solo cuando el revisor aprobó</td></tr>
+        </tbody>
+      </table>
     </div>
-
-    <!-- ══════════════════════════════════════
-         💡 EJEMPLO
-    ══════════════════════════════════════ -->
-    <div class="module-block">
-      <div class="module-label">💡 Ejemplo cotidiano</div>
-      <h2 class="section-heading" style="margin-top:8px;">El pedido de informe</h2>
-
-      <p>Imaginá que le decís a tu equipo: <em>"Necesito un informe para el cliente para el viernes."</em></p>
-
-      <div class="table-wrap">
-        <table>
-          <thead><tr><th>Quién actúa</th><th>Qué hace</th><th>Cuándo</th></tr></thead>
-          <tbody>
-            <tr><td>El redactor</td><td>Escribe el borrador</td><td>Primero</td></tr>
-            <tr><td>El revisor</td><td>Corrige y simplifica</td><td>Cuando el borrador está listo</td></tr>
-            <tr><td>El diseñador</td><td>Formatea para el cliente</td><td>Solo cuando el revisor aprobó</td></tr>
-          </tbody>
-        </table>
+    <p>Vos dijiste una sola cosa. El resto pasó automáticamente, en el orden correcto. Eso es orquestación.</p>
+    <div class="comparison">
+      <div class="comp-card bad">
+        <div class="comp-label">❌ Sin orquestación</div>
+        <div class="comp-text">Hacés tres pedidos por separado, en orden, esperando que cada uno termine antes del siguiente. Si olvidás alguno, el resultado es inconsistente.</div>
       </div>
-
-      <p>Vos dijiste una sola cosa. El resto pasó automáticamente, en el orden correcto. Eso es orquestación.</p>
-
-      <div class="comparison">
-        <div class="comp-card bad">
-          <div class="comp-label">❌ Sin orquestación</div>
-          <div class="comp-text">Hacés tres pedidos por separado, en orden, esperando que cada uno termine antes del siguiente. Si olvidás alguno, el resultado es inconsistente.</div>
-        </div>
-        <div class="comp-card good">
-          <div class="comp-label">✅ Con orquestación</div>
-          <div class="comp-text">Hacés un solo pedido. El agente principal coordina todo. Cada subagente actúa en el momento correcto, con lo que el anterior produjo.</div>
-        </div>
+      <div class="comp-card good">
+        <div class="comp-label">✅ Con orquestación</div>
+        <div class="comp-text">Hacés un solo pedido. El agente principal coordina todo. Cada subagente actúa en el momento correcto, con lo que el anterior produjo.</div>
       </div>
     </div>
+  </div>
 
-    <!-- ══════════════════════════════════════
-         🛠️ EJERCICIO
-    ══════════════════════════════════════ -->
-    <div class="module-block">
-      <div class="module-label">🛠️ Ejercicio — Tu primera orquestación</div>
-      <h2 class="section-heading" style="margin-top:8px;">Dos subagentes, un solo pedido</h2>
-      <p>Vas a crear dos subagentes simples y actualizar tu agente principal para que los coordine.</p>
-
-      <div class="stepper-nav" style="margin:32px 0 40px;">
-        <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Subagente 1</div></div>
-        <div class="step-connector"></div>
-        <div class="step-dot" data-step="1"><div class="step-dot-circle">2</div><div class="step-dot-label">Subagente 2</div></div>
-        <div class="step-connector"></div>
-        <div class="step-dot" data-step="2"><div class="step-dot-circle">3</div><div class="step-dot-label">Actualizar</div></div>
-        <div class="step-connector"></div>
-        <div class="step-dot" data-step="3"><div class="step-dot-circle">4</div><div class="step-dot-label">Probar</div></div>
+  <div class="module-block">
+    <div class="module-label">🛠️ Ejercicio — Tu primera orquestación</div>
+    <h2 class="section-heading" style="margin-top:8px;">Dos subagentes, un solo pedido</h2>
+    <p>Vas a crear dos subagentes simples y actualizar tu agente principal para que los coordine.</p>
+    <div class="stepper-nav" style="margin:32px 0 40px;">
+      <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Subagente 1</div></div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="1"><div class="step-dot-circle">2</div><div class="step-dot-label">Subagente 2</div></div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="2"><div class="step-dot-circle">3</div><div class="step-dot-label">Actualizar</div></div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="3"><div class="step-dot-circle">4</div><div class="step-dot-label">Probar</div></div>
+    </div>
+    <div class="exercise-step" data-step="0">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">1</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Explorer de VS Code</div>
+          <div class="ex-title">Creá el subagente de redacción</div>
+          <div class="ex-goal">Un especialista que solo redacta</div>
+        </div>
       </div>
-
-      <!-- PASO 1 -->
-      <div class="exercise-step" data-step="0">
-        <div class="exercise-step-header">
-          <div class="ex-num-circle">1</div>
-          <div class="ex-meta">
-            <div class="ex-mode">Explorer de VS Code</div>
-            <div class="ex-title">Creá el subagente de redacción</div>
-            <div class="ex-goal">Un especialista que solo redacta</div>
-          </div>
+      <p>Pedile al agente que cree la carpeta y el primer subagente de una sola vez. Abrí el chat en modo <strong>Agent</strong> y copiá esto:</p>
+      <div style="background:#F0EAFF;border-left:4px solid #8C52FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:16px 0;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <span style="font-size:18px;">💬</span>
+          <strong style="color:#2A0880;font-size:14px;">Copiá esto en el chat — modo Agent</strong>
         </div>
-
-        <p>Primero creá la carpeta de prompts. Abrí la terminal:</p>
-        <div class="table-wrap" style="margin-bottom:12px;">
-          <table>
-            <thead><tr><th>Forma</th><th>Cómo</th></tr></thead>
-            <tbody>
-              <tr><td>Tradicional</td><td>Menú <strong>Terminal → New Terminal</strong></td></tr>
-              <tr><td>Windows</td><td><code>Ctrl + Ñ</code> &nbsp;o&nbsp; <code>Ctrl + `</code></td></tr>
-              <tr><td>Mac</td><td><code>Cmd + `</code></td></tr>
-            </tbody>
-          </table>
-        </div>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>mkdir -p .github/prompts</pre></div>
-
-        <p>Luego creá el archivo <code>.github/prompts/redactar.prompt.md</code> con este contenido:</p>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>---
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Creá la carpeta .github/prompts en mi proyecto si no existe.
+Dentro de esa carpeta, creá el archivo redactar.prompt.md con este contenido exacto:
+---
 description: "Redacta contenido simple y claro"
 mode: agent
 ---
 Redactá el contenido que te piden en tono simple, sin tecnicismos.
 Usá español argentino.
 Guardá el resultado en el archivo que te indiquen.</pre></div>
-
-        <div class="step-nav-btns">
-          <button class="btn btn-ghost" disabled>← Anterior</button>
-          <button class="btn btn-primary" data-step-next>Siguiente: Subagente 2 →</button>
+        <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">El agente crea la carpeta y el archivo en un solo paso. No necesitás saber nada de terminal.</p>
+      </div>
+      <p>Verificá en el explorador (panel izquierdo de VS Code) que aparecieron <code>.github/prompts/</code> y el archivo <code>redactar.prompt.md</code> adentro. Si ya está, pasá al siguiente paso. Ahora el segundo subagente — creá <code>.github/prompts/revisar.prompt.md</code>:</p>
+      <div class="code-block"><button class="copy-btn">Copiar</button><pre>---
+description: "Redacta contenido simple y claro"
+mode: agent
+---
+Redactá el contenido que te piden en tono simple, sin tecnicismos.
+Usá español argentino.
+Guardá el resultado en el archivo que te indiquen.</pre></div>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" disabled>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Subagente 2 →</button>
+      </div>
+    </div>
+    <div class="exercise-step" data-step="1">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">2</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Explorer de VS Code</div>
+          <div class="ex-title">Creá el subagente de revisión</div>
+          <div class="ex-goal">Un especialista que solo revisa claridad</div>
         </div>
       </div>
-
-      <!-- PASO 2 -->
-      <div class="exercise-step" data-step="1">
-        <div class="exercise-step-header">
-          <div class="ex-num-circle">2</div>
-          <div class="ex-meta">
-            <div class="ex-mode">Explorer de VS Code</div>
-            <div class="ex-title">Creá el subagente de revisión</div>
-            <div class="ex-goal">Un especialista que solo revisa claridad</div>
-          </div>
-        </div>
-
-        <p>Creá el archivo <code>.github/prompts/revisar.prompt.md</code>:</p>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>---
+      <p>Creá <code>.github/prompts/revisar.prompt.md</code>:</p>
+      <div class="code-block"><button class="copy-btn">Copiar</button><pre>---
 description: "Revisa que el contenido sea simple y claro"
 mode: agent
 ---
@@ -225,112 +187,86 @@ Leé el archivo que te indiquen.
 Evaluá si se entiende para alguien que no sabe de tecnología.
 Dale un puntaje del 1 al 10.
 Si el puntaje es menor a 7, sugerí mejoras concretas.</pre></div>
-
-        <div class="step-nav-btns">
-          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
-          <button class="btn btn-primary" data-step-next>Siguiente: Actualizar agente →</button>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Actualizar agente →</button>
+      </div>
+    </div>
+    <div class="exercise-step" data-step="2">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">3</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Editor</div>
+          <div class="ex-title">Actualizá tu agente principal</div>
+          <div class="ex-goal">Enseñarle al director cuándo llamar a cada especialista</div>
         </div>
       </div>
-
-      <!-- PASO 3 -->
-      <div class="exercise-step" data-step="2">
-        <div class="exercise-step-header">
-          <div class="ex-num-circle">3</div>
-          <div class="ex-meta">
-            <div class="ex-mode">Editor</div>
-            <div class="ex-title">Actualizá tu agente principal</div>
-            <div class="ex-goal">Enseñarle al director cuándo llamar a cada especialista</div>
-          </div>
-        </div>
-
-        <p>Abrí <code>.github/copilot-instructions.md</code> y agregá al final:</p>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>## Subagentes disponibles
+      <p>Abrí <code>.github/copilot-instructions.md</code> y agregá al final:</p>
+      <div class="code-block"><button class="copy-btn">Copiar</button><pre>## Subagentes disponibles
 
 Cuando necesites redactar algo → invocá /redactar
 Cuando necesites revisar algo → invocá /revisar
 
 El orden correcto es siempre: redactar primero, revisar después.
 Nunca revises un texto que no fue generado en esta sesión.</pre></div>
-
-        <p>Guardá el archivo:</p>
-        <div class="table-wrap" style="margin-bottom:0;">
-          <table>
-            <thead><tr><th>Forma</th><th>Cómo</th></tr></thead>
-            <tbody>
-              <tr><td>Tradicional</td><td>Menú <strong>File → Save</strong></td></tr>
-              <tr><td>Windows</td><td><code>Ctrl + S</code></td></tr>
-              <tr><td>Mac</td><td><code>Cmd + S</code></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="step-nav-btns">
-          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
-          <button class="btn btn-primary" data-step-next>Siguiente: Probar →</button>
-        </div>
-      </div>
-
-      <!-- PASO 4 -->
-      <div class="exercise-step" data-step="3">
-        <div class="exercise-step-header">
-          <div class="ex-num-circle">4</div>
-          <div class="ex-meta">
-            <div class="ex-mode">Chat de Copilot — modo Agent</div>
-            <div class="ex-title">Probá la orquestación</div>
-            <div class="ex-goal">Un pedido que activa los dos subagentes en orden</div>
-          </div>
-        </div>
-
-        <p>En el chat modo <strong>Agent</strong>, escribí:</p>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Redactá y revisá un texto corto que explique qué es VS Code para alguien que nunca lo usó. Guardalo en mi-primer-texto.md</pre></div>
-
-        <p><strong>Observá:</strong></p>
-        <ul>
-          <li>¿Invocó <code>/redactar</code> primero?</li>
-          <li>¿Esperó que terminara antes de invocar <code>/revisar</code>?</li>
-          <li>¿Apareció <code>mi-primer-texto.md</code> en tu carpeta?</li>
-          <li>¿El texto tiene un puntaje asignado por el revisor?</li>
-        </ul>
-
-        <div class="tip">💡 Si el agente no invocó los subagentes automáticamente, podés hacerlo manualmente: escribí <code>/redactar</code> primero, y luego <code>/revisar</code>.</div>
-
-        <div class="step-nav-btns">
-          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
-          <span class="btn btn-ghost" style="opacity:.4;cursor:default;">Fin del ejercicio ✓</span>
-        </div>
+      <p>Guardá con <code>Ctrl + S</code> (Windows) o <code>Cmd + S</code> (Mac).</p>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Probar →</button>
       </div>
     </div>
-
-    <!-- ══════════════════════════════════════
-         ✅ CHECKPOINT
-    ══════════════════════════════════════ -->
-    <div class="module-block checkpoint-block">
-      <div class="module-label">✅ Checkpoint</div>
-      <h2 class="section-heading" style="margin-top:8px;">Lo que aprendiste en esta sección</h2>
-      <ul class="checkpoint-list">
-        <li>🎼 <strong>Orquestación</strong> = un pedido que activa múltiples agentes en orden.</li>
-        <li>🎬 El agente principal coordina — los subagentes se especializan.</li>
-        <li>📁 Los subagentes viven en <code>.github/prompts/</code> con extensión <code>.prompt.md</code>.</li>
-        <li>⚡ Menos errores, más consistencia — cada agente hace una sola cosa.</li>
-        <li>✅ Tenés tu primera orquestación funcionando con dos subagentes reales.</li>
+    <div class="exercise-step" data-step="3">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">4</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Chat de Copilot — modo Agent</div>
+          <div class="ex-title">Probá la orquestación</div>
+          <div class="ex-goal">Un pedido que activa los dos subagentes en orden</div>
+        </div>
+      </div>
+      <p>En el chat modo <strong>Agent</strong>, escribí:</p>
+      <div class="code-block"><button class="copy-btn">Copiar</button><pre>Redactá y revisá un texto corto que explique qué es VS Code para alguien que nunca lo usó. Guardalo en mi-primer-texto.md</pre></div>
+      <p><strong>Observá:</strong></p>
+      <ul>
+        <li>¿Invocó <code>/redactar</code> primero?</li>
+        <li>¿Esperó que terminara antes de invocar <code>/revisar</code>?</li>
+        <li>¿Apareció <code>mi-primer-texto.md</code> en tu carpeta?</li>
       </ul>
-    </div>
-
-    <div class="section-footer">
-      <span class="read-time">⏱️ Duración estimada: 20 min</span>
-      <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
-      <div style="text-align:center;padding:24px 0 8px;">
-        <div style="font-size:28px;margin-bottom:8px;">🎉</div>
-        <p style="font-weight:700;font-size:18px;margin:0 0 4px;">¡Completaste todas las secciones!</p>
-        <p style="color:var(--text-muted);font-size:14px;margin:0 0 24px;">Ya conocés todos los conceptos clave. ¿Listo para ponerlo en práctica?</p>
-      </div>
-      <div class="page-nav">
-        <a href="mcp.html" class="btn btn-ghost">← Anterior: MCP</a>
-        <a href="ejercicio.html" class="btn btn-primary">Ir al Ejercicio de inicio →</a>
+      <div class="tip">💡 Si el agente no invocó los subagentes automáticamente, podés hacerlo manualmente: escribí <code>/redactar</code> primero, y luego <code>/revisar</code>.</div>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <span class="btn btn-ghost" style="opacity:.4;cursor:default;">Fin del ejercicio ✓</span>
       </div>
     </div>
-
   </div>
+
+  <div class="module-block checkpoint-block">
+    <div class="module-label">✅ Checkpoint</div>
+    <h2 class="section-heading" style="margin-top:8px;">Lo que aprendiste en esta sección</h2>
+    <ul class="checkpoint-list">
+      <li>🎼 <strong>Orquestación</strong> = un pedido que activa múltiples agentes en orden.</li>
+      <li>🎬 El agente principal coordina — los subagentes se especializan.</li>
+      <li>📁 Los subagentes viven en <code>.github/prompts/</code> con extensión <code>.prompt.md</code>.</li>
+      <li>⚡ Menos errores, más consistencia — cada agente hace una sola cosa.</li>
+      <li>✅ Tenés tu primera orquestación funcionando con dos subagentes reales.</li>
+    </ul>
+  </div>
+
+  <div class="section-footer">
+    <span class="read-time">⏱️ Duración estimada: 20 min</span>
+    <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
+    <div style="text-align:center;padding:24px 0 8px;">
+      <div style="font-size:28px;margin-bottom:8px;">🎉</div>
+      <p style="font-weight:700;font-size:18px;margin:0 0 4px;">¡Completaste todas las secciones!</p>
+      <p style="color:var(--text-muted);font-size:14px;margin:0 0 24px;">Ya conocés todos los conceptos clave. ¿Listo para ponerlo en práctica?</p>
+    </div>
+    <div class="page-nav">
+      <a href="mcp.html" class="btn btn-ghost">← Anterior: MCP</a>
+      <a href="ejercicio.html" class="btn btn-primary">Ir al Ejercicio de inicio →</a>
+    </div>
+  </div>
+
+</div>
 </div>
 
 <script src="app.js"></script>

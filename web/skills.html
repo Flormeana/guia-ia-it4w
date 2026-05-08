@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Skills — Guía IA IT4W</title>
+<title>Skills · Guía IT4W</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="progress-bar"></div>
 
-<!-- SIDEBAR -->
 <aside class="sidebar">
   <div class="sidebar-brand">
     <a href="index.html">
@@ -21,21 +20,20 @@
   <nav class="sidebar-nav">
     <div class="nav-section-label">Inicio</div>
     <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
     <div class="nav-section-label" style="margin-top:12px">Secciones</div>
     <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
     <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
-    <a href="skills.html" class="nav-item active"><span class="nav-num">03</span> Skills</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
     <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
     <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
     <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
-    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
   </nav>
   <div class="sidebar-footer">
     <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio oficial IT4W</a>
   </div>
 </aside>
 
-<!-- MOBILE -->
 <div class="mobile-topbar">
   <span class="mobile-brand">IA en VS Code — <span>IT4W</span></span>
   <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
@@ -49,153 +47,120 @@
   <nav class="sidebar-nav">
     <div class="nav-section-label">Inicio</div>
     <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
     <div class="nav-section-label" style="margin-top:12px">Secciones</div>
     <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
     <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
-    <a href="skills.html" class="nav-item active"><span class="nav-num">03</span> Skills</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
     <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
     <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
     <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
-    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+    <div style="padding:16px 24px;margin-top:8px;border-top:1px solid #E4E4E4;">
+      <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener" style="font-size:13px;color:#6B6B6B;">📁 Repositorio oficial IT4W</a>
+    </div>
   </nav>
 </div>
 
-<!-- MAIN -->
 <div class="main-wrapper">
-  <div class="page-content">
+<div class="page-content">
 
-    <div class="breadcrumb">
-      <a href="index.html">Inicio</a>
-      <span class="sep">›</span>
-      <span class="current">Skills</span>
-    </div>
+  <div class="breadcrumb">
+    <a href="index.html">Inicio</a>
+    <span class="sep">›</span>
+    <span class="current">Skills</span>
+  </div>
+  <div class="page-section-label">Sección 03</div>
+  <h1 class="page-title">Skills: el manual de procedimientos de la IA</h1>
 
-    <div class="page-section-label">Sección 03</div>
-    <h1 class="page-title">Skills: el manual de procedimientos de la IA</h1>
-
-    <!-- ══════════════════════════════════════
-         📖 CONCEPTO
-    ══════════════════════════════════════ -->
-    <div class="module-block">
-      <div class="module-label">📖 Concepto</div>
-      <h2 class="section-heading" style="margin-top:8px;">¿Qué es un skill?</h2>
-
-      <p>Un skill es un archivo de texto con instrucciones que le explicás a la IA antes de que empiece a trabajar. Le decís cómo hablar, qué tono usar, qué reglas respetar.</p>
-
-      <blockquote class="key-quote">
-        "Un skill es el manual de procedimientos que el especialista tiene sobre su escritorio."
-      </blockquote>
-
-      <p>No es código. Es texto. Son instrucciones escritas como para explicarle a alguien nuevo cómo se hacen las cosas en tu equipo.</p>
-
-      <div class="comparison">
-        <div class="comp-card bad">
-          <div class="comp-label">❌ Sin skill — respuesta genérica</div>
-          <div class="comp-text">Le pedís a la IA que redacte un comunicado. Te escribe algo formal, en castellano neutro, con estructura de email corporativo genérico.</div>
-        </div>
-        <div class="comp-card good">
-          <div class="comp-label">✅ Con skill — respuesta personalizada</div>
-          <div class="comp-text">La IA ya sabe tu tono, tu audiencia y el formato que usás en tu equipo. El comunicado sale listo para enviar sin editar.</div>
-        </div>
+  <div class="module-block">
+    <div class="module-label">📖 Concepto</div>
+    <h2 class="section-heading" style="margin-top:8px;">¿Qué es un skill?</h2>
+    <p>Un skill es un archivo de texto con instrucciones que le explicás a la IA antes de que empiece a trabajar. Le decís cómo hablar, qué tono usar, qué reglas respetar.</p>
+    <blockquote class="key-quote">"Un skill es el manual de procedimientos que el especialista tiene sobre su escritorio."</blockquote>
+    <p>No es código. Es texto. Son instrucciones escritas como para explicarle a alguien nuevo cómo se hacen las cosas en tu equipo.</p>
+    <div class="comparison">
+      <div class="comp-card bad">
+        <div class="comp-label">❌ Sin skill — respuesta genérica</div>
+        <div class="comp-text">Le pedís a la IA que redacte un comunicado. Te escribe algo formal, en castellano neutro, con estructura de email corporativo genérico.</div>
+      </div>
+      <div class="comp-card good">
+        <div class="comp-label">✅ Con skill — respuesta personalizada</div>
+        <div class="comp-text">La IA ya sabe tu tono, tu audiencia y el formato que usás en tu equipo. El comunicado sale listo para enviar sin editar.</div>
       </div>
     </div>
+  </div>
 
-    <!-- ══════════════════════════════════════
-         💡 EJEMPLO
-    ══════════════════════════════════════ -->
-    <div class="module-block">
-      <div class="module-label">💡 Ejemplo cotidiano</div>
-      <h2 class="section-heading" style="margin-top:8px;">El documento de bienvenida del equipo</h2>
-
-      <p>Imaginá que incorporás a alguien nuevo a tu equipo. Antes de que empiece, le das un documento que dice:</p>
-
-      <div class="cards-grid">
-        <div class="card accent-blue">
-          <span class="card-icon">🗣️</span>
-          <div class="card-title">Idioma y tono</div>
-          <div class="card-desc">Siempre respondé en español argentino. Usá un tono amigable pero profesional. Nada de tecnicismos sin explicar.</div>
-        </div>
-        <div class="card">
-          <span class="card-icon">📐</span>
-          <div class="card-title">Formato</div>
-          <div class="card-desc">Usá bullet points para listas. Los títulos van en negrita. Los documentos empiezan con un resumen de dos líneas.</div>
-        </div>
-        <div class="card accent-green">
-          <span class="card-icon">🎯</span>
-          <div class="card-title">Audiencia</div>
-          <div class="card-desc">Escribís para personas que no saben de tecnología. Los ejemplos tienen que ser del trabajo cotidiano, no de programación.</div>
-        </div>
+  <div class="module-block">
+    <div class="module-label">💡 Ejemplo cotidiano</div>
+    <h2 class="section-heading" style="margin-top:8px;">El documento de bienvenida del equipo</h2>
+    <p>Imaginá que incorporás a alguien nuevo a tu equipo. Antes de que empiece, le das un documento que dice:</p>
+    <div class="cards-grid">
+      <div class="card accent-blue">
+        <span class="card-icon">🗣️</span>
+        <div class="card-title">Idioma y tono</div>
+        <div class="card-desc">Siempre respondé en español argentino. Usá un tono amigable pero profesional. Nada de tecnicismos sin explicar.</div>
       </div>
-
-      <p>Ese documento de instrucciones es exactamente lo que es un skill para la IA.</p>
+      <div class="card">
+        <span class="card-icon">📐</span>
+        <div class="card-title">Formato</div>
+        <div class="card-desc">Usá bullet points para listas. Los títulos van en negrita. Los documentos empiezan con un resumen de dos líneas.</div>
+      </div>
+      <div class="card accent-green">
+        <span class="card-icon">🎯</span>
+        <div class="card-title">Audiencia</div>
+        <div class="card-desc">Escribís para personas que no saben de tecnología. Los ejemplos tienen que ser del trabajo cotidiano, no de programación.</div>
+      </div>
     </div>
+    <p>Ese documento de instrucciones es exactamente lo que es un skill para la IA.</p>
+  </div>
 
-    <!-- ══════════════════════════════════════
-         🛠️ EJERCICIO
-    ══════════════════════════════════════ -->
-    <div class="module-block">
-      <div class="module-label">🛠️ Ejercicio — Creá tu primer skill</div>
-      <h2 class="section-heading" style="margin-top:8px;">Un skill con tu tono preferido</h2>
-      <p>Vas a crear un skill propio que la IA va a usar cada vez que trabajes en tu carpeta de proyecto.</p>
-
-      <div class="stepper-nav" style="margin:32px 0 40px;">
-        <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Carpeta</div></div>
-        <div class="step-connector"></div>
-        <div class="step-dot" data-step="1"><div class="step-dot-circle">2</div><div class="step-dot-label">Archivo</div></div>
-        <div class="step-connector"></div>
-        <div class="step-dot" data-step="2"><div class="step-dot-circle">3</div><div class="step-dot-label">Probarlo</div></div>
-      </div>
-
-      <!-- PASO 1 -->
-      <div class="exercise-step" data-step="0">
-        <div class="exercise-step-header">
-          <div class="ex-num-circle">1</div>
-          <div class="ex-meta">
-            <div class="ex-mode">Terminal</div>
-            <div class="ex-title">Creá la carpeta para el skill</div>
-            <div class="ex-goal">Preparar el lugar donde va a vivir tu skill</div>
-          </div>
-        </div>
-
-        <p>Abrí la terminal en VS Code:</p>
-        <div class="table-wrap" style="margin-bottom:16px;">
-          <table>
-            <thead><tr><th>Forma</th><th>Cómo</th></tr></thead>
-            <tbody>
-              <tr><td>Tradicional</td><td>Menú <strong>Terminal → New Terminal</strong></td></tr>
-              <tr><td>Windows</td><td><code>Ctrl + Ñ</code> &nbsp;o&nbsp; <code>Ctrl + `</code></td></tr>
-              <tr><td>Mac</td><td><code>Cmd + `</code></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <p>Escribí este comando y presioná Enter:</p>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>mkdir -p .vscode/instructions</pre></div>
-
-        <div class="tip">💡 <code>mkdir -p</code> crea la carpeta (y las carpetas padre que hagan falta) sin error si ya existe.</div>
-
-        <div class="step-nav-btns">
-          <button class="btn btn-ghost" disabled>← Anterior</button>
-          <button class="btn btn-primary" data-step-next>Siguiente: Crear archivo →</button>
+  <div class="module-block">
+    <div class="module-label">🛠️ Ejercicio — Creá tu primer skill</div>
+    <h2 class="section-heading" style="margin-top:8px;">Un skill con tu tono preferido</h2>
+    <p>Vas a crear un skill propio que la IA va a usar cada vez que trabajes en tu carpeta de proyecto.</p>
+    <div class="stepper-nav" style="margin:32px 0 40px;">
+      <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Carpeta</div></div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="1"><div class="step-dot-circle">2</div><div class="step-dot-label">Archivo</div></div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="2"><div class="step-dot-circle">3</div><div class="step-dot-label">Probarlo</div></div>
+    </div>
+    <div class="exercise-step" data-step="0">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">1</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Chat de Copilot — modo Agent</div>
+          <div class="ex-title">Pedile al agente que cree la carpeta</div>
+          <div class="ex-goal">La IA hace el trabajo técnico por vos</div>
         </div>
       </div>
-
-      <!-- PASO 2 -->
-      <div class="exercise-step" data-step="1">
-        <div class="exercise-step-header">
-          <div class="ex-num-circle">2</div>
-          <div class="ex-meta">
-            <div class="ex-mode">Explorer de VS Code</div>
-            <div class="ex-title">Creá el archivo del skill</div>
-            <div class="ex-goal">Escribir las instrucciones que la IA va a seguir</div>
-          </div>
+      <p>No necesitás usar la terminal. Abrí el chat de Copilot, asegurate de estar en modo <strong>Agent</strong>, y copiá esto:</p>
+      <div style="background:#F0EAFF;border-left:4px solid #8C52FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:16px 0;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <span style="font-size:18px;">💬</span>
+          <strong style="color:#2A0880;font-size:14px;">Copiá esto en el chat — modo Agent</strong>
         </div>
-
-        <p>En el explorador de archivos de VS Code (panel izquierdo), navegá a la carpeta <code>.vscode/instructions/</code> y creá un archivo nuevo llamado:</p>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>mi-estilo.instructions.md</pre></div>
-
-        <p>Pegá este contenido adentro y editalo con tu información:</p>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>---
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Creá la carpeta .vscode/instructions en mi proyecto si no existe todavía.</pre></div>
+        <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">El agente lo hace en segundos. No necesitás saber nada de terminal ni de comandos.</p>
+      </div>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" disabled>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Crear archivo →</button>
+      </div>
+    </div>
+    <div class="exercise-step" data-step="1">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">2</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Explorer de VS Code</div>
+          <div class="ex-title">Creá el archivo del skill</div>
+          <div class="ex-goal">Escribir las instrucciones que la IA va a seguir</div>
+        </div>
+      </div>
+      <p>En el explorador de archivos de VS Code (panel izquierdo), navegá a <code>.vscode/instructions/</code> y creá:</p>
+      <div class="code-block"><button class="copy-btn">Copiar</button><pre>mi-estilo.instructions.md</pre></div>
+      <p>Pegá este contenido y editalo con tu información:</p>
+      <div class="code-block"><button class="copy-btn">Copiar</button><pre>---
 applyTo: "**/*.md"
 ---
 Siempre respondé en español argentino.
@@ -203,84 +168,60 @@ Usá un tono simple, directo y sin tecnicismos.
 Si usás un término técnico, explicalo en la misma oración.
 Usá ejemplos del trabajo cotidiano, no de programación.
 Mis documentos tienen que entenderse sin ningún conocimiento previo.</pre></div>
-
-        <p>Guardá el archivo:</p>
-        <div class="table-wrap" style="margin-bottom:0;">
-          <table>
-            <thead><tr><th>Forma</th><th>Cómo</th></tr></thead>
-            <tbody>
-              <tr><td>Tradicional</td><td>Menú <strong>File → Save</strong></td></tr>
-              <tr><td>Windows</td><td><code>Ctrl + S</code></td></tr>
-              <tr><td>Mac</td><td><code>Cmd + S</code></td></tr>
-            </tbody>
-          </table>
-        </div>
-
-        <div class="step-nav-btns">
-          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
-          <button class="btn btn-primary" data-step-next>Siguiente: Probarlo →</button>
-        </div>
-      </div>
-
-      <!-- PASO 3 -->
-      <div class="exercise-step" data-step="2">
-        <div class="exercise-step-header">
-          <div class="ex-num-circle">3</div>
-          <div class="ex-meta">
-            <div class="ex-mode">Chat de Copilot — modo Agent</div>
-            <div class="ex-title">Probá que el skill funciona</div>
-            <div class="ex-goal">Ver que la IA ahora responde con tu tono</div>
-          </div>
-        </div>
-
-        <p>En el chat de Copilot, cambiá a modo <strong>Agent</strong>. Escribí:</p>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Explicame qué es Git</pre></div>
-
-        <p><strong>Observá:</strong></p>
-        <ul>
-          <li>¿Respondió en español argentino?</li>
-          <li>¿Usó ejemplos cotidianos, no de programación?</li>
-          <li>¿El tono coincide con lo que escribiste en el skill?</li>
-        </ul>
-
-        <div class="tip">💡 Si el skill no se aplicó, verificá que el archivo tenga la extensión <code>.instructions.md</code> y que esté exactamente en <code>.vscode/instructions/</code>.</div>
-
-        <div class="step-nav-btns">
-          <button class="btn btn-ghost" data-step-prev>← Anterior</button>
-          <span class="btn btn-ghost" style="opacity:.4;cursor:default;">Fin del ejercicio ✓</span>
-        </div>
+      <p>Guardá con <code>Ctrl + S</code> (Windows) o <code>Cmd + S</code> (Mac).</p>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Probarlo →</button>
       </div>
     </div>
-
-    <!-- ══════════════════════════════════════
-         ✅ CHECKPOINT
-    ══════════════════════════════════════ -->
-    <div class="module-block checkpoint-block">
-      <div class="module-label">✅ Checkpoint</div>
-      <h2 class="section-heading" style="margin-top:8px;">Lo que aprendiste en esta sección</h2>
-      <ul class="checkpoint-list">
-        <li>📋 <strong>Un skill</strong> = un archivo <code>.md</code> con instrucciones para la IA.</li>
-        <li>📁 Vive en <code>.vscode/instructions/</code> con extensión <code>.instructions.md</code>.</li>
-        <li>⚙️ Se activa automáticamente para los archivos que define en <code>applyTo</code>.</li>
-        <li>✍️ Podés cambiarle el tono, el formato y la audiencia sin saber programar.</li>
-        <li>✅ Tenés tu primer skill propio que podés reusar en cualquier proyecto.</li>
+    <div class="exercise-step" data-step="2">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">3</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Chat de Copilot — modo Agent</div>
+          <div class="ex-title">Probá que el skill funciona</div>
+          <div class="ex-goal">Ver que la IA ahora responde con tu tono</div>
+        </div>
+      </div>
+      <p>En el chat de Copilot, cambiá a modo <strong>Agent</strong>. Escribí:</p>
+      <div class="code-block"><button class="copy-btn">Copiar</button><pre>Explicame qué es Git</pre></div>
+      <p><strong>Observá:</strong></p>
+      <ul>
+        <li>¿Respondió en español argentino?</li>
+        <li>¿Usó ejemplos cotidianos, no de programación?</li>
       </ul>
-    </div>
-
-    <div class="alert">
-      ⚠️ <strong>Regla de uso:</strong> Antes de ejecutar cualquier tarea de diseño o documentación, asegurate de que el skill correcto esté activo. No asumas que la IA sabe tu tono — decíselo explícitamente.
-    </div>
-
-    <div class="section-footer">
-      <span class="read-time">⏱️ Duración estimada: 15 min</span>
-      <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
-      <div class="page-nav">
-        <a href="modelos.html" class="btn btn-ghost">← Sección 02</a>
-        <a href="agentes.html" class="btn btn-primary">Sección 04: Agentes →</a>
+      <div class="tip">💡 Si el skill no se aplicó, verificá que el archivo tenga la extensión <code>.instructions.md</code> y esté en <code>.vscode/instructions/</code>.</div>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <span class="btn btn-ghost" style="opacity:.4;cursor:default;">Fin del ejercicio ✓</span>
       </div>
     </div>
-
   </div>
+
+  <div class="module-block checkpoint-block">
+    <div class="module-label">✅ Checkpoint</div>
+    <h2 class="section-heading" style="margin-top:8px;">Lo que aprendiste en esta sección</h2>
+    <ul class="checkpoint-list">
+      <li>📋 <strong>Un skill</strong> = un archivo <code>.md</code> con instrucciones para la IA.</li>
+      <li>📁 Vive en <code>.vscode/instructions/</code> con extensión <code>.instructions.md</code>.</li>
+      <li>⚙️ Se activa automáticamente para los archivos que define en <code>applyTo</code>.</li>
+      <li>✍️ Podés cambiarle el tono, el formato y la audiencia sin saber programar.</li>
+      <li>✅ Tenés tu primer skill propio que podés reusar en cualquier proyecto.</li>
+    </ul>
+  </div>
+
+  <div class="alert">⚠️ <strong>Regla de uso:</strong> Antes de ejecutar cualquier tarea de diseño o documentación, asegurate de que el skill correcto esté activo.</div>
+
+  <div class="section-footer">
+    <span class="read-time">⏱️ Duración estimada: 15 min</span>
+    <a class="repo-link" href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio IT4W</a>
+    <div class="page-nav">
+      <a href="modelos.html" class="btn btn-ghost">← Sección 02</a>
+      <a href="agentes.html" class="btn btn-primary">Sección 04: Agentes →</a>
+    </div>
+  </div>
+
+</div>
 </div>
 
 <script src="app.js"></script>

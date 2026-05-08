@@ -5,6 +5,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+  // Garantizá que cada página empiece desde arriba
+  window.scrollTo(0, 0);
+
   // ── 1. PROGRESS BAR ──────────────────────────────────────────
   const progressBar = document.getElementById('progress-bar');
   if (progressBar) {
@@ -58,14 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
-  // ── 4. STEPPER (ejercicio) ────────────────────────────────────
+  // ── 4. STEPPER ────────────────────────────────────────────────
   const stepDots  = document.querySelectorAll('.step-dot');
   const stepCards = document.querySelectorAll('.exercise-step');
 
   if (stepDots.length && stepCards.length) {
     let current = 0;
 
-    const goTo = (idx) => {
+    const goTo = (idx, scroll = true) => {
       if (idx < 0 || idx >= stepCards.length) return;
       current = idx;
 
@@ -82,7 +85,9 @@ document.addEventListener('DOMContentLoaded', () => {
         card.classList.toggle('active', i === idx);
       });
 
-      window.scrollTo({ top: document.querySelector('.stepper-nav')?.offsetTop - 80 || 0, behavior: 'smooth' });
+      if (scroll) {
+        window.scrollTo({ top: document.querySelector('.stepper-nav')?.offsetTop - 80 || 0, behavior: 'smooth' });
+      }
     };
 
     stepDots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
@@ -95,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.addEventListener('click', () => goTo(current - 1));
     });
 
-    goTo(0);
+    goTo(0, false);  // inicializa sin scrollear — la página ya arranca desde arriba
   }
 
   // ── 5. ACTIVE NAV LINK ────────────────────────────────────────
