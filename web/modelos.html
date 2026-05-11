@@ -72,13 +72,53 @@
     <span class="current">Copilot vs Claude</span>
   </div>
   <div class="page-section-label">Sección 02</div>
-  <h1 class="page-title">Los modelos de IA:<br>Copilot y Claude</h1>
+  <h1 class="page-title">Elegí la IA correcta<br>para cada momento</h1>
 
   <div class="module-block">
-    <div class="module-label">📖 Concepto</div>
-    <h2 class="section-heading" style="margin-top:8px;">¿Qué es un modelo de IA?</h2>
-    <p>Cuando le escribís algo a la IA en VS Code, hay un "motor" que procesa tu mensaje y genera la respuesta. Ese motor se llama <strong>modelo</strong>. Podés elegir cuál usar — y cada uno tiene una personalidad distinta.</p>
-    <blockquote class="key-quote">"No es Copilot VS Claude. Usan el mismo lugar, cambia el motor."</blockquote>
+    <div class="module-label">🗺️ El flujo completo de trabajo con IA</div>
+    <h2 class="section-heading" style="margin-top:8px;">No todo empieza en VS Code</h2>
+    <p>Hay más de una herramienta de IA disponible en IT4W — y cada una tiene un rol distinto en el flujo de trabajo. No son competencia: son etapas.</p>
+    <blockquote class="key-quote">"M365 Copilot prepara el pensamiento. VS Code lo convierte en resultados."</blockquote>
+
+    <div class="comparison">
+      <div class="comp-card bad" style="border-top-color:#0078D4;">
+        <div class="comp-label" style="color:#0078D4;">① Antes de VS Code — M365 Copilot</div>
+        <div class="comp-text">
+          <p style="margin:0 0 10px;font-size:14px;">Disponible en Teams, Word, Outlook y el resto de la suite Microsoft. Lo usás para <strong>pensar y estructurar</strong>, antes de ponerte a ejecutar.</p>
+          <p style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text-muted);">IDEAL PARA:</p>
+          <ul style="margin:0;padding-left:16px;font-size:13px;line-height:2;">
+            <li>Resumir reuniones, documentos o libros</li>
+            <li>Ordenar ideas difusas y crear esquemas</li>
+            <li>Generar borradores de contenido en Word o Teams</li>
+            <li>Preparar el material antes de pasarlo a archivos del proyecto</li>
+          </ul>
+        </div>
+      </div>
+      <div class="comp-card good" style="border-top-color:#8C52FF;">
+        <div class="comp-label" style="color:#8C52FF;">② En VS Code — Copilot o Claude</div>
+        <div class="comp-text">
+          <p style="margin:0 0 10px;font-size:14px;">Disponible en el chat de VS Code. Lo usás para <strong>ejecutar y materializar</strong>: crear archivos, refinar documentación, trabajar sobre el proyecto real.</p>
+          <p style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text-muted);">IDEAL PARA:</p>
+          <ul style="margin:0;padding-left:16px;font-size:13px;line-height:2;">
+            <li>Convertir ideas en archivos Markdown estructurados</li>
+            <li>Trabajar con el contexto del repositorio</li>
+            <li>Crear, editar y refinar contenido técnico</li>
+            <li>Ejecutar cambios con acceso directo a los archivos</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:#F0FFF4;border:1px solid #37B75F;border-radius:10px;padding:16px 20px;margin:20px 0 0;font-size:14px;line-height:1.7;">
+      <strong style="color:#1a6e3a;">💡 Tip de tokens:</strong> M365 Copilot es una buena opción para generar borradores largos de contenido sin código — como esquemas o textos de comunicación interna. Reservá el chat de VS Code para cuando necesitás trabajar directamente sobre los archivos del proyecto.
+    </div>
+  </div>
+
+  <div class="module-block">
+    <div class="module-label">📖 Dentro de VS Code: Copilot vs Claude</div>
+    <h2 class="section-heading" style="margin-top:8px;">El mismo lugar, distinto motor</h2>
+    <p>Una vez que estás en VS Code, podés elegir con qué modelo trabajar. Ambos viven en el mismo chat — solo cambiás el selector.</p>
+    <blockquote class="key-quote">"No es Copilot vs Claude. Usan el mismo lugar, cambia el motor."</blockquote>
     <div class="cards-grid cols-2">
       <div class="card accent-blue">
         <span class="card-icon">🤖</span>
@@ -96,7 +136,7 @@
         <span class="card-icon">✨</span>
         <div class="card-subtitle">Anthropic</div>
         <div class="card-title">Claude</div>
-        <div class="card-desc">El modelo alternativo, especialmente bueno para escribir en lenguaje humano: documentación, comunicaciones, explicaciones para personas reales.</div>
+        <div class="card-desc">El modelo alternativo. Especialmente bueno para escribir en lenguaje humano: documentación, comunicaciones, explicaciones para personas reales. Sonnet consume menos tokens.</div>
         <p style="font-size:13px;font-weight:700;margin-bottom:6px;color:var(--text-muted);">MEJOR PARA:</p>
         <ul style="margin:0;padding-left:16px;font-size:13px;">
           <li style="margin-bottom:4px;">Redactar con tono específico</li>
@@ -105,22 +145,16 @@
         </ul>
       </div>
     </div>
-  </div>
-
-  <div class="module-block">
-    <div class="module-label">💡 Ejemplo cotidiano</div>
-    <h2 class="section-heading" style="margin-top:8px;">Dos traductores, el mismo escritorio</h2>
-    <p>Imaginá que tenés dos traductores en la misma oficina, los dos trabajan en tu computadora:</p>
-    <div class="table-wrap">
+    <div class="table-wrap" style="margin-top:24px;">
       <table>
-        <thead><tr><th>Traductor</th><th>Especialidad</th><th>Cuándo llamarlo</th></tr></thead>
+        <thead><tr><th>Herramienta</th><th>Dónde vive</th><th>Cuándo usarla</th></tr></thead>
         <tbody>
-          <tr><td><strong>Copilot</strong></td><td>Documentos técnicos, contratos, especificaciones</td><td>Cuando necesitás precisión y estructura</td></tr>
-          <tr><td><strong>Claude</strong></td><td>Comunicación, cartas, textos para el público</td><td>Cuando necesitás claridad y tono humano</td></tr>
+          <tr><td><strong>M365 Copilot</strong></td><td>Teams, Word, Outlook</td><td>Pensar, resumir, estructurar ideas antes de ejecutar</td></tr>
+          <tr><td><strong>Copilot en VS Code</strong></td><td>Chat de VS Code</td><td>Analizar archivos, razonamiento lógico, estructura</td></tr>
+          <tr><td><strong>Claude en VS Code</strong></td><td>Chat de VS Code</td><td>Redactar, documentar, comunicar en lenguaje humano</td></tr>
         </tbody>
       </table>
     </div>
-    <p>Los dos están en el mismo lugar. Solo cambiás el selector.</p>
   </div>
 
   <div class="module-block">
@@ -236,12 +270,12 @@
     <div class="module-label">✅ Checkpoint</div>
     <h2 class="section-heading" style="margin-top:8px;">Lo que aprendiste en esta sección</h2>
     <ul class="checkpoint-list">
-      <li>🤖 <strong>Copilot y Claude</strong> viven en el mismo lugar — el chat de VS Code.</li>
+      <li>🗺️ <strong>El flujo completo tiene dos etapas</strong>: pensar con M365 Copilot, ejecutar en VS Code.</li>
+      <li>📋 <strong>M365 Copilot</strong> (Teams, Word, Outlook) es para estructurar y preparar — antes de abrir VS Code.</li>
+      <li>🤖 <strong>Copilot en VS Code</strong>: preciso para análisis, estructura y razonamiento.</li>
+      <li>✨ <strong>Claude en VS Code</strong>: conversacional para redacción, documentación y comunicación. Sonnet consume menos tokens.</li>
       <li>🔄 Cambiás de modelo con el selector que está abajo del cuadro de texto.</li>
-      <li>📐 <strong>Copilot:</strong> más preciso para análisis y estructura.</li>
-      <li>✍️ <strong>Claude:</strong> más conversacional para redacción y comunicación.</li>
-      <li>💻 <strong>Copilot en VS Code</strong> es visual e interactivo, pero usa más recursos.</li>
-      <li>⚡ <strong>Copilot CLI</strong> es liviano y autónomo — ideal para tareas grandes o cuando el editor va lento.</li>
+      <li>💻 <strong>Copilot CLI</strong> es liviano y autónomo — ideal para tareas grandes o cuando el editor va lento.</li>
       <li>✅ Tenés un archivo <code>comparacion.md</code> con ambas respuestas para volver a consultar.</li>
     </ul>
   </div>
