@@ -113,6 +113,21 @@
       </table>
     </div>
 
+    <div style="background:#FFF8ED;border:1px solid #F5A623;border-radius:10px;padding:16px 20px;margin:20px 0;">
+      <strong style="color:#272727;">🧮 ¿Qué versión de Claude elegir?</strong>
+      <p style="margin:10px 0 8px;font-size:14px;">Dentro del selector de VS Code vas a ver varios modelos de Claude. Cada uno tiene un costo distinto en tokens:</p>
+      <div class="table-wrap" style="margin:0;">
+        <table>
+          <thead><tr><th>Modelo</th><th>Costo en tokens</th><th>Cuándo usarlo</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Claude Sonnet</strong> (el más reciente)</td><td>✅ 1×</td><td>Día a día — redacción, análisis, documentación. La opción ideal para la mayoría de los casos.</td></tr>
+            <tr><td><strong>Claude Opus</strong> (el más reciente)</td><td>⚠️ 3×</td><td>Tareas muy complejas que requieren el máximo razonamiento. Usalo cuando Sonnet no alcanza.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">"Más reciente" = el número de versión más alto que aparece en el selector. Si ves <em>Sonnet 3.5</em> y <em>Sonnet 3.7</em>, elegí el 3.7. Si ves <em>Sonnet 4</em>, ese es.</p>
+    </div>
+
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px;">
       <div style="background:#F0FFF4;border:1px solid #37B75F;border-radius:10px;padding:14px 16px;font-size:13px;line-height:1.7;">
         <strong style="color:#1a6e3a;">💡 Tip de tokens</strong><br>
@@ -170,21 +185,57 @@
       <div class="exercise-step-header">
         <div class="ex-num-circle">2</div>
         <div class="ex-meta">
-          <div class="ex-mode">Copilot CLI — terminal integrada de VS Code</div>
-          <div class="ex-title">La misma tarea, pero delegada al CLI</div>
-          <div class="ex-goal">Ves cómo trabaja de forma autónoma, sin cargar el editor</div>
+          <div class="ex-mode">Copilot CLI — requiere instalación previa</div>
+          <div class="ex-title">Conocé el CLI y cómo instalarlo</div>
+          <div class="ex-goal">Entendés qué es, cómo se configura y cuándo vale la pena</div>
         </div>
       </div>
-      <p>Abrí la terminal integrada de VS Code con <strong>Ctrl + `</strong>. Luego escribí:</p>
-      <div style="background:#F0EAFF;border-left:4px solid #8C52FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:16px 0;">
+
+      <div style="background:#FFF8ED;border:2px solid #F5A623;border-radius:12px;padding:14px 18px;margin:0 0 20px;font-size:14px;">
+        ⚠️ <strong>Copilot CLI no viene instalado por defecto.</strong> Es una herramienta separada que hay que configurar. Si no la tenés, el comando de más abajo no va a funcionar — eso es normal y esperado.
+      </div>
+
+      <p><strong>¿Qué es?</strong> Es Copilot funcionando en la terminal — una ventana de texto, sin interfaz visual. Escribís un comando, él ejecuta la tarea y devuelve el resultado. Como no carga el editor gráfico, usa muy poca RAM.</p>
+
+      <p style="margin-top:20px;"><strong>Cómo abrír la terminal en VS Code:</strong></p>
+      <div style="background:#F8F8F8;border:1px solid #E4E4E4;border-radius:10px;padding:14px 18px;margin:8px 0 20px;font-size:14px;line-height:2.2;">
+        <strong>Windows:</strong> <code>Ctrl + `</code> &nbsp;(tecla del acento grave — arriba a la izquierda del teclado, junto al 1)<br>
+        <strong>Mac:</strong> <code>Cmd + `</code><br>
+        <strong>Por menú:</strong> Terminal → Nueva terminal
+      </div>
+
+      <p><strong>Cómo instalarlo:</strong></p>
+
+      <div style="background:#F8F8F8;border:1px solid #E4E4E4;border-radius:10px;padding:14px 18px;margin:8px 0 10px;">
+        <p style="margin:0 0 10px;font-size:14px;font-weight:700;">① Instalá GitHub CLI</p>
+        <p style="font-size:13px;margin:0 0 6px;"><strong>Windows</strong> — en la terminal escribí:</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>winget install --id GitHub.cli</pre></div>
+        <p style="font-size:13px;margin:10px 0 6px;"><strong>Mac</strong> — en la terminal escribí:</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>brew install gh</pre></div>
+        <p style="font-size:13px;margin:8px 0 0;">¿Preferís instalador con clicks? Descargalo desde <strong>cli.github.com</strong></p>
+      </div>
+
+      <div style="background:#F8F8F8;border:1px solid #E4E4E4;border-radius:10px;padding:14px 18px;margin:0 0 10px;">
+        <p style="margin:0 0 10px;font-size:14px;font-weight:700;">② Autenticarte con tu cuenta de GitHub</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>gh auth login</pre></div>
+        <p style="font-size:13px;margin:8px 0 0;">Va a abrir el navegador para confirmar tu cuenta — seguí las instrucciones en pantalla.</p>
+      </div>
+
+      <div style="background:#F8F8F8;border:1px solid #E4E4E4;border-radius:10px;padding:14px 18px;margin:0 0 20px;">
+        <p style="margin:0 0 10px;font-size:14px;font-weight:700;">③ Instalá la extensión de Copilot</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>gh extension install github/gh-copilot</pre></div>
+      </div>
+
+      <p><strong>Una vez instalado, se usa así:</strong></p>
+      <div style="background:#F0EAFF;border-left:4px solid #8C52FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:12px 0;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
           <span style="font-size:18px;">⌨️</span>
-          <strong style="color:#2A0880;font-size:14px;">Escribí esto en la terminal</strong>
+          <strong style="color:#2A0880;font-size:14px;">Ejemplo de uso</strong>
         </div>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>gh copilot suggest "Reescribí el párrafo de la sección Sobre mí en index.html para que suene más natural y personal"</pre></div>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>gh copilot suggest "Reescribí el párrafo de la sección Sobre mí en index.html para que suene más natural"</pre></div>
+        <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">Sin chat, sin historial visual. El resultado aparece directo en la terminal.</p>
       </div>
-      <p>Observá la diferencia: no hay chat visual, no hay historial visible. El CLI ejecuta y devuelve el resultado — más rápido, menos recursos, pero menos interactivo.</p>
-      <div class="tip">💡 Si CLI no está instalado, el comando va a fallar. No es un error tuyo — es una configuración que hace el equipo de IT. Lo importante es entender la diferencia conceptual.</div>
+
       <div class="step-nav-btns">
         <button class="btn btn-ghost" data-step-prev>← Anterior</button>
         <button class="btn btn-primary" data-step-next>Siguiente: Comparar →</button>
