@@ -120,8 +120,11 @@
 
   <div class="module-block">
     <div class="module-label">🛠️ Ejercicio — Probá los 3 modos</div>
-    <h2 class="section-heading" style="margin-top:8px;">El mismo mensaje, tres resultados distintos</h2>
-    <p>Vas a escribir el mismo mensaje en los tres modos y observar qué hace la IA en cada caso.</p>
+    <h2 class="section-heading" style="margin-top:8px;">El mismo proyecto, tres resultados distintos</h2>
+    <p>Vas a usar tu <code>index.html</code> del ejercicio de inicio para ver cómo cada modo reacciona de forma diferente al mismo tipo de pedido.</p>
+    <div style="background:#F0EAFF;border-radius:10px;padding:12px 16px;margin:0 0 24px;font-size:14px;">
+      📁 <strong>Abrí la carpeta <code>mi-proyecto-ia</code> en VS Code</strong> antes de empezar — la que creaste en el Ejercicio de inicio con tu <code>index.html</code> adentro.
+    </div>
     <div class="stepper-nav" style="margin:32px 0 40px;">
       <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Ask</div></div>
       <div class="step-connector"></div>
@@ -138,21 +141,10 @@
           <div class="ex-goal">Observar que Ask solo responde, no toca archivos</div>
         </div>
       </div>
-      <p>Abrí el chat de Copilot:</p>
-      <div class="table-wrap" style="margin-bottom:16px;">
-        <table>
-          <thead><tr><th>Forma</th><th>Cómo</th></tr></thead>
-          <tbody>
-            <tr><td>Tradicional</td><td>Click en el ícono del chat (burbuja) en la barra izquierda</td></tr>
-            <tr><td>Windows</td><td><code>Ctrl + Alt + I</code></td></tr>
-            <tr><td>Mac</td><td><code>Cmd + Option + I</code></td></tr>
-          </tbody>
-        </table>
-      </div>
-      <p>Seleccioná <strong>Ask</strong> en el selector de modo. Luego escribí:</p>
-      <div class="code-block"><button class="copy-btn">Copiar</button><pre>Creá un archivo llamado prueba.md con 3 tips de productividad</pre></div>
-      <p><strong>Observá:</strong> ¿Creó el archivo o solo respondió con texto?</p>
-      <div class="tip">💡 En modo Ask la IA nunca modifica archivos. Solo explica, sugiere o responde.</div>
+      <p>Abrí el panel de chat, seleccioná <strong>Ask</strong> abajo, y escribí:</p>
+      <div class="code-block"><button class="copy-btn">Copiar</button><pre>¿Qué secciones podría tener mi index.html para presentarme mejor a alguien que no me conoce?</pre></div>
+      <p><strong>Observá:</strong> ¿Modificó el <code>index.html</code> o solo te dio ideas en el chat?</p>
+      <div class="tip">💡 En modo Ask la IA nunca toca archivos. Solo explica, sugiere o responde. Es como preguntarle a un colega.</div>
       <div class="step-nav-btns">
         <button class="btn btn-ghost" disabled>← Anterior</button>
         <button class="btn btn-primary" data-step-next>Siguiente: Agent →</button>
@@ -164,18 +156,18 @@
         <div class="ex-meta">
           <div class="ex-mode">Modo Agent</div>
           <div class="ex-title">¿Qué pasa cuando le das permiso para actuar?</div>
-          <div class="ex-goal">Ver que Agent sí crea archivos reales</div>
+          <div class="ex-goal">Agent mejora tu index.html directamente</div>
         </div>
       </div>
-      <p>Cambiá el selector a <strong>Agent</strong>. Escribí <em>el mismo mensaje</em>:</p>
-      <div class="code-block"><button class="copy-btn">Copiar</button><pre>Creá un archivo llamado prueba.md con 3 tips de productividad</pre></div>
+      <p>Cambiá el selector a <strong>Agent</strong>. Escribí:</p>
+      <div class="code-block"><button class="copy-btn">Copiar</button><pre>Agregá una sección llamada "Sobre mí" al final del index.html con un párrafo breve de presentación. Mantené el estilo que ya tiene la página.</pre></div>
       <p><strong>Observá:</strong></p>
       <ul>
-        <li>¿Te pidió confirmación antes de crear el archivo?</li>
-        <li>¿Apareció <code>prueba.md</code> en el explorador de archivos?</li>
+        <li>¿Te pidió confirmación antes de modificar el archivo?</li>
+        <li>¿Apareció el cambio en <code>index.html</code> al abrirlo?</li>
         <li>¿El comportamiento fue diferente al de Ask?</li>
       </ul>
-      <div class="alert">⚠️ Agent puede crear y modificar archivos reales. Siempre leé antes de confirmar.</div>
+      <div class="alert">⚠️ Agent modifica archivos reales. Siempre leé la propuesta antes de confirmar — podés rechazarla si no te convence.</div>
       <div class="step-nav-btns">
         <button class="btn btn-ghost" data-step-prev>← Anterior</button>
         <button class="btn btn-primary" data-step-next>Siguiente: Plan →</button>
@@ -187,17 +179,17 @@
         <div class="ex-meta">
           <div class="ex-mode">Modo Plan</div>
           <div class="ex-title">¿Qué pasa cuando pedís que piense antes de hacer?</div>
-          <div class="ex-goal">Ver cómo Plan propone sin ejecutar</div>
+          <div class="ex-goal">Ver cómo Plan propone sin ejecutar nada</div>
         </div>
       </div>
       <p>Cambiá el selector a <strong>Plan</strong>. Escribí:</p>
-      <div class="code-block"><button class="copy-btn">Copiar</button><pre>Quiero organizar mis notas de trabajo en carpetas. ¿Cómo lo harías?</pre></div>
+      <div class="code-block"><button class="copy-btn">Copiar</button><pre>Quiero mejorar el diseño de mi index.html para que se vea más prolijo. ¿Qué cambios harías y en qué orden?</pre></div>
       <p><strong>Observá:</strong></p>
       <ul>
         <li>¿Ejecutó algo o solo describió los pasos?</li>
         <li>¿Te pidió aprobación antes de actuar?</li>
       </ul>
-      <div class="tip">💡 Plan es ideal antes de tareas nuevas. Ves el camino antes de dar el primer paso.</div>
+      <div class="tip">💡 Plan es ideal antes de cambios importantes. Ves el camino completo antes de que la IA toque nada.</div>
       <div class="step-nav-btns">
         <button class="btn btn-ghost" data-step-prev>← Anterior</button>
         <span class="btn btn-ghost" style="opacity:.4;cursor:default;">Fin del ejercicio ✓</span>
