@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deploy y publicación · Guía IT4W</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <a href="index.html">
+      <span class="brand-label">IT4W · Adopción IA 2026</span>
+      <span class="brand-title">IA en VS Code —<br><span>Guía práctica</span></span>
+    </a>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <a href="deploy.html" class="nav-item"><span class="nav-num">08</span> Deploy y publicación</a>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener">📁 Repositorio oficial IT4W</a>
+  </div>
+</aside>
+
+<div class="mobile-topbar">
+  <span class="mobile-brand">IA en VS Code — <span>IT4W</span></span>
+  <button class="hamburger" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+</div>
+<div class="mobile-nav-overlay"></div>
+<div class="mobile-nav-drawer">
+  <div class="sidebar-brand" style="display:block;padding:24px 20px 16px;">
+    <span class="brand-label">IT4W · Adopción IA 2026</span>
+    <span class="brand-title" style="display:block;margin-top:4px">IA en VS Code — <span style="color:#8C52FF">Guía práctica</span></span>
+  </div>
+  <nav class="sidebar-nav">
+    <div class="nav-section-label">Inicio</div>
+    <a href="index.html" class="nav-item"><span class="nav-num">🏠</span> Portada</a>
+    <a href="ejercicio.html" class="nav-item"><span class="nav-num">07</span> Ejercicio de inicio</a>
+    <div class="nav-section-label" style="margin-top:12px">Secciones</div>
+    <a href="modos.html" class="nav-item"><span class="nav-num">01</span> Los modos de trabajo</a>
+    <a href="modelos.html" class="nav-item"><span class="nav-num">02</span> Copilot vs Claude</a>
+    <a href="skills.html" class="nav-item"><span class="nav-num">03</span> Skills</a>
+    <a href="agentes.html" class="nav-item"><span class="nav-num">04</span> Agentes y subagentes</a>
+    <a href="mcp.html" class="nav-item"><span class="nav-num">05</span> MCP</a>
+    <a href="orquestacion.html" class="nav-item"><span class="nav-num">06</span> Orquestación</a>
+    <a href="deploy.html" class="nav-item"><span class="nav-num">08</span> Deploy y publicación</a>
+    <div style="padding:16px 24px;margin-top:8px;border-top:1px solid #E4E4E4;">
+      <a href="https://it4wnet.sharepoint.com/sites/DSML/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDSML%2FShared%20Documents%2FAdopcion%2FIniciativaIT4W_2026%2FRepoAdopcion&p=true&ct=1776958121309&or=Teams%2DHL&ga=1&LOF=1" target="_blank" rel="noopener" style="font-size:13px;color:#6B6B6B;">📁 Repositorio oficial IT4W</a>
+    </div>
+  </nav>
+</div>
+
+<div class="main-wrapper">
+<div class="page-content">
+
+  <div class="breadcrumb">
+    <a href="index.html">Inicio</a>
+    <span class="sep">›</span>
+    <span class="current">Deploy y publicación</span>
+  </div>
+  <div class="page-section-label">Sección 08</div>
+  <h1 class="page-title">Deploy y publicación:<br>tu trabajo, visible para todos</h1>
+  <div class="page-meta">
+    <span class="read-time">⏱️ Duración estimada: 20 min</span>
+  </div>
+
+  <div class="module-block">
+    <div class="module-label">📖 Concepto</div>
+    <h2 class="section-heading" style="margin-top:8px;">¿Qué es el deploy?</h2>
+    <p><strong>Deploy</strong> significa publicar. Es el acto de tomar lo que tenés en tu computadora y dejarlo accesible en internet para que cualquier persona pueda verlo con un link.</p>
+    <blockquote class="key-quote">"Tu compu es el taller. GitHub es la bodega. Render es la vidriera. Vos trabajás en el taller y decidís cuándo poner algo en la vidriera."</blockquote>
+    <p>Hoy en IT4W usamos tres piezas que se conectan en cadena:</p>
+    <div class="flow">
+      <div class="flow-trigger">💻 Tu compu — donde editás y guardás cambios</div>
+      <div class="flow-arrow">↓ git push</div>
+      <div class="flow-step s1"><div><span class="fs-name">GitHub</span><span class="fs-desc">Guarda el historial de versiones en la nube</span></div></div>
+      <div class="flow-arrow">↓ automático</div>
+      <div class="flow-step s2"><div><span class="fs-name">Render</span><span class="fs-desc">Detecta el cambio y publica la versión nueva</span></div></div>
+      <div class="flow-arrow">↓</div>
+      <div class="flow-result">🌐 URL pública — accesible para cualquier persona</div>
+    </div>
+  </div>
+
+  <div class="module-block">
+    <div class="module-label">💡 El flujo del día a día</div>
+    <h2 class="section-heading" style="margin-top:8px;">Desarrollo vs. producción</h2>
+    <p>Estas palabras suenan técnicas pero el concepto es simple:</p>
+    <div class="comparison">
+      <div class="comp-card bad">
+        <div class="comp-label">🔧 Desarrollo (tu compu)</div>
+        <div class="comp-text">Donde hacés los cambios. Nadie más lo ve. Podés romper cosas, probar, deshacer. Es tu espacio de trabajo.</div>
+      </div>
+      <div class="comp-card good">
+        <div class="comp-label">🌐 Producción (la URL pública)</div>
+        <div class="comp-text">Lo que ven todos. Solo llega acá lo que vos decidís publicar con un push. Es la versión "oficial".</div>
+      </div>
+    </div>
+    <p>El flujo completo de cada cambio que hacés:</p>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Paso</th><th>Qué hacés</th><th>Qué pasa</th></tr></thead>
+        <tbody>
+          <tr><td><strong>1. Editás</strong></td><td>Cambiás un archivo en VS Code</td><td>El cambio existe solo en tu compu</td></tr>
+          <tr><td><strong>2. Commit</strong></td><td><code>git commit -m "descripción"</code></td><td>Git guarda una foto del estado actual</td></tr>
+          <tr><td><strong>3. Push</strong></td><td><code>git push</code></td><td>Sube esa foto a GitHub</td></tr>
+          <tr><td><strong>4. Deploy</strong></td><td>Render lo detecta solo</td><td>La URL pública se actualiza en ~1 min</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tip">💡 Vos solo hacés los pasos 1, 2 y 3. El 4 pasa solo — Render vigila GitHub las 24 horas.</div>
+  </div>
+
+  <div class="module-block">
+    <div class="module-label">🛠️ Ejercicio — Publicá tu primer cambio</div>
+    <h2 class="section-heading" style="margin-top:8px;">Editá algo, guardalo y velo en vivo</h2>
+    <p>Vas a hacer un cambio pequeño en la guía, publicarlo y ver el resultado en la URL pública en tiempo real.</p>
+
+    <div class="stepper-nav" style="margin:32px 0 40px;">
+      <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Editar</div></div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="1"><div class="step-dot-circle">2</div><div class="step-dot-label">Commit</div></div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="2"><div class="step-dot-circle">3</div><div class="step-dot-label">Push</div></div>
+      <div class="step-connector"></div>
+      <div class="step-dot" data-step="3"><div class="step-dot-circle">4</div><div class="step-dot-label">Verificar</div></div>
+    </div>
+
+    <div class="exercise-step" data-step="0">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">1</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Explorador de VS Code</div>
+          <div class="ex-title">Hacé un cambio simple en la guía</div>
+          <div class="ex-goal">Algo pequeño que puedas reconocer cuando lo veas publicado</div>
+        </div>
+      </div>
+      <p>Abrí cualquier archivo HTML de la carpeta <code>web/</code> — por ejemplo <code>web/index.html</code>. Buscá algún texto visible (un título, una descripción) y cambiá una palabra. Algo que puedas identificar fácilmente cuando lo veas en el browser.</p>
+      <div style="background:#F8F8F8;border:1px solid #E4E4E4;border-radius:8px;padding:14px 16px;font-size:14px;margin:12px 0;line-height:1.7;">
+        <strong>Ejemplo:</strong> En <code>index.html</code>, buscá la frase <em>"Para UX, Comercial, QA y toda el área."</em> y cambiala por algo como <em>"Para todo el equipo de IT4W."</em>
+      </div>
+      <p>Guardá el archivo con <strong>Ctrl + S</strong> (Windows) o <strong>Cmd + S</strong> (Mac).</p>
+      <div class="tip">💡 No rompas nada importante — elegí un texto de poco impacto. Si algo sale mal, siempre podés deshacer con Ctrl + Z.</div>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" disabled>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Commit →</button>
+      </div>
+    </div>
+
+    <div class="exercise-step" data-step="1">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">2</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Panel de chat de VS Code — modo Agent</div>
+          <div class="ex-title">Hacé el commit — guardá la foto del cambio</div>
+          <div class="ex-goal">Registrar el cambio en el historial de Git</div>
+        </div>
+      </div>
+      <p>Un commit es como sacarle una foto al estado actual de tu proyecto. Incluye todos los archivos que modificaste y un mensaje que describe qué cambiaste.</p>
+      <p>Pedile al agente que lo haga por vos:</p>
+      <div style="background:#F0EAFF;border-left:4px solid #8C52FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:16px 0;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <span style="font-size:18px;">💬</span>
+          <strong style="color:#2A0880;font-size:14px;">Copiá esto en el chat — modo Agent</strong>
+        </div>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Hacé un commit con todos los archivos que modifiqué. El mensaje del commit tiene que describir brevemente qué cambié.</pre></div>
+        <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">El agente va a detectar qué archivos cambiaron, escribir un mensaje descriptivo y hacer el commit por vos.</p>
+      </div>
+      <p>Vas a ver en el chat algo como: <code>git commit -m "Actualiza texto de descripción en index.html"</code> y luego una confirmación.</p>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Push →</button>
+      </div>
+    </div>
+
+    <div class="exercise-step" data-step="2">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">3</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Panel de chat de VS Code — modo Agent</div>
+          <div class="ex-title">Hacé el push — subí el cambio a GitHub</div>
+          <div class="ex-goal">Enviar el commit a la nube para que Render lo detecte</div>
+        </div>
+      </div>
+      <p>El commit existe en tu compu, pero todavía no en GitHub. El push lo sube:</p>
+      <div style="background:#F0EAFF;border-left:4px solid #8C52FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:16px 0;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <span style="font-size:18px;">💬</span>
+          <strong style="color:#2A0880;font-size:14px;">Copiá esto en el chat — modo Agent</strong>
+        </div>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Hacé un push para subir el último commit a GitHub.</pre></div>
+        <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">El agente ejecuta <code>git push</code>. Cuando termina, el cambio ya está en GitHub y Render empieza a procesar el deploy automáticamente.</p>
+      </div>
+      <div class="alert">⚠️ Si te pide usuario y contraseña de GitHub, ingresalos. Si ya los tenés guardados, pasa directo.</div>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Verificar →</button>
+      </div>
+    </div>
+
+    <div class="exercise-step" data-step="3">
+      <div class="exercise-step-header">
+        <div class="ex-num-circle">4</div>
+        <div class="ex-meta">
+          <div class="ex-mode">Navegador</div>
+          <div class="ex-title">Verificá el cambio en la URL pública</div>
+          <div class="ex-goal">Ver tu cambio publicado en tiempo real</div>
+        </div>
+      </div>
+      <p>Esperá 1-2 minutos y abrí la URL de la guía en el navegador:</p>
+      <div style="background:#F8F8F8;border:1px solid #E4E4E4;border-radius:8px;padding:12px 16px;font-size:14px;margin:12px 0;">
+        <a href="https://guia-ia-it4w.onrender.com" target="_blank" rel="noopener" style="color:#8C52FF;font-weight:600;">https://guia-ia-it4w.onrender.com</a>
+      </div>
+      <p>¿Ves el texto que cambiaste? Si sí — ¡el flujo completo funcionó! Editaste localmente, commiteaste, pusheaste a GitHub, Render lo detectó y publicó.</p>
+      <div style="background:#F0FFF4;border:1px solid #37B75F;border-radius:10px;padding:16px 18px;margin:16px 0;">
+        <strong style="color:#1a6e3a;">✅ Si ves el cambio:</strong> Ya sabés hacer deploy. Este es el flujo que vas a repetir cada vez que quieras publicar algo nuevo.
+      </div>
+      <div style="background:#FFF8ED;border:1px solid #F5A623;border-radius:10px;padding:16px 18px;margin:12px 0;">
+        <strong>🕐 Si no ves el cambio todavía:</strong> Render puede tardar hasta 2-3 minutos. Actualizá la página con <strong>Ctrl + Shift + R</strong> (fuerza la recarga sin caché).
+      </div>
+      <div class="step-nav-btns">
+        <button class="btn btn-ghost" data-step-prev>← Anterior</button>
+        <span class="btn btn-ghost" style="opacity:.4;cursor:default;">Fin del ejercicio ✓</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="module-block checkpoint-block">
+    <div class="module-label">✅ Checkpoint</div>
+    <h2 class="section-heading" style="margin-top:8px;">¿Qué aprendiste en esta sección?</h2>
+    <ul class="checklist">
+      <li>🌐 <strong>Deploy</strong> es publicar tu trabajo en una URL accesible para todos.</li>
+      <li>🔧 <strong>Desarrollo</strong> es tu compu — donde trabajás sin que nadie vea.</li>
+      <li>📦 <strong>Commit</strong> es guardar una foto del estado de tu proyecto con Git.</li>
+      <li>⬆️ <strong>Push</strong> es subir esa foto a GitHub.</li>
+      <li>🤖 <strong>Render</strong> detecta cada push y actualiza la URL pública automáticamente.</li>
+      <li>💬 El agente puede hacer el commit y el push por vos — solo pedíselo.</li>
+    </ul>
+  </div>
+
+  <div class="section-footer">
+    <a href="orquestacion.html" class="btn btn-ghost">← Orquestación</a>
+    <a href="index.html" class="btn btn-primary">Volver al inicio →</a>
+  </div>
+
+</div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
