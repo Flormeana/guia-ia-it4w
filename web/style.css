@@ -1194,12 +1194,7 @@ li {
   transition: all 0.18s;
 }
 
-/* Últimas 3 tarjetas: 4 columnas cada una (3 × 4 = 12) */
-.quick-card:nth-child(5),
-.quick-card:nth-child(6),
-.quick-card:nth-child(7) {
-  grid-column: span 4;
-}
+/* 8 tarjetas × span 3 = 4 por fila, 2 filas exactas */
 
 .quick-card:hover {
   border-top-color: var(--dark-blue);
@@ -1240,11 +1235,6 @@ li {
   /* Tablet: 2 por fila — cada card ocupa 6 de 12 columnas */
   .quick-grid { padding: 0 24px; gap: 14px; grid-template-columns: repeat(12, 1fr); }
   .quick-card { grid-column: span 6; }
-  .quick-card:nth-child(5),
-  .quick-card:nth-child(6),
-  .quick-card:nth-child(7) { grid-column: span 6; }
-  /* Si son 7 cards, la última queda sola — que ocupe el ancho completo */
-  .quick-card:nth-child(7):last-child { grid-column: span 12; }
   .cards-grid { grid-template-columns: 1fr; }
   .cards-grid.cols-2 { grid-template-columns: 1fr; }
   .comparison { grid-template-columns: 1fr; }
@@ -1258,18 +1248,11 @@ li {
 @media (max-width: 640px) {
   .quick-grid { padding: 0 16px; gap: 12px; grid-template-columns: repeat(12, 1fr); }
   .quick-card { grid-column: span 6; }
-  .quick-card:nth-child(5),
-  .quick-card:nth-child(6),
-  .quick-card:nth-child(7) { grid-column: span 6; }
-  .quick-card:nth-child(7):last-child { grid-column: span 12; }
 }
 
 @media (max-width: 400px) {
   .quick-grid { grid-template-columns: 1fr; }
-  .quick-card,
-  .quick-card:nth-child(5),
-  .quick-card:nth-child(6),
-  .quick-card:nth-child(7) { grid-column: span 1; }
+  .quick-card { grid-column: span 1; }
   .hero h1 { font-size: 28px; }
   .key-quote { font-size: 16px; }
   .bridge { flex-direction: column; }
