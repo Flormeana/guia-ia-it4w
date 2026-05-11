@@ -124,38 +124,57 @@
   </div>
 
   <div class="module-block">
-    <div class="module-label">🛠️ Ejercicio — Publicá tu primer cambio</div>
-    <h2 class="section-heading" style="margin-top:8px;">Editá algo, guardalo y velo en vivo</h2>
-    <p>Vas a hacer un cambio pequeño en la guía, publicarlo y ver el resultado en la URL pública en tiempo real.</p>
+    <div class="module-label">🛠️ Ejercicio — Tu primera página pública</div>
+    <h2 class="section-heading" style="margin-top:8px;">Creá un mini sitio desde cero y publicalo</h2>
+    <p>Vas a crear un proyecto propio simple, subirlo a GitHub y publicarlo con Render. Al final vas a tener una URL pública que podés compartir con quien quieras.</p>
+    <div style="background:#FFF3CD;border:2px solid #F5A623;border-radius:12px;padding:18px 20px;margin:0 0 24px;">
+      <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+        <span style="font-size:20px;">🧪</span>
+        <strong style="color:#272727;font-size:15px;">Este es tu propio proyecto — no el de otra persona</strong>
+      </div>
+      <p style="margin:0;font-size:14px;color:#272727;line-height:1.7;">El ejercicio está diseñado para que lo hagas <strong>con una carpeta nueva que vos creás</strong>. No uses carpetas de proyectos reales — empezá con algo limpio y sin riesgo.</p>
+    </div>
 
     <div class="stepper-nav" style="margin:32px 0 40px;">
-      <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Editar</div></div>
+      <div class="step-dot" data-step="0"><div class="step-dot-circle">1</div><div class="step-dot-label">Crear</div></div>
       <div class="step-connector"></div>
-      <div class="step-dot" data-step="1"><div class="step-dot-circle">2</div><div class="step-dot-label">Commit</div></div>
+      <div class="step-dot" data-step="1"><div class="step-dot-circle">2</div><div class="step-dot-label">GitHub</div></div>
       <div class="step-connector"></div>
-      <div class="step-dot" data-step="2"><div class="step-dot-circle">3</div><div class="step-dot-label">Push</div></div>
+      <div class="step-dot" data-step="2"><div class="step-dot-circle">3</div><div class="step-dot-label">Render</div></div>
       <div class="step-connector"></div>
-      <div class="step-dot" data-step="3"><div class="step-dot-circle">4</div><div class="step-dot-label">Verificar</div></div>
+      <div class="step-dot" data-step="3"><div class="step-dot-circle">4</div><div class="step-dot-label">Publicar</div></div>
     </div>
 
     <div class="exercise-step" data-step="0">
       <div class="exercise-step-header">
         <div class="ex-num-circle">1</div>
         <div class="ex-meta">
-          <div class="ex-mode">Explorador de VS Code</div>
-          <div class="ex-title">Hacé un cambio simple en la guía</div>
-          <div class="ex-goal">Algo pequeño que puedas reconocer cuando lo veas publicado</div>
+          <div class="ex-mode">Panel de chat de VS Code — modo Agent</div>
+          <div class="ex-title">Creá una página simple con tu nombre</div>
+          <div class="ex-goal">Una página HTML básica en una carpeta nueva</div>
         </div>
       </div>
-      <p>Abrí cualquier archivo HTML de la carpeta <code>web/</code> — por ejemplo <code>web/index.html</code>. Buscá algún texto visible (un título, una descripción) y cambiá una palabra. Algo que puedas identificar fácilmente cuando lo veas en el browser.</p>
-      <div style="background:#F8F8F8;border:1px solid #E4E4E4;border-radius:8px;padding:14px 16px;font-size:14px;margin:12px 0;line-height:1.7;">
-        <strong>Ejemplo:</strong> En <code>index.html</code>, buscá la frase <em>"Para UX, Comercial, QA y toda el área."</em> y cambiala por algo como <em>"Para todo el equipo de IT4W."</em>
+      <p>Abrí una carpeta nueva y vacía en VS Code (<strong>Archivo → Abrir carpeta</strong>, creá una carpeta llamada <code>mi-pagina</code>). Luego abrí el chat en modo <strong>Agent</strong> y copiá esto:</p>
+      <div style="background:#F0EAFF;border-left:4px solid #8C52FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:16px 0;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <span style="font-size:18px;">💬</span>
+          <strong style="color:#2A0880;font-size:14px;">Copiá esto en el chat — modo Agent</strong>
+        </div>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Creá un archivo index.html en esta carpeta. Tiene que ser una página simple con mi nombre como título, una línea que diga qué área trabajo en IT4W, y un fondo blanco con texto negro. Sin estilos complicados.</pre></div>
+        <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">El agente crea el archivo por vos. Abrilo para ver cómo quedó — podés pedirle que cambie algo si querés.</p>
       </div>
-      <p>Guardá el archivo con <strong>Ctrl + S</strong> (Windows) o <strong>Cmd + S</strong> (Mac).</p>
-      <div class="tip">💡 No rompas nada importante — elegí un texto de poco impacto. Si algo sale mal, siempre podés deshacer con Ctrl + Z.</div>
+      <p>Una vez que el archivo existe, pedile al agente que inicialice Git en esta carpeta:</p>
+      <div style="background:#F0EAFF;border-left:4px solid #8C52FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:16px 0;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
+          <span style="font-size:18px;">💬</span>
+          <strong style="color:#2A0880;font-size:14px;">Copiá esto en el chat — modo Agent</strong>
+        </div>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Inicializá Git en esta carpeta y hacé el primer commit con el archivo index.html que acabamos de crear.</pre></div>
+        <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">El agente ejecuta <code>git init</code> y <code>git commit</code>. El proyecto queda registrado en Git y listo para subir a GitHub.</p>
+      </div>
       <div class="step-nav-btns">
         <button class="btn btn-ghost" disabled>← Anterior</button>
-        <button class="btn btn-primary" data-step-next>Siguiente: Commit →</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Subir a GitHub →</button>
       </div>
     </div>
 
@@ -163,25 +182,33 @@
       <div class="exercise-step-header">
         <div class="ex-num-circle">2</div>
         <div class="ex-meta">
-          <div class="ex-mode">Panel de chat de VS Code — modo Agent</div>
-          <div class="ex-title">Hacé el commit — guardá la foto del cambio</div>
-          <div class="ex-goal">Registrar el cambio en el historial de Git</div>
+          <div class="ex-mode">GitHub — navegador</div>
+          <div class="ex-title">Creá un repo en GitHub y subí tu proyecto</div>
+          <div class="ex-goal">Tu página en la nube, lista para conectar a Render</div>
         </div>
       </div>
-      <p>Un commit es como sacarle una foto al estado actual de tu proyecto. Incluye todos los archivos que modificaste y un mensaje que describe qué cambiaste.</p>
-      <p>Pedile al agente que lo haga por vos:</p>
+      <p>Abrí <strong>github.com</strong>, iniciá sesión y creá un repo nuevo:</p>
+      <div style="background:#F8F8F8;border:1px solid #E4E4E4;border-radius:10px;padding:16px 20px;margin:12px 0;font-size:14px;line-height:2;">
+        1. Click en <strong>"New"</strong> (botón verde arriba a la izquierda)<br>
+        2. Nombre del repo: <code>mi-pagina</code><br>
+        3. Dejalo en <strong>Public</strong><br>
+        4. <strong>No marques</strong> ninguna opción de "Add README" — tiene que quedar vacío<br>
+        5. Click en <strong>"Create repository"</strong>
+      </div>
+      <p>GitHub te va a mostrar la URL del repo. Copiala — tiene el formato <code>https://github.com/tu-usuario/mi-pagina.git</code></p>
+      <p>Ahora conectá tu carpeta local con ese repo. Pedile al agente:</p>
       <div style="background:#F0EAFF;border-left:4px solid #8C52FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:16px 0;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
           <span style="font-size:18px;">💬</span>
-          <strong style="color:#2A0880;font-size:14px;">Copiá esto en el chat — modo Agent</strong>
+          <strong style="color:#2A0880;font-size:14px;">Copiá esto en el chat — modo Agent (reemplazá la URL)</strong>
         </div>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Hacé un commit con todos los archivos que modifiqué. El mensaje del commit tiene que describir brevemente qué cambié.</pre></div>
-        <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">El agente va a detectar qué archivos cambiaron, escribir un mensaje descriptivo y hacer el commit por vos.</p>
+        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Conectá este proyecto con el repo de GitHub https://github.com/TU-USUARIO/mi-pagina.git y hacé un push.</pre></div>
+        <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">El agente ejecuta los comandos para conectar y subir. Reemplazá la URL con la tuya real.</p>
       </div>
-      <p>Vas a ver en el chat algo como: <code>git commit -m "Actualiza texto de descripción en index.html"</code> y luego una confirmación.</p>
+      <div class="tip">💡 Si GitHub te pide usuario y contraseña, ingresalos. Si no tenés el acceso configurado, pedile al agente que te explique cómo configurar las credenciales.</div>
       <div class="step-nav-btns">
         <button class="btn btn-ghost" data-step-prev>← Anterior</button>
-        <button class="btn btn-primary" data-step-next>Siguiente: Push →</button>
+        <button class="btn btn-primary" data-step-next>Siguiente: Conectar Render →</button>
       </div>
     </div>
 
@@ -189,21 +216,22 @@
       <div class="exercise-step-header">
         <div class="ex-num-circle">3</div>
         <div class="ex-meta">
-          <div class="ex-mode">Panel de chat de VS Code — modo Agent</div>
-          <div class="ex-title">Hacé el push — subí el cambio a GitHub</div>
-          <div class="ex-goal">Enviar el commit a la nube para que Render lo detecte</div>
+          <div class="ex-mode">Render — navegador</div>
+          <div class="ex-title">Conectá Render con tu repo de GitHub</div>
+          <div class="ex-goal">El servicio que publica tu página automáticamente</div>
         </div>
       </div>
-      <p>El commit existe en tu compu, pero todavía no en GitHub. El push lo sube:</p>
-      <div style="background:#F0EAFF;border-left:4px solid #8C52FF;border-radius:0 10px 10px 0;padding:18px 20px;margin:16px 0;">
-        <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">
-          <span style="font-size:18px;">💬</span>
-          <strong style="color:#2A0880;font-size:14px;">Copiá esto en el chat — modo Agent</strong>
-        </div>
-        <div class="code-block"><button class="copy-btn">Copiar</button><pre>Hacé un push para subir el último commit a GitHub.</pre></div>
-        <p style="margin:10px 0 0;font-size:13px;color:#6B6B6B;">El agente ejecuta <code>git push</code>. Cuando termina, el cambio ya está en GitHub y Render empieza a procesar el deploy automáticamente.</p>
+      <p>Abrí <strong>render.com</strong> — si no tenés cuenta, creá una gratuita (podés usar tu cuenta de GitHub para registrarte, es lo más rápido).</p>
+      <div style="background:#F8F8F8;border:1px solid #E4E4E4;border-radius:10px;padding:16px 20px;margin:12px 0;font-size:14px;line-height:2;">
+        1. Click en <strong>"New +"</strong> → <strong>"Static Site"</strong><br>
+        2. Conectá tu cuenta de GitHub si te lo pide<br>
+        3. Elegí el repo <code>mi-pagina</code><br>
+        4. <strong>Name:</strong> <code>mi-pagina</code> (o lo que quieras)<br>
+        5. <strong>Branch:</strong> <code>main</code><br>
+        6. <strong>Publish directory:</strong> <code>.</code> (un punto solo — porque el index.html está en la raíz)<br>
+        7. Click en <strong>"Create Static Site"</strong>
       </div>
-      <div class="alert">⚠️ Si te pide usuario y contraseña de GitHub, ingresalos. Si ya los tenés guardados, pasa directo.</div>
+      <p>Render va a tardar 1-2 minutos en hacer el primer deploy. Vas a ver un log con texto corriendo — cuando aparezca <strong>"Deploy live"</strong>, terminó.</p>
       <div class="step-nav-btns">
         <button class="btn btn-ghost" data-step-prev>← Anterior</button>
         <button class="btn btn-primary" data-step-next>Siguiente: Verificar →</button>
@@ -215,21 +243,18 @@
         <div class="ex-num-circle">4</div>
         <div class="ex-meta">
           <div class="ex-mode">Navegador</div>
-          <div class="ex-title">Verificá el cambio en la URL pública</div>
-          <div class="ex-goal">Ver tu cambio publicado en tiempo real</div>
+          <div class="ex-title">Abrí tu URL pública y verificá que funciona</div>
+          <div class="ex-goal">Ver tu página publicada — y entender el flujo completo</div>
         </div>
       </div>
-      <p>Esperá 1-2 minutos y abrí la URL de la guía en el navegador:</p>
-      <div style="background:#F8F8F8;border:1px solid #E4E4E4;border-radius:8px;padding:12px 16px;font-size:14px;margin:12px 0;">
-        <a href="https://guia-ia-it4w.onrender.com" target="_blank" rel="noopener" style="color:#8C52FF;font-weight:600;">https://guia-ia-it4w.onrender.com</a>
-      </div>
-      <p>¿Ves el texto que cambiaste? Si sí — ¡el flujo completo funcionó! Editaste localmente, commiteaste, pusheaste a GitHub, Render lo detectó y publicó.</p>
+      <p>Render te muestra la URL al final de la pantalla — algo como <code>https://mi-pagina.onrender.com</code>. Abrila y deberías ver tu página con tu nombre.</p>
       <div style="background:#F0FFF4;border:1px solid #37B75F;border-radius:10px;padding:16px 18px;margin:16px 0;">
-        <strong style="color:#1a6e3a;">✅ Si ves el cambio:</strong> Ya sabés hacer deploy. Este es el flujo que vas a repetir cada vez que quieras publicar algo nuevo.
+        <strong style="color:#1a6e3a;">✅ Si ves tu página:</strong> Completaste el flujo entero. Ahora cualquier cambio que hagas y subas con push va a aparecer en esa URL automáticamente — sin tocar Render de nuevo.
       </div>
       <div style="background:#FFF8ED;border:1px solid #F5A623;border-radius:10px;padding:16px 18px;margin:12px 0;">
-        <strong>🕐 Si no ves el cambio todavía:</strong> Render puede tardar hasta 2-3 minutos. Actualizá la página con <strong>Ctrl + Shift + R</strong> (fuerza la recarga sin caché).
+        <strong>🕐 Si no cargó todavía:</strong> Esperá 2-3 minutos y recargá con <strong>Ctrl + Shift + R</strong>. Render puede tardar un poco en el primer deploy.
       </div>
+      <p><strong>Bonus:</strong> Hacé un cambio en el <code>index.html</code> (cambiá una palabra), pedile al agente que haga commit y push, y en 1-2 minutos vas a ver el cambio reflejado en la URL. Ese es el flujo del día a día.</p>
       <div class="step-nav-btns">
         <button class="btn btn-ghost" data-step-prev>← Anterior</button>
         <span class="btn btn-ghost" style="opacity:.4;cursor:default;">Fin del ejercicio ✓</span>
